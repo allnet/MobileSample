@@ -2753,6 +2753,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1055691455}
+  - component: {fileID: 1055691456}
   m_Layer: 0
   m_Name: Application
   m_TagString: Untagged
@@ -2774,6 +2775,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1055691456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1055691454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da88816ba6e268438937a701a8c981a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartGameState: 0
+  LoopStartGameState: 0
+  LoopEndGameState: 0
+  CurrentGameState: 0
 --- !u!4 &1084187951 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 26548f7a1678ad64b835bf290a254dbe,
@@ -2956,12 +2972,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 578b16a231595e742ae07d6439e58865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateControllers:
-  - {fileID: 0}
-  - {fileID: 0}
   requestedState: 0
   currentState: 0
   DebugMode: 0
+  Bindings:
+  - gameState: 0
+    StateController: {fileID: 0}
+  - gameState: 1
+    StateController: {fileID: 0}
+  - gameState: 2
+    StateController: {fileID: 0}
+  - gameState: 3
+    StateController: {fileID: 0}
 --- !u!95 &1132832371
 Animator:
   serializedVersion: 3

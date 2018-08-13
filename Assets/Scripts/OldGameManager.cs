@@ -28,9 +28,7 @@ namespace Evgo
     */
     public class OldGameManager : MainApplication
     {
-
-
-        public static new OldGameManager Instance;
+        public static OldGameManager Instance;
         public GameMetadata Metadata;
         public int HashStateEnumId;
         public int MaxRounds = 5;

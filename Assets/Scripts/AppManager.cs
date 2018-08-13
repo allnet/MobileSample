@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Evgo
 {
-    public enum eGameState //DH
+    public enum eAppState //DH
     {
         //None = -1,
         State0 = 0,  //splash
@@ -13,10 +13,10 @@ namespace Evgo
         State3 = 3,
         Count
     }
-      
+
     public class AppManager : MainApplication
     {
-        public static new AppManager Instance;
+        public static AppManager Instance;
         //public static eGameState GameState;
         public GameMetadata Metadata;
 
@@ -37,96 +37,92 @@ namespace Evgo
         //public ReplayCameraSystem ReplayCamera;
 
         [Header("Customize default states")]
-        public eGameState StartGameState;
-        public eGameState LoopStartGameState;
-        public eGameState LoopEndGameState;
-        public eGameState CurrentGameState;
+        public eAppState StartGameState;
+        public eAppState LoopStartGameState;
+        public eAppState LoopEndGameState;
+        public eAppState CurrentGameState;
 
         //-------------------- MODES               
-       /*
-        [System.Serializable]
-        public struct GameModeToUIStateBinding
-        {
-            public ApplicationMode GameMode;  // Game play controllers
-            public UIViewControllerSequential ViewController; //UI
-            public GameObject ScoreboardPanel;
 
-            public GameModeToUIStateBinding(ApplicationMode gameMode = null,
-                UIViewControllerSequential viewController = null,
-                GameObject scoreboardPanel = null)
-            {
-                GameMode = gameMode;
-                ViewController = viewController;
-                ScoreboardPanel = scoreboardPanel;
-            }
-        }
-        [Header("Game Mode to UI Bindings")]
-        public GameModeToUIStateBinding[] Bindings;
+        //[System.Serializable]
+        //public struct StringToStateBinding
+        //{
+        //    public eAppState gameState;
+        //    public StateController StateController; //UI
 
-        //------------------------------------------------------------------------------------- APPLICATION
-        protected override void Awake()
-        {
-            Instance = this;
+        //    public StringToStateBinding(eAppState gameState = eAppState.State0, StateController stateController = null)
+        //    {
+        //        this.gameState = gameState;
+        //        this.StateController = stateController;
+        //    }
+        //}
+        //[Header("Game Mode to UI Bindings")]
+        //public StringToStateBinding[] Bindings;
+        /*
+       //------------------------------------------------------------------------------------- APPLICATION
+       protected override void Awake()
+       {
+           Instance = this;
 
-            List<GameMetadata.PlayerScore> scores = new List<GameMetadata.PlayerScore>();
-            Metadata = new GameMetadata(currentGameState: (eGameState)0,
-                        location: "", username: "", totalPoints: 0,
-                        currentRound: 0, numberOfRounds: 2,
-                        elapsedTime: 0f, timeRemaining: 0f,
-                        playerScores: new List<GameMetadata.PlayerScore>());
+           List<GameMetadata.PlayerScore> scores = new List<GameMetadata.PlayerScore>();
+           Metadata = new GameMetadata(currentGameState: (eGameState)0,
+                       location: "", username: "", totalPoints: 0,
+                       currentRound: 0, numberOfRounds: 2,
+                       elapsedTime: 0f, timeRemaining: 0f,
+                       playerScores: new List<GameMetadata.PlayerScore>());
 
-            base.Awake();
-        }
+           base.Awake();
+       }
 
-        protected override void PostStart()
-        {
-            base.PostStart();
-            Fade(Color.black, Color.clear, 2.0f);
-   
-            ChangeToGameState((eGameState)0);  // start app/game/experience
-        }
+       protected override void PostStart()
+       {
+           base.PostStart();
+           Fade(Color.black, Color.clear, 2.0f);
 
-        // Darryl TODO:  review this with everyone should probably be on MainApplication possibly 
-        public void ChangeToGameState(eGameState gameState)  // this is simply a monobehavior
-        {
-            // Guard statements
-            if (gameState == CurrentGameState)
-            {
-                return;
-            }
+           ChangeToGameState((eGameState)0);  // start app/game/experience
+       }
 
-            // continue            
-            ApplicationMode newMode = Bindings[(int)gameState].GameMode;
-            if (newMode != null)
-            {
-                ChangeMode(newMode);  // previous calls used this
-            }
+       // Darryl TODO:  review this with everyone should probably be on MainApplication possibly 
+       public void ChangeToGameState(eGameState gameState)  // this is simply a monobehavior
+       {
+           // Guard statements
+           if (gameState == CurrentGameState)
+           {
+               return;
+           }
 
-            if (UISystemManager.Sequential != null && UISystemManager.Sequential is IUIAnimatableSingle)
-            {
-                UISystemManager.Sequential.ChangeStateTo(gameState);
-            }
+           // continue            
+           ApplicationMode newMode = Bindings[(int)gameState].GameMode;
+           if (newMode != null)
+           {
+               ChangeMode(newMode);  // previous calls used this
+           }
 
-            if (UISystemManager.Scoreboard != null)
-            {
-                UISystemManager.Scoreboard.ChangeStateTo(gameState);
-            }
+           if (UISystemManager.Sequential != null && UISystemManager.Sequential is IUIAnimatableSingle)
+           {
+               UISystemManager.Sequential.ChangeStateTo(gameState);
+           }
 
-            CurrentGameState = gameState;
-            UISystemManager.UIStateMachine.SetInteger("GameState", (int)CurrentGameState);
-          }
+           if (UISystemManager.Scoreboard != null)
+           {
+               UISystemManager.Scoreboard.ChangeStateTo(gameState);
+           }
 
-        */
+           CurrentGameState = gameState;
+           UISystemManager.UIStateMachine.SetInteger("GameState", (int)CurrentGameState);
+         }
+
+       */
 
         // On next request
-        public void ChangeStateTo(eGameState toState)  // adheres to interface or could subclass
+        public void ChangeStateTo(eAppState toState)  // adheres to interface or could subclass
         {
             // send exit to present state controller and wait for callback
-           // isBusy = true;
+            // isBusy = true;
         }
 
         public void ExitCompleteCallback()  // is ready for 
-        {            
+        {
             // turn off state controller
 
             // Turn on next state contoller after small delay
@@ -135,7 +131,7 @@ namespace Evgo
             // actually change the state by turning on the next controller
         }
 
-        public void EnterCompleteCallback( )
+        public void EnterCompleteCallback()
         {
 
 

@@ -8,7 +8,7 @@ namespace Evgo
 {
     public class GameMetadata   // can have struct within a struct
     {
-        public GameMetadata(eGameState currentGameState, string location, string username, int totalPoints,
+        public GameMetadata(eAppState currentGameState, string location, string username, int totalPoints,
                             int currentRound, int numberOfRounds, float elapsedTime, float timeRemaining,
                             List<PlayerScore> playerScores = null)
         {
@@ -27,7 +27,7 @@ namespace Evgo
         public delegate void OnStringPropertyChangeDelegate(string PropertyValue);
         public delegate void OnIntPropertyChangeDelegate(int PropertyValue);
         public delegate void OnFloatPropertyChangeDelegate(float PropertyValue);
-        public delegate void OnEnumChangeDelegate(eGameState PropertyValue);
+        public delegate void OnEnumChangeDelegate(eAppState PropertyValue);
         public delegate void OnPlayerScoresChangeDelegate(List<PlayerScore> PropertyValue);
         
         //Special
@@ -42,8 +42,8 @@ namespace Evgo
         public event GameMetadata.OnPlayerScoresChangeDelegate OnPlayerScoresSetTo; // commit the score
         #endregion
 
-        private eGameState currentGameState;  
-        public eGameState CurrentGameState
+        private eAppState currentGameState;  
+        public eAppState CurrentGameState
         {
             get
             {

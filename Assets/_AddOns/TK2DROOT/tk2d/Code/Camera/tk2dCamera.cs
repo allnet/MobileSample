@@ -660,9 +660,10 @@ public class tk2dCamera : MonoBehaviour
 		bool needHalfTexelOffset = (Application.platform == RuntimePlatform.WindowsPlayer ||
 									isWebPlayer ||
 						   			Application.platform == RuntimePlatform.WindowsEditor);
-		float halfTexel = (halfTexelOffset && needHalfTexelOffset && SystemInfo.graphicsDeviceType == UnityEngine.Rendering.GraphicsDeviceType.Direct3D9) ? 0.5f : 0.0f;
-
-		float orthoSize = settings.cameraSettings.orthographicSize;
+        //float halfTexel = (halfTexelOffset && needHalfTexelOffset && SystemInfo.graphicsDeviceType == UnityEngine.Rendering.GraphicsDeviceType.Direct3D9) ? 0.5f : 0.0f;
+        float halfTexel = (halfTexelOffset && needHalfTexelOffset) ? 0.5f : 0.0f;
+        
+        float orthoSize = settings.cameraSettings.orthographicSize;
 		switch (settings.cameraSettings.orthographicType) {
 			case tk2dCameraSettings.OrthographicType.OrthographicSize:
 				orthoSize = 2.0f * settings.cameraSettings.orthographicSize / settings.nativeResolutionHeight;

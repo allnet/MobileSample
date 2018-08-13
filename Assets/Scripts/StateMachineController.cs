@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Talespin;
 using UnityEngine.EventSystems;
 
 // next activates the state controller
@@ -10,36 +11,51 @@ namespace Evgo
     public class StateMachineController : MonoBehaviour
     {
         private Animator animator;
-       //private SmbHandler smbHandler;
-        public List<StateController> stateControllers;
 
-        public eGameState requestedState; //prop
-        public eGameState currentState;  // prop
+        public eAppState requestedState; //prop
+        public eAppState currentState;  // prop
 
-        public bool DebugMode;    
+        public bool DebugMode;
         public struct FriendlyStateInfo
         {
             public string stateName;
             public float duration;
             public int stateIndex;
 
-           public FriendlyStateInfo(string stateName, float duration, int stateIndex)
+            public FriendlyStateInfo(string stateName, float duration, int stateIndex)
             {
                 this.stateName = stateName;
                 this.duration = duration;
                 this.stateIndex = stateIndex;
-            } 
+            }
         }
         public FriendlyStateInfo friendlyStateInfo;
+
+
+        [System.Serializable]
+        public struct StateToControllerBindings
+        {
+            public eAppState gameState;
+            public StateController StateController; //UI
+
+            public StateToControllerBindings(eAppState gameState = eAppState.State0, StateController stateController = null)
+            {
+                this.gameState = gameState;
+                this.StateController = stateController;
+            }
+        }
+        [Header("Animator State to Controller Bindings")]
+        public StateToControllerBindings[] Bindings;
+
+        // ===================================================================]
 
         void Awake()
         {
             animator = GetComponent<Animator>();
-            // smbHandler = animator.GetBehaviour<SmbHandler>();
-           
+            Reset();
         }
 
-        private void Reset()
+        void Reset()
         {
             friendlyStateInfo = new FriendlyStateInfo(stateName: "", duration: 0, stateIndex: 0);
         }
@@ -71,7 +87,7 @@ namespace Evgo
         public void HandleStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             Debug.Log("STATE EXIT =" + GetStateNameFrom(stateInfo));
-                      
+
             //Reset();  // turn off old state controller
         }
 
@@ -81,8 +97,8 @@ namespace Evgo
             Reset();
 
             friendlyStateInfo.duration = stateInfo.length;
-                  
-            foreach (eGameState enumVal in Enum.GetValues(typeof(eGameState)))
+
+            foreach (eAppState enumVal in Enum.GetValues(typeof(eAppState)))
             {
                 friendlyStateInfo.stateName = (enumVal.ToString() == "Count") ? "< State Mismatch >" : enumVal.ToString();
                 //Debug.Log("search val = " + searchVal);
@@ -91,7 +107,7 @@ namespace Evgo
                     friendlyStateInfo.stateIndex = (int)enumVal;
                     break;
                 }
-            }         
+            }
 
             return friendlyStateInfo.stateName;
         }
