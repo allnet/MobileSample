@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WelcomeStateController : StateController
+namespace AllNetXR
 {
+    public class WelcomeStateController : StateController
+    {
 
 
+    }
 }

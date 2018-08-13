@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace Evgo
+namespace AllNetXR
 {
     public enum eAppState //DH
     {

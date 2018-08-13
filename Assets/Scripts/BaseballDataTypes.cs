@@ -1,4 +1,4 @@
-﻿namespace Evgo
+﻿namespace AllNetXR
 {
     // scoring run types
     public enum eRunType

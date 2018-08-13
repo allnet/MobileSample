@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Evgo
+namespace AllNetXR
 {
 
-    public class SmbHandler : StateMachineBehaviour  // attach to every state in the animator
+    public class SmbEventDispatcher : StateMachineBehaviour  // attach to every state in the animator
     {
         public delegate void StateEventHandler(Animator animator, AnimatorStateInfo stateInfo, int layerIndex);
 

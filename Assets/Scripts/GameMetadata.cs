@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using Talespin;
 
-namespace Evgo
+namespace AllNetXR
 {
     public class GameMetadata   // can have struct within a struct
     {

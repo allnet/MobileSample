@@ -1,4 +1,4 @@
-namespace Evgo
+namespace AllNetXR
 {
     public static class LogTypes
     {

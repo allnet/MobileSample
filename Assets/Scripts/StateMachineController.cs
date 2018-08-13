@@ -6,14 +6,16 @@ using Talespin;
 using UnityEngine.EventSystems;
 
 // next activates the state controller
-namespace Evgo
+namespace AllNetXR
 {
     public class StateMachineController : MonoBehaviour
     {
+        public static StateMachineController instance;
+        public static bool isInitialized;
         private Animator animator;
-
-        public eAppState requestedState; //prop
-        public eAppState currentState;  // prop
+   
+        public eAppState requestedState, activeState, previousState;
+        StateController activeController;
 
         public bool DebugMode;
         public struct FriendlyStateInfo
@@ -35,67 +37,92 @@ namespace Evgo
         [System.Serializable]
         public struct StateToControllerBindings
         {
-            public eAppState gameState;
-            public StateController StateController; //UI
+            public eAppState appState;
+            public StateController stateController; //UI
 
-            public StateToControllerBindings(eAppState gameState = eAppState.State0, StateController stateController = null)
+            public StateToControllerBindings(eAppState appState = eAppState.State0, StateController stateController = null)
             {
-                this.gameState = gameState;
-                this.StateController = stateController;
+                this.appState = appState;
+                this.stateController = stateController;
             }
         }
         [Header("Animator State to Controller Bindings")]
-        public StateToControllerBindings[] Bindings;
+        public StateToControllerBindings[] bindings;
 
-        // ===================================================================]
-
+        // ==================================================================
         void Awake()
         {
+            instance = this;
             animator = GetComponent<Animator>();
+            friendlyStateInfo = new FriendlyStateInfo(stateName: "", duration: 0, stateIndex: 0);
+
             Reset();
+            ChangeToAppState(requestedState);  // start with requested state
         }
+
+        void ChangeToAppState(eAppState appState)
+        {
+            animator.SetTrigger("On" + appState);
+           // LaunchState(appState);
+        }
+
+        //void LaunchState(eAppState appState)
+        //{
+        //    StateController controller = bindings[(int)appState].stateController;
+        //    //controller.gameObject.SetActive(true);
+        //    controller.Begin();
+        //}
 
         void Reset()
         {
-            friendlyStateInfo = new FriendlyStateInfo(stateName: "", duration: 0, stateIndex: 0);
+            if (StateMachineController.isInitialized) return;
+
+            foreach (StateToControllerBindings binding in bindings)
+            {
+                binding.stateController.gameObject.SetActive(false);
+            }
+            StateMachineController.isInitialized = true;
         }
 
         void OnEnable()
         {
-            SmbHandler.OnStateEntered += HandleStateEnter;
-            SmbHandler.OnStateExited += HandleStateExit;
+            SmbEventDispatcher.OnStateEntered += HandleStateEnter;
+            SmbEventDispatcher.OnStateExited += HandleStateExit;
         }
 
         private void OnDisable()
         {
-            SmbHandler.OnStateEntered -= HandleStateEnter;
-            SmbHandler.OnStateExited -= HandleStateExit;
+            SmbEventDispatcher.OnStateEntered -= HandleStateEnter;
+            SmbEventDispatcher.OnStateExited -= HandleStateExit;
         }
 
         // ======================================================================== State Machine Callbacks
         public void HandleStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            //UIMgr = UIManagerAdditive.Instance;
-            //eUIStateAdditive stateEntered = (eUIStateAdditive)layerIndex - NumberOfLayersToIgnore;
-            //AnimatorStateInfo baseStateInfo = animator.GetCurrentAnimatorStateInfo(layerIndex);
-
-            Debug.Log("STATE ENTER  =" + GetStateNameFrom(stateInfo));
-            // turn on new state controller based on index or dictionary
+            SetFriendlyInfoFrom(stateInfo); Debug.Log("STATE ENTER  =" + friendlyStateInfo.stateName);
+          
             animator.SetInteger("AppStateIndex", friendlyStateInfo.stateIndex);
+         
+            StateController controller = bindings[friendlyStateInfo.stateIndex].stateController;
+           //controller.gameObject.SetActive(true);
+            controller.Begin();
+            activeState =  (eAppState)friendlyStateInfo.stateIndex;
         }
 
         public void HandleStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            Debug.Log("STATE EXIT =" + GetStateNameFrom(stateInfo));
 
+            Debug.Log("STATE EXIT =" + SetFriendlyInfoFrom(stateInfo).stateName);
             //Reset();  // turn off old state controller
+
+            //controller.gameObject.SetActive(false);
+           StateController controller = bindings[friendlyStateInfo.stateIndex].stateController;
+           // StateController controller = bindings[(int)previousState].stateController;
+            controller.End();
         }
 
-        //====================================================     
-        protected string GetStateNameFrom(AnimatorStateInfo stateInfo)  // clip name 
+        protected FriendlyStateInfo SetFriendlyInfoFrom(AnimatorStateInfo stateInfo)  // clip name 
         {
-            Reset();
-
             friendlyStateInfo.duration = stateInfo.length;
 
             foreach (eAppState enumVal in Enum.GetValues(typeof(eAppState)))
@@ -109,7 +136,7 @@ namespace Evgo
                 }
             }
 
-            return friendlyStateInfo.stateName;
+            return friendlyStateInfo;
         }
 
         void OnGUI()
