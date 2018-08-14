@@ -34,6 +34,8 @@ namespace AllNetXR
 
         public virtual void Begin()
         {
+            //if (isReady) return;  // already turned on 
+
             Debug.Log("BEGIN --");
             gameObject.SetActive(true);
             isReady = false;
@@ -51,17 +53,15 @@ namespace AllNetXR
         public virtual void DoReady()
         {
             // do whatever the controller was intended to do
-
         }
 
         // NEED CALLBACK WHEN OBJECT IS READY FOR ACTION
         public virtual void OpenCompleteHandler()  // callback from dotween
         {
-
+            Debug.Log("OpenCompleteHandler");
             isReady = true;
             DoReady();  //wait for input, ask questions, show video, some
         }
-
 
     }
 }

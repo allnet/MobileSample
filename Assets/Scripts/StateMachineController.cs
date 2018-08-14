@@ -64,7 +64,7 @@ namespace AllNetXR
         {
             animator.SetTrigger("On" + appState);
            // LaunchState(appState);
-        }
+        } 
 
         //void LaunchState(eAppState appState)
         //{
