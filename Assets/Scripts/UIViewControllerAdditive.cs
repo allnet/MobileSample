@@ -7,14 +7,14 @@ namespace AllNetXR
     {
         public List<eAppState> EnabledStates;
                 
-        public bool ShouldShow()
+        public bool ShouldShow(eAppState appState)
         {
             if (EnabledStates.Count == 0)
             {
                 return true;
             }
 
-            return (EnabledStates.Contains(StateMachineController.instance.activeState));
+            return (EnabledStates.Contains(appState));
         }
     }
 }

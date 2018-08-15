@@ -5,17 +5,35 @@ using System;
 using Talespin;
 using UnityEngine.EventSystems;
 
+
 // next activates the state controller
 namespace AllNetXR
 {
-    public class StateMachineController : MonoBehaviour
+
+    public enum eAppState //DH
     {
-        public static StateMachineController instance;
-        public static bool isInitialized;
-        private Animator animator;
-   
-        public eAppState requestedState, activeState, previousState;
-        StateController activeController;
+        None = -1,
+        State0 = 0,  //splash
+        State1 = 1,
+        State2 = 2,
+        State3 = 3,
+        Count
+    }
+
+   public interface IUINavigationHandler
+    {
+
+        void OnNextAction();
+    }
+
+    public class StateMachineController : MonoBehaviour, IUINavigationHandler
+    {
+        public static Stack<eAppState> StateStack;  // LIFO stack
+
+        public static StateMachineController Instance;
+        public static bool IsInitialized;
+        public Animator animator;
+        public UIManagerSequential sequencer; //DH - be able to swap in additive or sequential by interface or child class
 
         public bool DebugMode;
         public struct FriendlyStateInfo
@@ -33,6 +51,9 @@ namespace AllNetXR
         }
         public FriendlyStateInfo friendlyStateInfo;
 
+        [SerializeField]
+        protected eAppState activeState;
+        private eAppState requestedState, previousState;
 
         [System.Serializable]
         public struct StateToControllerBindings
@@ -49,39 +70,62 @@ namespace AllNetXR
         [Header("Animator State to Controller Bindings")]
         public StateToControllerBindings[] bindings;
 
+      
+       // StateController activeController;
+
         // ==================================================================
         void Awake()
         {
-            instance = this;
-            animator = GetComponent<Animator>();
+            Instance = this;
+           /// animator = GetRequiredComponent<Animator>();  // // must be hooked up in inspector
+                      
             friendlyStateInfo = new FriendlyStateInfo(stateName: "", duration: 0, stateIndex: 0);
 
             Reset();
             ChangeToAppState(requestedState);  // start with requested state
         }
 
-        void ChangeToAppState(eAppState appState)
+        private T GetRequiredComponent<T>()
         {
-            animator.SetTrigger("On" + appState);
+            throw new NotImplementedException();
+        }
+
+        public void OnNextAction()
+        {
+            ChangeToAppState(sequencer.GetNextStateFor(activeState));
+        }
+
+        public void OnPreviousAction()
+        {
+            ChangeToAppState(sequencer.GetPreviousStateFor(activeState));
+        }
+
+        public virtual void ChangeToAppState(eAppState appState)
+        {
+            string triggerName = "On" + appState;  Debug.Log(triggerName);
+            animator.SetTrigger(triggerName);
            // LaunchState(appState);
         } 
 
-        //void LaunchState(eAppState appState)
-        //{
-        //    StateController controller = bindings[(int)appState].stateController;
-        //    //controller.gameObject.SetActive(true);
-        //    controller.Begin();
-        //}
-
+        public void ChangeToAppStateWith(int stateId)
+        {
+            ChangeToAppState((eAppState)stateId); 
+        }
+        
         void Reset()
         {
-            if (StateMachineController.isInitialized) return;
+            if (StateMachineController.IsInitialized) return;
 
             foreach (StateToControllerBindings binding in bindings)
             {
-                binding.stateController.gameObject.SetActive(false);
+               StateController ctrl = binding.stateController;  //shortcut
+                ctrl.gameObject.SetActive(false);
+               if (ctrl.view != null)
+                {
+                    ctrl.view.SetActive(false);
+                }
             }
-            StateMachineController.isInitialized = true;
+            StateMachineController.IsInitialized = true;
         }
 
         void OnEnable()

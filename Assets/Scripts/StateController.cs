@@ -39,7 +39,7 @@ namespace AllNetXR
             Debug.Log("BEGIN --");
             gameObject.SetActive(true);
             isReady = false;
-            if (view != null) view.SetActive(true);  //s/b opening  if animatable                  
+            //if (view != null) view.SetActive(true);  //s/b opening  if animatable                  
         }
 
         public virtual void End()
@@ -47,7 +47,7 @@ namespace AllNetXR
             Debug.Log("END --");
             gameObject.SetActive(false);
             isReady = false;
-            if (view != null) view.SetActive(false);  //s/b closing animation if animatable
+            //if (view != null) view.SetActive(false);  //s/b closing animation if animatable
         }
 
         public virtual void DoReady()

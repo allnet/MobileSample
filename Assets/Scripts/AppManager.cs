@@ -4,21 +4,11 @@ using System.Collections.Generic;
 
 namespace AllNetXR
 {
-    public enum eAppState //DH
-    {
-        //None = -1,
-        State0 = 0,  //splash
-        State1 = 1,
-        State2 = 2,
-        State3 = 3,
-        Count
-    }
-
-    public class AppManager : MainApplication
+    public class AppManager : MonoBehaviour  // No update
     {
         public static AppManager Instance;
-        //public static eGameState GameState;
-        public GameMetadata Metadata;
+        //public static eAppState GameState;
+        public AppMetadata appMetadata;
 
         //-------------------- MANAGERS
         //[Header("MANAGERS")]
@@ -36,11 +26,7 @@ namespace AllNetXR
         //public Transform Strikezone;
         //public ReplayCameraSystem ReplayCamera;
 
-        [Header("Customize default states")]
-        public eAppState StartGameState;
-        public eAppState LoopStartGameState;
-        public eAppState LoopEndGameState;
-        public eAppState CurrentGameState;
+
 
         //-------------------- MODES               
 
@@ -58,61 +44,62 @@ namespace AllNetXR
         //}
         //[Header("Game Mode to UI Bindings")]
         //public StringToStateBinding[] Bindings;
+
+        //------------------------------------------------------------------------------------- APPLICATION
+      
+     protected void Awake()
+     {
+         Instance = this;
+
+            //List<GameMetadata.PlayerScore> scores = new List<GameMetadata.PlayerScore>();
+            //Metadata = new AppMetadata(currentGameState: (eAppState)0,
+            //            location: "", username: "", totalPoints: 0,
+            //            currentRound: 0, numberOfRounds: 2,
+            //            elapsedTime: 0f, timeRemaining: 0f,
+            //            playerScores: new List<AppMetadata.PlayerScore>() );
+
+            //appMetadata = AppMetadata.CreateInstance<AppMetadata>();       
+     }
         /*
-       //------------------------------------------------------------------------------------- APPLICATION
-       protected override void Awake()
-       {
-           Instance = this;
+                  protected override void PostStart()
+                  {
+                      base.PostStart();
+                      Fade(Color.black, Color.clear, 2.0f);
 
-           List<GameMetadata.PlayerScore> scores = new List<GameMetadata.PlayerScore>();
-           Metadata = new GameMetadata(currentGameState: (eGameState)0,
-                       location: "", username: "", totalPoints: 0,
-                       currentRound: 0, numberOfRounds: 2,
-                       elapsedTime: 0f, timeRemaining: 0f,
-                       playerScores: new List<GameMetadata.PlayerScore>());
+                      ChangeToGameState((eAppState)0);  // start app/game/experience
+                  }
 
-           base.Awake();
-       }
+                  // Darryl TODO:  review this with everyone should probably be on MainApplication possibly 
+                  public void ChangeToGameState(eAppState gameState)  // this is simply a monobehavior
+                  {
+                      // Guard statements
+                      if (gameState == CurrentGameState)
+                      {
+                          return;
+                      }
 
-       protected override void PostStart()
-       {
-           base.PostStart();
-           Fade(Color.black, Color.clear, 2.0f);
+                      // continue            
+                      ApplicationMode newMode = Bindings[(int)gameState].GameMode;
+                      if (newMode != null)
+                      {
+                          ChangeMode(newMode);  // previous calls used this
+                      }
 
-           ChangeToGameState((eGameState)0);  // start app/game/experience
-       }
+                      if (UISystemManager.Sequential != null && UISystemManager.Sequential is IUIAnimatableSingle)
+                      {
+                          UISystemManager.Sequential.ChangeStateTo(gameState);
+                      }
 
-       // Darryl TODO:  review this with everyone should probably be on MainApplication possibly 
-       public void ChangeToGameState(eGameState gameState)  // this is simply a monobehavior
-       {
-           // Guard statements
-           if (gameState == CurrentGameState)
-           {
-               return;
-           }
+                      if (UISystemManager.Scoreboard != null)
+                      {
+                          UISystemManager.Scoreboard.ChangeStateTo(gameState);
+                      }
 
-           // continue            
-           ApplicationMode newMode = Bindings[(int)gameState].GameMode;
-           if (newMode != null)
-           {
-               ChangeMode(newMode);  // previous calls used this
-           }
+                      CurrentGameState = gameState;
+                      UISystemManager.UIStateMachine.SetInteger("GameState", (int)CurrentGameState);
+                    }
 
-           if (UISystemManager.Sequential != null && UISystemManager.Sequential is IUIAnimatableSingle)
-           {
-               UISystemManager.Sequential.ChangeStateTo(gameState);
-           }
-
-           if (UISystemManager.Scoreboard != null)
-           {
-               UISystemManager.Scoreboard.ChangeStateTo(gameState);
-           }
-
-           CurrentGameState = gameState;
-           UISystemManager.UIStateMachine.SetInteger("GameState", (int)CurrentGameState);
-         }
-
-       */
+                  */
 
         // On next request
         public void ChangeStateTo(eAppState toState)  // adheres to interface or could subclass
