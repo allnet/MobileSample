@@ -12,30 +12,38 @@ namespace AllNetXR
         public static UIManagerSequential Instance;
         public int numberOfRounds;
         private eAppState newStartState;
-        public eAppState loopStartState, loopEndState; // DH - 
+        public eAppState loopStartState, loopEndState; // DH -
+        private AppMetadata appMetadata; // helper
 
         #region Next/Previous support
-        public eAppState GetNextStateFor(eAppState state, eAppState newStartState = (eAppState)1  )
-        {
-            int idx = (int)state;
-
-            AppMetadata gameData = AppManager.Instance.appMetadata;
-            bool shouldLoop =
-                (state == loopEndState
-                && gameData.currentRound < numberOfRounds);
-
-            int newIdx = (shouldLoop) ? (int)loopStartState : ++idx;
+        public eAppState GetNextStateFor(eAppState state, eAppState theStartState = (eAppState)0  )
+        {            
+            //int newIdx = DetermineNextIndex(state);
+            int newIdx = (int)state + 1;
 
             if (!Enum.IsDefined(typeof(eAppState), newIdx))
             {
-                gameData.currentRound = 0;
-                newIdx = (int)newStartState;
+                newIdx = (int)theStartState;
             }
 
-            eAppState requestedState = (eAppState)newIdx;
-
-            return requestedState;
+            Debug.Log("***" + state + " < == > " + (eAppState)newIdx);
+             
+            return (eAppState)newIdx;
         }
+
+        public int DetermineNextIndex(eAppState state)
+        {
+            int idx = (int)state;
+
+            bool shouldLoop =
+                (state == loopEndState && appMetadata.currentRound < numberOfRounds);
+
+            int newIdx = (shouldLoop) ? (int)loopStartState : ++idx;
+            appMetadata.currentRound++;
+
+            return newIdx;
+        }
+
 
         public eAppState GetPreviousStateFor(eAppState state)  // starts short game loop again
         {

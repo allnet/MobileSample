@@ -46,20 +46,18 @@ namespace AllNetXR
         //public StringToStateBinding[] Bindings;
 
         //------------------------------------------------------------------------------------- APPLICATION
-      
-     protected void Awake()
-     {
-         Instance = this;
 
-            //List<GameMetadata.PlayerScore> scores = new List<GameMetadata.PlayerScore>();
-            //Metadata = new AppMetadata(currentGameState: (eAppState)0,
-            //            location: "", username: "", totalPoints: 0,
-            //            currentRound: 0, numberOfRounds: 2,
-            //            elapsedTime: 0f, timeRemaining: 0f,
-            //            playerScores: new List<AppMetadata.PlayerScore>() );
+        protected void Awake()
+        {
+            Instance = this;
 
-            //appMetadata = AppMetadata.CreateInstance<AppMetadata>();       
-     }
+        }
+
+        private void Start()
+        {
+            appMetadata = new AppMetadata();
+        }
+
         /*
                   protected override void PostStart()
                   {

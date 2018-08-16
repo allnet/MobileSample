@@ -1,37 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System;
-using Talespin;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 
 // next activates the state controller
 namespace AllNetXR
 {
-
     public enum eAppState //DH
     {
-        None = -1,
-        State0 = 0,  //splash
-        State1 = 1,
-        State2 = 2,
-        State3 = 3,
+        State0,  //splash
+        State1,
+        State2,
+        State3,
+        State4,
         Count
     }
 
-   public interface IUINavigationHandler
+    public interface IUINavigationHandler
     {
-
         void OnNextAction();
     }
 
     public class StateMachineController : MonoBehaviour, IUINavigationHandler
     {
         public static Stack<eAppState> StateStack;  // LIFO stack
-
         public static StateMachineController Instance;
         public static bool IsInitialized;
+
+        public string cStateParmKey = "AppStateIndex";
+        public string cStateTriggerPrefix = "On";
+
         public Animator animator;
         public UIManagerSequential sequencer; //DH - be able to swap in additive or sequential by interface or child class
 
@@ -51,8 +51,18 @@ namespace AllNetXR
         }
         public FriendlyStateInfo friendlyStateInfo;
 
-        [SerializeField]
-        protected eAppState activeState;
+        private int stateHash;
+        private eAppState _activeState;
+        public eAppState ActiveState { get; set; }           
+               //{
+            //get
+            //{
+            //   // return (eAppState)animator.GetInteger(stateParmKey);
+
+            //}
+        //}
+
+        [SerializeField]      
         private eAppState requestedState, previousState;
 
         [System.Serializable]
@@ -69,62 +79,59 @@ namespace AllNetXR
         }
         [Header("Animator State to Controller Bindings")]
         public StateToControllerBindings[] bindings;
-
-      
-       // StateController activeController;
-
+        
         // ==================================================================
         void Awake()
         {
             Instance = this;
-           /// animator = GetRequiredComponent<Animator>();  // // must be hooked up in inspector
-                      
-            friendlyStateInfo = new FriendlyStateInfo(stateName: "", duration: 0, stateIndex: 0);
+            // animator = GetRequiredComponent<Animator>();  // // must be hooked up in inspector
 
+            friendlyStateInfo = new FriendlyStateInfo(stateName: "", duration: 0, stateIndex: 0);
+            stateHash = Animator.StringToHash(cStateParmKey);
+            
             Reset();
             ChangeToAppState(requestedState);  // start with requested state
         }
 
-        private T GetRequiredComponent<T>()
-        {
-            throw new NotImplementedException();
-        }
-
         public void OnNextAction()
         {
-            ChangeToAppState(sequencer.GetNextStateFor(activeState));
+            ChangeToAppState(sequencer.GetNextStateFor(ActiveState));
         }
 
         public void OnPreviousAction()
         {
-            ChangeToAppState(sequencer.GetPreviousStateFor(activeState));
+            ChangeToAppState(sequencer.GetPreviousStateFor(ActiveState));
         }
 
         public virtual void ChangeToAppState(eAppState appState)
         {
-            string triggerName = "On" + appState;  Debug.Log(triggerName);
+            string triggerName = cStateTriggerPrefix + appState; Debug.Log(triggerName);
             animator.SetTrigger(triggerName);
-           // LaunchState(appState);
-        } 
+            // LaunchState(appState);
+            ActiveState = appState;
+        }
 
         public void ChangeToAppStateWith(int stateId)
         {
-            ChangeToAppState((eAppState)stateId); 
+            ChangeToAppState((eAppState)stateId);
         }
-        
+
         void Reset()
         {
             if (StateMachineController.IsInitialized) return;
 
             foreach (StateToControllerBindings binding in bindings)
             {
-               StateController ctrl = binding.stateController;  //shortcut
+                StateController ctrl = binding.stateController;  //shortcut
+                if (ctrl == null) continue;
+
                 ctrl.gameObject.SetActive(false);
-               if (ctrl.view != null)
+                if (ctrl.view != null)
                 {
                     ctrl.view.SetActive(false);
                 }
             }
+
             StateMachineController.IsInitialized = true;
         }
 
@@ -144,13 +151,12 @@ namespace AllNetXR
         public void HandleStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             SetFriendlyInfoFrom(stateInfo); Debug.Log("STATE ENTER  =" + friendlyStateInfo.stateName);
-          
+
             animator.SetInteger("AppStateIndex", friendlyStateInfo.stateIndex);
-         
+
             StateController controller = bindings[friendlyStateInfo.stateIndex].stateController;
-           //controller.gameObject.SetActive(true);
+            //controller.gameObject.SetActive(true);
             controller.Begin();
-            activeState =  (eAppState)friendlyStateInfo.stateIndex;
         }
 
         public void HandleStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -160,8 +166,8 @@ namespace AllNetXR
             //Reset();  // turn off old state controller
 
             //controller.gameObject.SetActive(false);
-           StateController controller = bindings[friendlyStateInfo.stateIndex].stateController;
-           // StateController controller = bindings[(int)previousState].stateController;
+            StateController controller = bindings[friendlyStateInfo.stateIndex].stateController;
+            // StateController controller = bindings[(int)previousState].stateController;
             controller.End();
         }
 

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InternalSettings_ExecutedUpgrade: 0
   autoExpandEnabledFeatures: 0
-  askToAddElementNameToCategoryIfNotFound: 0
-  askToAddButtonNameToCategoryIfNotFound: 0
+  askToAddElementNameToCategoryIfNotFound: 1
+  askToAddButtonNameToCategoryIfNotFound: 1
   HierarchyManager_Enabled: 0
   HierarchyManager_PlaymakerEventDispatcher_ShowIcon: 0
   HierarchyManager_UITrigger_ShowIcon: 0
