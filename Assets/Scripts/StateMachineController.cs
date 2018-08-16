@@ -31,7 +31,7 @@ namespace AllNetXR
         public static bool IsInitialized;
 
         private string cStateTriggerPrefix = "On";
-        
+
         public Animator animator;
         public LoopSequencer sequencer; //DH - be able to swap in additive or sequential by interface or child class
 
@@ -79,7 +79,7 @@ namespace AllNetXR
             // animator = GetRequiredComponent<Animator>();  // // must be hooked up in inspector
 
             friendlyStateInfo = new FriendlyStateInfo(stateName: "", duration: 0, stateIndex: 0);
-                      
+
             Reset();
 
             ChangeToAppState(startState);  // start with requested state
@@ -95,7 +95,7 @@ namespace AllNetXR
             DoozyUI.UIManager.HideUiElement("YourElementName"); //if you use the Uncategorized category name
             DoozyUI.UIManager.HideUiElement("YourElementName", "YourElementCategoryName");
             //UIManager.HideUIElement("YourElementName", "YourElementCategoryName", instantAction);                                 
-                        //instantActions tells the animation to happen in zero seconds (if true) and normally (otherwise)
+            //instantActions tells the animation to happen in zero seconds (if true) and normally (otherwise)
         }
 
         public void OnNextAction()
@@ -108,7 +108,7 @@ namespace AllNetXR
         public void OnPreviousAction()
         {
             int prevIndex = sequencer.GetPreviousIndex(activeStateIndex, (int)eAppState.Count, 0);
-            ChangeToAppState ((eAppState)prevIndex); 
+            ChangeToAppState((eAppState)prevIndex);
         }
 
         public void ChangeToAppState(eAppState appState)
@@ -121,10 +121,19 @@ namespace AllNetXR
             {
                 //animator.Play(stateName, 0, percentage);
                 animator.SetTrigger(triggerName);
+                PerformUIUpdates();
             }
-         
+
             // LaunchState(appState);
             activeStateIndex = (int)appState;
+        }
+
+        public void PerformUIUpdates()
+        {
+            //DoozyUI.UIManager.ShowUiElement("2"); //if you use the Uncategorized category name
+            DoozyUI.UIManager.ShowUiElement("2", "Example 3 - Buttons");
+            DoozyUI.UIManager.HideUiElement("1", "Example 3 - Buttons");
+
         }
 
         public void ChangeToAppStateWith(int stateId)
