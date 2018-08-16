@@ -58,7 +58,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1746656262089488
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4058828851054192
 Transform:
   m_ObjectHideFlags: 1
@@ -222,8 +222,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfRounds: 0
-  loopStartState: 1
-  loopEndState: 2
 --- !u!114 &114323201579785960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -250,13 +248,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 578b16a231595e742ae07d6439e58865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cStateParmKey: AppStateIndex
-  cStateTriggerPrefix: On
   animator: {fileID: 95545861119394290}
   sequencer: {fileID: 114086216241723636}
   DebugMode: 0
-  requestedState: 0
-  previousState: 0
+  activeStateIndex: 0
+  startState: 0
   bindings:
   - appState: 0
     stateController: {fileID: 114932957140476108}

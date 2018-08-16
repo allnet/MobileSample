@@ -9,7 +9,7 @@ namespace AllNetXR
         public bool CanDismiss = true;
         public GameObject View;
         protected bool DebugMode;
-        protected UIManagerSequential UIMgr;
+        protected LoopSequencer sequencer;
         protected float EnterTime;
 
         protected virtual void Awake()

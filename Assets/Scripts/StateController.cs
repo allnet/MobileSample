@@ -32,7 +32,7 @@ namespace AllNetXR
            
         }
 
-        public virtual void Begin()
+        public void Begin()
         {
             //if (isReady) return;  // already turned on 
 
@@ -42,7 +42,7 @@ namespace AllNetXR
             //if (view != null) view.SetActive(true);  //s/b opening  if animatable                  
         }
 
-        public virtual void End()
+        public void End()
         {
             Debug.Log("END --");
             gameObject.SetActive(false);

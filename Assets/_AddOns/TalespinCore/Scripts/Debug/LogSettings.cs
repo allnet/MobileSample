@@ -13,10 +13,10 @@ namespace Talespin.Debugging
         {
             //string htmlValue = “#FF0000”;
             Color newCol;
-            if (ColorUtility.TryParseHtmlString(hexValue, out newCol))
-            {
-                return newCol;
-            }
+            //if (ColorUtility.TryParseHtmlString(hexValue, out newCol))  //DH
+            //{
+            //    return newCol;
+            //}
 
             return new Color();
         }

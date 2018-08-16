@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,14 +6,60 @@ using Talespin;
 
 namespace AllNetXR
 {
-    public class UIManagerSequential : MonoBehaviour  //, IUIAnimatableSingle
+    public class LoopSequencer : MonoBehaviour  //, IUIAnimatableSingle
     {
-        public static UIManagerSequential Instance;
+       // public static LoopSequencer Instance;
         public int numberOfRounds;
-        private eAppState newStartState;
-        public eAppState loopStartState, loopEndState; // DH -
-        private AppMetadata appMetadata; // helper
+        //private eAppState newStartState;
+        //public eAppState loopStartState, loopEndState; // DH -
+        //private AppMetadata appMetadata; // helper
 
+
+        #region Next/Previous support
+        public int GetNextIndex( int currentIndex, int maxIndex, int startIndex )  // maxIndex s/b count if using enumerator
+        {
+            //int newIdx = DetermineNextIndex(state);
+            int newIdx = currentIndex + 1;
+
+            if (newIdx >= maxIndex)
+            {
+                newIdx = startIndex;
+            }
+
+            Debug.Log("***" + currentIndex + " < == > " + newIdx);
+
+            return newIdx;
+        }
+
+        /*
+        public int DetermineNextIndex(eAppState state)
+        {
+            int idx = (int)state;
+
+            bool shouldLoop =
+                (state == loopEndState && appMetadata.currentRound < numberOfRounds);
+
+            int newIdx = (shouldLoop) ? (int)loopStartState : ++idx;
+            appMetadata.currentRound++;
+
+            return newIdx;
+        }
+        */
+
+        public int GetPreviousIndex (int currentIndex, int maxIndex, int startIndex)  // count
+        {
+            int newIdx = currentIndex - 1 ;   // vs idx++
+
+            if (newIdx < 0 )
+            {
+                newIdx = maxIndex - 1;
+            }
+
+            return newIdx;
+        }
+
+
+        /*
         #region Next/Previous support
         public eAppState GetNextStateFor(eAppState state, eAppState theStartState = (eAppState)0  )
         {            
@@ -58,7 +103,7 @@ namespace AllNetXR
             eAppState requestedState = (eAppState)newIdx;
             return requestedState;
         }
-
+        */
         //protected void DoBetweenRoundsProcessing()
         //{
         //

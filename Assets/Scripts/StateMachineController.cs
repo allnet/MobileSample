@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using DoozyUI;
 
 
 // next activates the state controller
@@ -29,11 +30,10 @@ namespace AllNetXR
         public static StateMachineController Instance;
         public static bool IsInitialized;
 
-        public string cStateParmKey = "AppStateIndex";
-        public string cStateTriggerPrefix = "On";
-
+        private string cStateTriggerPrefix = "On";
+        
         public Animator animator;
-        public UIManagerSequential sequencer; //DH - be able to swap in additive or sequential by interface or child class
+        public LoopSequencer sequencer; //DH - be able to swap in additive or sequential by interface or child class
 
         public bool DebugMode;
         public struct FriendlyStateInfo
@@ -51,19 +51,11 @@ namespace AllNetXR
         }
         public FriendlyStateInfo friendlyStateInfo;
 
-        private int stateHash;
-        private eAppState _activeState;
-        public eAppState ActiveState { get; set; }           
-               //{
-            //get
-            //{
-            //   // return (eAppState)animator.GetInteger(stateParmKey);
-
-            //}
-        //}
-
-        [SerializeField]      
-        private eAppState requestedState, previousState;
+        private static int AppStateHash = Animator.StringToHash("AppStateIndex");
+        //private eAppState _activeState;
+        //public eAppState ActiveState { get; set; }         // return (eAppState)animator.GetInteger(stateParmKey);
+        public int activeStateIndex;
+        public eAppState startState = eAppState.State0;
 
         [System.Serializable]
         public struct StateToControllerBindings
@@ -79,7 +71,7 @@ namespace AllNetXR
         }
         [Header("Animator State to Controller Bindings")]
         public StateToControllerBindings[] bindings;
-        
+
         // ==================================================================
         void Awake()
         {
@@ -87,28 +79,52 @@ namespace AllNetXR
             // animator = GetRequiredComponent<Animator>();  // // must be hooked up in inspector
 
             friendlyStateInfo = new FriendlyStateInfo(stateName: "", duration: 0, stateIndex: 0);
-            stateHash = Animator.StringToHash(cStateParmKey);
-            
+                      
             Reset();
-            ChangeToAppState(requestedState);  // start with requested state
+
+            ChangeToAppState(startState);  // start with requested state
+        }
+
+        public void OnTestAction()
+        {
+            DoozyUI.UIManager.ShowUiElement("YourElementName"); //if you use the Uncategorized category name
+            DoozyUI.UIManager.ShowUiElement("YourElementName", "YourElementCategoryName");
+            // UIManager.ShowUiElement("YourElementName", "YourElementCategoryName", instantAction); 
+            //instantActions tells the animation to happen in zero seconds (if true) and normally (otherwise)
+
+            DoozyUI.UIManager.HideUiElement("YourElementName"); //if you use the Uncategorized category name
+            DoozyUI.UIManager.HideUiElement("YourElementName", "YourElementCategoryName");
+            //UIManager.HideUIElement("YourElementName", "YourElementCategoryName", instantAction);                                 
+                        //instantActions tells the animation to happen in zero seconds (if true) and normally (otherwise)
         }
 
         public void OnNextAction()
         {
-            ChangeToAppState(sequencer.GetNextStateFor(ActiveState));
+            int nextIndex = sequencer.GetNextIndex(activeStateIndex, (int)eAppState.Count, 0);
+
+            ChangeToAppState((eAppState)nextIndex);
         }
 
         public void OnPreviousAction()
         {
-            ChangeToAppState(sequencer.GetPreviousStateFor(ActiveState));
+            int prevIndex = sequencer.GetPreviousIndex(activeStateIndex, (int)eAppState.Count, 0);
+            ChangeToAppState ((eAppState)prevIndex); 
         }
 
-        public virtual void ChangeToAppState(eAppState appState)
+        public void ChangeToAppState(eAppState appState)
         {
+            if (appState == eAppState.Count) return;
+
             string triggerName = cStateTriggerPrefix + appState; Debug.Log(triggerName);
-            animator.SetTrigger(triggerName);
+
+            if (animator != null && animator.isActiveAndEnabled)
+            {
+                //animator.Play(stateName, 0, percentage);
+                animator.SetTrigger(triggerName);
+            }
+         
             // LaunchState(appState);
-            ActiveState = appState;
+            activeStateIndex = (int)appState;
         }
 
         public void ChangeToAppStateWith(int stateId)
