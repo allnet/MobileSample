@@ -252,18 +252,8 @@ MonoBehaviour:
   sequencer: {fileID: 114086216241723636}
   activeStateIndex: 4
   previousStateIndex: 0
+  activeController: {fileID: 0}
   startState: 0
-  bindings:
-  - appState: 0
-    stateController: {fileID: 114932957140476108}
-  - appState: 1
-    stateController: {fileID: 114608468029138634}
-  - appState: 2
-    stateController: {fileID: 114980172410583808}
-  - appState: 3
-    stateController: {fileID: 114725290073307038}
-  - appState: 4
-    stateController: {fileID: 114323201579785960}
 --- !u!114 &114608468029138634
 MonoBehaviour:
   m_ObjectHideFlags: 1

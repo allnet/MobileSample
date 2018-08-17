@@ -8,7 +8,7 @@ using DoozyUI;
 // next activates the state controller
 namespace AllNetXR
 {
-    public enum eAppState //DH
+    public enum eAppState // Essential also start of class name
     {
         State0,  //splash
         State1,
@@ -39,31 +39,108 @@ namespace AllNetXR
 
         private AnimatorStateInfoHelper stateInfoHelper;
         public int activeStateIndex, previousStateIndex;
+        public StateController activeController;
         public eAppState startState = eAppState.State0;
 
-        [System.Serializable]
-        public struct StateToControllerBindings
-        {
-            public eAppState appState;
-            public StateController stateController; //UI
+        public Dictionary<string, Transform> stateControllers = new Dictionary<string, Transform>();
 
-            public StateToControllerBindings(eAppState appState = eAppState.State0, StateController stateController = null)
+        // Static - DH - extension possibly        
+        public Transform[] GetTopLevelChildren(Transform Parent)
+        {
+            Transform[] Children = new Transform[Parent.childCount];
+            for (int ID = 0; ID < Parent.childCount; ID++)
             {
-                this.appState = appState;
-                this.stateController = stateController;
+                Children[ID] = Parent.GetChild(ID);
+            }
+            return Children;
+        }
+
+        public void SetControllersToChildren(Transform parent) //DH
+        {
+            Transform[] transforms = GetTopLevelChildren(parent);
+            foreach (Transform t in transforms)
+            {
+                stateControllers[t.gameObject.name] = t;
+                //AddOrUpdate(stateC)
+                t.gameObject.SetActive(false);
             }
         }
-        [Header("Animator State to Controller Bindings")]
-        public StateToControllerBindings[] bindings;
 
-        // ==================================================================
+        void addOrUpdate(Dictionary<int, int> dic, int key, int newValue)
+        {
+            int val;
+            if (dic.TryGetValue(key, out val))
+            {
+                // yay, value exists!
+                dic[key] = val + newValue;
+            }
+            else
+            {
+                // darn, lets add the value
+                dic.Add(key, newValue);
+            }
+        }
+
         void Awake()
         {
             Instance = this;
 
-            Reset();
+            SetControllersToChildren(this.transform); // places in Controllers
+
+            //Reset();
             ChangeToAppState(startState);  // start with requested state
         }
+        
+        #region Callback Handling
+        void OnEnable()
+        {
+            SmbEventDispatcher.OnStateEntered += HandleStateEnter;
+            SmbEventDispatcher.OnStateExited += HandleStateExit;
+        }
+
+        private void OnDisable()
+        {
+            SmbEventDispatcher.OnStateEntered -= HandleStateEnter;
+            SmbEventDispatcher.OnStateExited -= HandleStateExit;
+        }
+
+        public void HandleStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
+        {
+            stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo);
+                            // animator.SetInteger("AppStateIndex", stateInfoHelper.stateIndex);  
+            Debug.Log("STATE ENTER  =" + stateInfoHelper.stateName);
+
+            //StateController controller = bindings[stateInfoHelper.stateIndex].stateController;           
+            //controller.gameObject.SetActive(true);
+            //StateController controller = GetComponent(baseVal + stateInfoHelper.stateIndex.ToString()) as StateController;
+            Transform t = stateControllers[stateInfoHelper.stateName] as Transform;
+          
+            activeController = t.gameObject.GetComponent <StateController>();
+            //activeController.gameObject.SetActive(true);
+            activeController.Begin();
+        }
+
+        public void HandleStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
+        {
+            stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo);
+            Debug.Log("STATE EXIT =" + stateInfoHelper.stateName);
+            //StateController controller = bindings[stateInfoHelper.stateIndex].stateController;
+            //activeController.gameObject.SetActive(false);
+            //.activeController.End();
+            Transform t = stateControllers[stateInfoHelper.stateName] as Transform;
+            activeController = t.gameObject.GetComponent<StateController>();
+            //activeController.gameObject.SetActive(true);
+            activeController.End();
+
+        }
+
+        void OnGUI()
+        {
+            //Output the current Animation name and length to the screen
+            GUI.Label(new Rect(0, 0, 200, 20), "Clip Name:" + stateInfoHelper.stateName);
+            GUI.Label(new Rect(0, 30, 200, 20), "Clip Length: " + stateInfoHelper.duration);
+        }
+        #endregion
 
         public void OnNextAction()
         {
@@ -112,66 +189,62 @@ namespace AllNetXR
             ChangeToAppState((eAppState)stateId);
         }
 
-        void Reset()
-        {
-            if (StateMachineController.IsInitialized) return;
+        //void Reset()
+        //{
+        //    if (!StateMachineController.IsInitialized) return;
 
-            foreach (StateToControllerBindings binding in bindings)
-            {
-                StateController ctrl = binding.stateController;  //shortcut
-                if (ctrl == null) continue;
+        //    foreach (stateControllers con in bindings)
+        //    {
+        //        StateController ctrl = binding.stateController;  //shortcut
+        //        if (ctrl == null) continue;
 
-                ctrl.gameObject.SetActive(false);
-                if (ctrl.view != null)
-                {
-                    ctrl.view.SetActive(false);
-                }
-            }
+        //        ctrl.gameObject.SetActive(false);
+        //        if (ctrl.view != null)
+        //        {
+        //            ctrl.view.SetActive(false);
+        //        }
+        //    }
 
-            StateMachineController.IsInitialized = true;
-        }
+        //    StateMachineController.IsInitialized = true;
+        //}
 
 
-        #region Callback handling
-        void OnEnable()
-        {
-            SmbEventDispatcher.OnStateEntered += HandleStateEnter;
-            SmbEventDispatcher.OnStateExited += HandleStateExit;
-        }
+        // BINDINGS LOGIC
 
-        private void OnDisable()
-        {
-            SmbEventDispatcher.OnStateEntered -= HandleStateEnter;
-            SmbEventDispatcher.OnStateExited -= HandleStateExit;
-        }
+        //[System.Serializable]
+        //public struct StateToControllerBindings
+        //{
+        //    public eAppState appState;
+        //    public StateController stateController; //UI
 
-        // ======================================================================== State Machine Callbacks
-        public void HandleStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
-        {
-            stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo);
-            Debug.Log("STATE ENTER  =" + stateInfoHelper.stateName);
+        //    public StateToControllerBindings(eAppState appState = eAppState.State0, StateController stateController = null)
+        //    {
+        //        this.appState = appState;
+        //        this.stateController = stateController;
+        //    }
+        //}
+        //[Header("Animator State to Controller Bindings")]
+        //public StateToControllerBindings[] bindings;
 
-            animator.SetInteger("AppStateIndex", stateInfoHelper.stateIndex);
-            StateController controller = bindings[stateInfoHelper.stateIndex].stateController;
-            //controller.gameObject.SetActive(true);
-            controller.Begin();
-        }
 
-        public void HandleStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
-        {
-            //Debug.Log("STATE EXIT =" + SetFriendlyInfoFrom(stateInfo).stateName);
+        //void Reset()
+        //{
+        //    if (StateMachineController.IsInitialized) return;
 
-            StateController controller = bindings[stateInfoHelper.stateIndex].stateController;
-            //controller.gameObject.SetActive(true);
-            controller.End();
-        }
+        //    foreach (StateToControllerBindings binding in bindings)
+        //    {
+        //        StateController ctrl = binding.stateController;  //shortcut
+        //        if (ctrl == null) continue;
 
-        void OnGUI()
-        {
-            //Output the current Animation name and length to the screen
-            GUI.Label(new Rect(0, 0, 200, 20), "Clip Name:" + stateInfoHelper.stateName);
-            GUI.Label(new Rect(0, 30, 200, 20), "Clip Length: " + stateInfoHelper.duration);
-        }
-        #endregion
+        //        ctrl.gameObject.SetActive(false);
+        //        if (ctrl.view != null)
+        //        {
+        //            ctrl.view.SetActive(false);
+        //        }
+        //    }
+
+        //    StateMachineController.IsInitialized = true;
+        //}
+
     }
 }
