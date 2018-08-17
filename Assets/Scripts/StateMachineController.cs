@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using DoozyUI;
 
-
 // next activates the state controller
 namespace AllNetXR
 {
@@ -19,41 +18,23 @@ namespace AllNetXR
         Count
     }
 
-    public interface IUINavigationHandler
+    public interface IUINavigationHandler  // required from doozy ui prefab elements
     {
         void OnNextAction();
     }
 
     public class StateMachineController : MonoBehaviour, IUINavigationHandler
     {
+        private static int AppStateHash = Animator.StringToHash("AppStateIndex");
+        private static string cStateTriggerPrefix = "On";
+
+        public static bool DebugMode;
         public static Stack<eAppState> StateStack;  // LIFO stack
         public static StateMachineController Instance;
         public static bool IsInitialized;
-
-        private string cStateTriggerPrefix = "On";
-
+     
         public Animator animator;
         public LoopSequencer sequencer; //DH - be able to swap in additive or sequential by interface or child class
-
-        public bool DebugMode;
-        public struct FriendlyStateInfo
-        {
-            public string stateName;
-            public float duration;
-            public int stateIndex;
-
-            public FriendlyStateInfo(string stateName, float duration, int stateIndex)
-            {
-                this.stateName = stateName;
-                this.duration = duration;
-                this.stateIndex = stateIndex;
-            }
-        }
-        public FriendlyStateInfo friendlyStateInfo;
-
-        private static int AppStateHash = Animator.StringToHash("AppStateIndex");
-        //private eAppState _activeState;
-        //public eAppState ActiveState { get; set; }         // return (eAppState)animator.GetInteger(stateParmKey);
         public int activeStateIndex;
         public eAppState startState = eAppState.State0;
 
@@ -72,30 +53,15 @@ namespace AllNetXR
         [Header("Animator State to Controller Bindings")]
         public StateToControllerBindings[] bindings;
 
+       
         // ==================================================================
         void Awake()
         {
             Instance = this;
-            // animator = GetRequiredComponent<Animator>();  // // must be hooked up in inspector
-
-            friendlyStateInfo = new FriendlyStateInfo(stateName: "", duration: 0, stateIndex: 0);
-
+         
             Reset();
 
             ChangeToAppState(startState);  // start with requested state
-        }
-
-        public void OnTestAction()
-        {
-            DoozyUI.UIManager.ShowUiElement("YourElementName"); //if you use the Uncategorized category name
-            DoozyUI.UIManager.ShowUiElement("YourElementName", "YourElementCategoryName");
-            // UIManager.ShowUiElement("YourElementName", "YourElementCategoryName", instantAction); 
-            //instantActions tells the animation to happen in zero seconds (if true) and normally (otherwise)
-
-            DoozyUI.UIManager.HideUiElement("YourElementName"); //if you use the Uncategorized category name
-            DoozyUI.UIManager.HideUiElement("YourElementName", "YourElementCategoryName");
-            //UIManager.HideUIElement("YourElementName", "YourElementCategoryName", instantAction);                                 
-            //instantActions tells the animation to happen in zero seconds (if true) and normally (otherwise)
         }
 
         public void OnNextAction()
@@ -133,7 +99,6 @@ namespace AllNetXR
             //DoozyUI.UIManager.ShowUiElement("2"); //if you use the Uncategorized category name
             DoozyUI.UIManager.ShowUiElement("2", "Example 3 - Buttons");
             DoozyUI.UIManager.HideUiElement("1", "Example 3 - Buttons");
-
         }
 
         public void ChangeToAppStateWith(int stateId)
@@ -160,6 +125,8 @@ namespace AllNetXR
             StateMachineController.IsInitialized = true;
         }
 
+
+        #region Callback handling
         void OnEnable()
         {
             SmbEventDispatcher.OnStateEntered += HandleStateEnter;
@@ -173,45 +140,27 @@ namespace AllNetXR
         }
 
         // ======================================================================== State Machine Callbacks
-        public void HandleStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+        public void HandleStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
         {
-            SetFriendlyInfoFrom(stateInfo); Debug.Log("STATE ENTER  =" + friendlyStateInfo.stateName);
+            EasyStateInfo easyStateInfo = new StateInfoHelper().GetFriendlyStateInfo(animatorStateInfo);
+            //StateInfo stateInfo = stateInfoHelper.GetFriendlyStateInfo(stateInfo); 
+            Debug.Log("STATE ENTER  =" + stateInfo.stateName);
 
-            animator.SetInteger("AppStateIndex", friendlyStateInfo.stateIndex);
-
-            StateController controller = bindings[friendlyStateInfo.stateIndex].stateController;
+            animator.SetInteger("AppStateIndex", stateInfo.stateIndex);
+            StateController controller = bindings[stateInfo.stateIndex].stateController;
             //controller.gameObject.SetActive(true);
             controller.Begin();
         }
 
-        public void HandleStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+        public void HandleStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
         {
-
-            Debug.Log("STATE EXIT =" + SetFriendlyInfoFrom(stateInfo).stateName);
+            //Debug.Log("STATE EXIT =" + SetFriendlyInfoFrom(stateInfo).stateName);
             //Reset();  // turn off old state controller
 
             //controller.gameObject.SetActive(false);
-            StateController controller = bindings[friendlyStateInfo.stateIndex].stateController;
             // StateController controller = bindings[(int)previousState].stateController;
+            StateController controller = bindings[friendlyStateInfo.stateIndex].stateController;          
             controller.End();
-        }
-
-        protected FriendlyStateInfo SetFriendlyInfoFrom(AnimatorStateInfo stateInfo)  // clip name 
-        {
-            friendlyStateInfo.duration = stateInfo.length;
-
-            foreach (eAppState enumVal in Enum.GetValues(typeof(eAppState)))
-            {
-                friendlyStateInfo.stateName = (enumVal.ToString() == "Count") ? "< State Mismatch >" : enumVal.ToString();
-                //Debug.Log("search val = " + searchVal);
-                if (stateInfo.IsName(friendlyStateInfo.stateName))
-                {
-                    friendlyStateInfo.stateIndex = (int)enumVal;
-                    break;
-                }
-            }
-
-            return friendlyStateInfo;
         }
 
         void OnGUI()
@@ -220,5 +169,6 @@ namespace AllNetXR
             GUI.Label(new Rect(0, 0, 200, 20), "Clip Name:" + friendlyStateInfo.stateName);
             GUI.Label(new Rect(0, 30, 200, 20), "Clip Length: " + friendlyStateInfo.duration);
         }
+        #endregion
     }
 }
