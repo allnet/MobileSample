@@ -74,7 +74,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1748730826544978
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,8 +250,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 95545861119394290}
   sequencer: {fileID: 114086216241723636}
-  DebugMode: 0
-  activeStateIndex: 0
+  activeStateIndex: 4
+  previousStateIndex: 0
   startState: 0
   bindings:
   - appState: 0
