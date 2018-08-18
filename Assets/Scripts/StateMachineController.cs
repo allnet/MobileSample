@@ -4,6 +4,7 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using DoozyUI;
+using System.Linq;
 
 // next activates the state controller
 namespace AllNetXR
@@ -36,16 +37,16 @@ namespace AllNetXR
 
         public Animator animator;
         public LoopSequencer sequencer; //DH - be able to swap in additive or sequential by interface or child class
-
         private AnimatorStateInfoHelper stateInfoHelper;
-        public int activeStateIndex, previousStateIndex;
+        private string[] stateKeys;
+        public string activeStateName, previousStateName;
+        public string startState;
         public StateController activeController;
-        public eAppState startState = eAppState.State0;
 
         public Dictionary<string, Transform> stateControllers = new Dictionary<string, Transform>();
 
         // Static - DH - extension possibly        
-        public Transform[] GetTopLevelChildren(Transform Parent)
+        private Transform[] GetTopLevelChildren(Transform Parent)
         {
             Transform[] Children = new Transform[Parent.childCount];
             for (int ID = 0; ID < Parent.childCount; ID++)
@@ -55,7 +56,7 @@ namespace AllNetXR
             return Children;
         }
 
-        public void SetControllersToChildren(Transform parent) //DH
+        private void SetControllersToChildren(Transform parent) //DH
         {
             Transform[] transforms = GetTopLevelChildren(parent);
             foreach (Transform t in transforms)
@@ -64,21 +65,13 @@ namespace AllNetXR
                 //AddOrUpdate(stateC)
                 t.gameObject.SetActive(false);
             }
+            SetStateControllerSpecifics();
         }
 
-        void addOrUpdate(Dictionary<int, int> dic, int key, int newValue)
+        private void SetStateControllerSpecifics()
         {
-            int val;
-            if (dic.TryGetValue(key, out val))
-            {
-                // yay, value exists!
-                dic[key] = val + newValue;
-            }
-            else
-            {
-                // darn, lets add the value
-                dic.Add(key, newValue);
-            }
+            stateKeys = new string[stateControllers.Count];
+            stateControllers.Keys.CopyTo(stateKeys, 0);
         }
 
         void Awake()
@@ -86,11 +79,14 @@ namespace AllNetXR
             Instance = this;
 
             SetControllersToChildren(this.transform); // places in Controllers
-
-            //Reset();
-            ChangeToAppState(startState);  // start with requested state
+            startState = stateControllers.Keys.First();  // get first child controller
         }
-        
+
+        void Start()
+        {
+            ChangeToAppState(startState);
+        }
+
         #region Callback Handling
         void OnEnable()
         {
@@ -104,147 +100,109 @@ namespace AllNetXR
             SmbEventDispatcher.OnStateExited -= HandleStateExit;
         }
 
-        public void HandleStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
+        private bool TryToSetActiveController(AnimatorStateInfo animatorStateInfo)
         {
             stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo);
-                            // animator.SetInteger("AppStateIndex", stateInfoHelper.stateIndex);  
-            Debug.Log("STATE ENTER  =" + stateInfoHelper.stateName);
+            if (!stateControllers.ContainsKey(key: stateInfoHelper.stateName))
+            {
+                Debug.Log("< INVALID: State and GameObject name mismatch >");
+                return false;
+            }
 
-            //StateController controller = bindings[stateInfoHelper.stateIndex].stateController;           
-            //controller.gameObject.SetActive(true);
-            //StateController controller = GetComponent(baseVal + stateInfoHelper.stateIndex.ToString()) as StateController;
             Transform t = stateControllers[stateInfoHelper.stateName] as Transform;
-          
-            activeController = t.gameObject.GetComponent <StateController>();
-            //activeController.gameObject.SetActive(true);
+            activeController = t.gameObject.GetComponent<StateController>();
+
+            return true;
+        }
+        public void HandleStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
+        {
+            if (!TryToSetActiveController(animatorStateInfo)) return;
+            
+            Debug.Log("STATE ENTER  =" + stateInfoHelper.stateName);
             activeController.Begin();
         }
 
         public void HandleStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
         {
-            stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo);
-            Debug.Log("STATE EXIT =" + stateInfoHelper.stateName);
-            //StateController controller = bindings[stateInfoHelper.stateIndex].stateController;
-            //activeController.gameObject.SetActive(false);
-            //.activeController.End();
-            Transform t = stateControllers[stateInfoHelper.stateName] as Transform;
-            activeController = t.gameObject.GetComponent<StateController>();
-            //activeController.gameObject.SetActive(true);
-            activeController.End();
+            if (!TryToSetActiveController(animatorStateInfo)) return;
 
+            Debug.Log("STATE EXIT =" + stateInfoHelper.stateName);
+            activeController.End();         
         }
 
         void OnGUI()
         {
             //Output the current Animation name and length to the screen
-            GUI.Label(new Rect(0, 0, 200, 20), "Clip Name:" + stateInfoHelper.stateName);
-            GUI.Label(new Rect(0, 30, 200, 20), "Clip Length: " + stateInfoHelper.duration);
+            if (stateInfoHelper != null)
+            {
+                GUI.Label(new Rect(0, 0, 200, 20), "Clip Name:" + stateInfoHelper.stateName);
+                GUI.Label(new Rect(0, 30, 200, 20), "Clip Length: " + stateInfoHelper.duration);
+            }
         }
         #endregion
 
+        public int GetCurrentIndex()
+        {
+            return Array.FindIndex(stateKeys, s => s == activeStateName);
+        }
+
         public void OnNextAction()
         {
-            int nextIndex = sequencer.GetNextIndex(activeStateIndex, (int)eAppState.Count, 0);
-            ChangeToAppState((eAppState)nextIndex);
+            int nextIndex = sequencer.GetNextIndex(GetCurrentIndex(), stateKeys.Length, 0);
+            ChangeToAppState(stateKeys[nextIndex]);
         }
 
         public void OnPreviousAction()
         {
-            int prevIndex = sequencer.GetPreviousIndex(activeStateIndex, (int)eAppState.Count, 0);
-            ChangeToAppState((eAppState)prevIndex);
+            int previousIndex = sequencer.GetPreviousIndex(GetCurrentIndex(), stateKeys.Length, 0);
+            ChangeToAppState(stateKeys[previousIndex]);
         }
 
-        public void ChangeToAppState(eAppState appState, int direction = 1)  // -1 for reverse
+        public void ChangeToAppState(string aRequestedState, int direction = 1)  // -1 for reverse
         {
-            previousStateIndex = (stateInfoHelper != null) ? stateInfoHelper.stateIndex : (int)eAppState.State0;
+            if (!stateControllers.ContainsKey(key: aRequestedState))
+            {
+                Debug.Log("< INVALID: State and GameObject name mismatch >");
+                return;
+            }
 
-            if (appState == eAppState.Count) return;
-
-            string triggerName = cStateTriggerPrefix + appState; Debug.Log(triggerName);
-
+            string triggerName = cStateTriggerPrefix + aRequestedState; Debug.Log(triggerName);
             if (animator != null && animator.isActiveAndEnabled)
             {
-                //animator.Play(stateName, 0, percentage);
-                PerformUIUpdates(appState, direction);
+                //animator.Play(stateName, 0, percentage);             
                 animator.SetTrigger(triggerName);
-                previousStateIndex = activeStateIndex;
-                activeStateIndex = (int)appState;
             }
+
+            previousStateName = activeStateName;
+            activeStateName = aRequestedState;
+
+            //NOTE: uncomment this for automatic progression without state controllers
+            //PerformUIUpdates(activeStateName, direction); // one approach otherwise state controlelrs
         }
 
-        public void PerformUIUpdates(eAppState appStateRequested, int direction = 1) // -1 is reverse
+        public void PerformUIUpdates(string requestedStateName, int direction = 1) // -1 is reverse
         {
-            string showElementForState = ((int)appStateRequested).ToString();
-            DoozyUI.UIManager.ShowUiElement(showElementForState, Category);
+            DoozyUI.UIManager.ShowUiElement(requestedStateName, Category);
 
-            if (previousStateIndex != (int)appStateRequested)
+            if (previousStateName != requestedStateName)
             {
-                string hideElementForState = ((int)previousStateIndex).ToString();
-                DoozyUI.UIManager.HideUiElement(hideElementForState, Category);
+                DoozyUI.UIManager.HideUiElement(previousStateName, Category);
             }
         }
 
-        public void ChangeToAppStateWith(int stateId)
-        {
-            ChangeToAppState((eAppState)stateId);
-        }
-
-        //void Reset()
+        //void addOrUpdate(Dictionary<int, int> dic, int key, int newValue)
         //{
-        //    if (!StateMachineController.IsInitialized) return;
-
-        //    foreach (stateControllers con in bindings)
+        //    int val;
+        //    if (dic.TryGetValue(key, out val))
         //    {
-        //        StateController ctrl = binding.stateController;  //shortcut
-        //        if (ctrl == null) continue;
-
-        //        ctrl.gameObject.SetActive(false);
-        //        if (ctrl.view != null)
-        //        {
-        //            ctrl.view.SetActive(false);
-        //        }
+        //        // yay, value exists!
+        //        dic[key] = val + newValue;
         //    }
-
-        //    StateMachineController.IsInitialized = true;
-        //}
-
-
-        // BINDINGS LOGIC
-
-        //[System.Serializable]
-        //public struct StateToControllerBindings
-        //{
-        //    public eAppState appState;
-        //    public StateController stateController; //UI
-
-        //    public StateToControllerBindings(eAppState appState = eAppState.State0, StateController stateController = null)
+        //    else
         //    {
-        //        this.appState = appState;
-        //        this.stateController = stateController;
+        //        // darn, lets add the value
+        //        dic.Add(key, newValue);
         //    }
         //}
-        //[Header("Animator State to Controller Bindings")]
-        //public StateToControllerBindings[] bindings;
-
-
-        //void Reset()
-        //{
-        //    if (StateMachineController.IsInitialized) return;
-
-        //    foreach (StateToControllerBindings binding in bindings)
-        //    {
-        //        StateController ctrl = binding.stateController;  //shortcut
-        //        if (ctrl == null) continue;
-
-        //        ctrl.gameObject.SetActive(false);
-        //        if (ctrl.view != null)
-        //        {
-        //            ctrl.view.SetActive(false);
-        //        }
-        //    }
-
-        //    StateMachineController.IsInitialized = true;
-        //}
-
     }
 }

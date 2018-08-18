@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DoozyUI;
 
 namespace AllNetXR
 {
@@ -14,7 +15,9 @@ namespace AllNetXR
         // ready
 
         public bool isReady;
-        public GameObject view;
+        public bool shouldControlUI = true;  // allows for parameter navigation
+        //public GameObject view;
+        public UIElement uiElement;
 
         // == no standard game loop methods
         private void Awake()
@@ -22,33 +25,54 @@ namespace AllNetXR
             isReady = false;
         }
 
-        private void OnEnable()
+        private void OnEnableState()
         {
-            
+
         }
 
-        private void OnDisable()
+        private void OnDisableState()
         {
-           
+
         }
 
-        public void Begin()
+        public virtual void Begin()
         {
             //if (isReady) return;  // already turned on 
 
             Debug.Log("BEGIN --");
-            gameObject.SetActive(true);
+            this.gameObject.SetActive(true);
             isReady = false;
-            //if (view != null) view.SetActive(true);  //s/b opening  if animatable                  
+            //if (view != null) view.SetActive(true);  //s/b opening  if animatable 
+
+            if (shouldControlUI) ShowElement();   // 
         }
 
-        public void End()
+        private void ShowElement()
+        {
+            if (uiElement != null && uiElement.GetType() == typeof(UIElement))
+            {
+                uiElement.Show(true); //instant action
+            }
+        }
+
+        public virtual void End()
         {
             Debug.Log("END --");
-            gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
             isReady = false;
-            //if (view != null) view.SetActive(false);  //s/b closing animation if animatable
+            //if (view != null) view.SetActive(false);  //s/b closing animation if animatable 
+
+            if (shouldControlUI) HideElement(); //DH
         }
+
+        private void HideElement()
+        {
+            if (uiElement != null && uiElement.GetType() == typeof(UIElement))
+            {
+                uiElement.Hide(true, false); //instant action
+            }
+        }
+
 
         public virtual void DoReady()
         {

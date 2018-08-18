@@ -34,12 +34,12 @@ MonoBehaviour:
     - categoryName: Example 3 - Buttons
       itemNames:
       - ~Element Name~
-      - 0
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
+      - State0
+      - State1
+      - State2
+      - State3
+      - State4
+      - State5
       isExpanded:
         m_Target: 1
         speed: 2

@@ -9,13 +9,11 @@ namespace AllNetXR
         public new void Begin()  // or override member hiding 
         {
             base.Begin();
-
         }
 
         public new void End()
         {
             base.End();
-
         }
     }
 }
