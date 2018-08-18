@@ -51,7 +51,7 @@ namespace AllNetXR
         {
             if (uiElement != null && uiElement.GetType() == typeof(UIElement))
             {
-                uiElement.Show(true); //instant action
+                uiElement.Show(false); //instant action
             }
         }
 
@@ -69,7 +69,7 @@ namespace AllNetXR
         {
             if (uiElement != null && uiElement.GetType() == typeof(UIElement))
             {
-                uiElement.Hide(true, false); //instant action
+                uiElement.Hide(false, false); //instant action
             }
         }
 
