@@ -11,6 +11,7 @@ namespace AllNetXR
         protected bool DebugMode;
         protected LoopSequencer sequencer;
         protected float EnterTime;
+        //public UIElement uiElement;
 
         protected virtual void Awake()
         {

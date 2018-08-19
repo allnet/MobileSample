@@ -11,29 +11,49 @@ namespace AllNetXR
 
         public string stateName;
         public int stateIndex;
-        public float duration;
+        public float stateDuration;
+        public int stateLayer;
 
-        public AnimatorStateInfoHelper(AnimatorStateInfo animatorStateInfo)  // constru
+        public AnimatorStateInfoHelper(AnimatorStateInfo animatorStateInfo, string[] stateNames = null)  // constru
         {
-            ParseStateInfo(animatorStateInfo);
+            ParseStateInfo(animatorStateInfo, stateNames);
         }
 
-        public void ParseStateInfo(AnimatorStateInfo animatorStateInfo)
+        public void ParseStateInfo(AnimatorStateInfo animatorStateInfo, string[] stateNames = null )  // enum based
         {
-            duration = animatorStateInfo.length;
-
-            foreach (eAppState enumVal in Enum.GetValues(typeof(eAppState)))
+            if (stateNames == null) return;  // return from uncharted waters         
+            
+            int i = -1;
+            foreach (string val in stateNames)
             {
-                stateName = (enumVal.ToString() == EnumEndString) ? "< State Mismatch >" : enumVal.ToString();
-
+                i++;
                 //Debug.Log("search val = " + searchVal);
-                if (animatorStateInfo.IsName(stateName))  // only way att
+                if (animatorStateInfo.IsName(val))  // only way att
                 {
-                    stateIndex = (int)enumVal;
+                    this.stateName = val;
+                    this.stateIndex = i;
                     break;
                 }
             }
+            this.stateDuration = animatorStateInfo.length;
         }
+
+        //public void ParseStateInfo(AnimatorStateInfo animatorStateInfo)  // enum based
+        //{
+        //    duration = animatorStateInfo.length;
+
+        //    foreach (eAppState enumVal in Enum.GetValues(typeof(eAppState)))
+        //    {
+        //        stateName = (enumVal.ToString() == EnumEndString) ? "< State Mismatch >" : enumVal.ToString();
+
+        //        //Debug.Log("search val = " + searchVal);
+        //        if (animatorStateInfo.IsName(stateName))  // only way att
+        //        {
+        //            stateIndex = (int)enumVal;
+        //            break;
+        //        }
+        //    }
+        //}
 
     }
 }

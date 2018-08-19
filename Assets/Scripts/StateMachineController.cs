@@ -39,6 +39,7 @@ namespace AllNetXR
         public LoopSequencer sequencer; //DH - be able to swap in additive or sequential by interface or child class
         private AnimatorStateInfoHelper stateInfoHelper;
         private string[] stateKeys;
+        private List<string> sequenceableKeys;
         public string activeStateName, previousStateName;
         public string startState;
         public StateController activeController;
@@ -58,12 +59,17 @@ namespace AllNetXR
 
         private void SetControllersToChildren(Transform parent) //DH
         {
+            sequenceableKeys = new List<string>();
             Transform[] transforms = GetTopLevelChildren(parent);
+
             foreach (Transform t in transforms)
             {
                 stateControllers[t.gameObject.name] = t;
-                //AddOrUpdate(stateC)
                 t.gameObject.SetActive(false);
+
+                if (t.gameObject.CompareTag("Sequenceable")) {
+                    sequenceableKeys.Add(t.gameObject.name);
+                }
             }
             SetStateControllerSpecifics();
         }
@@ -100,12 +106,30 @@ namespace AllNetXR
             SmbEventDispatcher.OnStateExited -= HandleStateExit;
         }
 
+         public void HandleStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
+        {            
+            if (!TryToSetActiveController(animatorStateInfo)) return;
+
+            Debug.Log("STATE ENTER  =" + stateInfoHelper.stateName);
+            activeController.Begin();
+        }
+
+        public void HandleStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
+        {          
+            if (!TryToSetActiveController(animatorStateInfo)) return;
+
+            Debug.Log("STATE EXIT =" + stateInfoHelper.stateName);
+            activeController.End();         
+        }
+
         private bool TryToSetActiveController(AnimatorStateInfo animatorStateInfo)
         {
-            stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo);
+            stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo, stateKeys);
+            if (stateInfoHelper.stateName == null) return false;
+
             if (!stateControllers.ContainsKey(key: stateInfoHelper.stateName))
             {
-                Debug.Log("< INVALID: State and GameObject name mismatch > " + stateInfoHelper.stateName);
+                Debug.Log("< INVALID: State & GameObject name mismatch > " + stateInfoHelper.stateName);
                 return false;
             }
 
@@ -113,31 +137,6 @@ namespace AllNetXR
             activeController = t.gameObject.GetComponent<StateController>();
 
             return true;
-        }
-        public void HandleStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
-        {
-            if (!TryToSetActiveController(animatorStateInfo)) return;
-            
-            Debug.Log("STATE ENTER  =" + stateInfoHelper.stateName);
-            activeController.Begin();
-        }
-
-        public void HandleStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
-        {
-            if (!TryToSetActiveController(animatorStateInfo)) return;
-
-            Debug.Log("STATE EXIT =" + stateInfoHelper.stateName);
-            activeController.End();         
-        }
-
-        void OnGUI()
-        {
-            //Output the current Animation name and length to the screen
-            if (stateInfoHelper != null)
-            {
-                GUI.Label(new Rect(0, 0, 200, 20), "Clip Name:" + stateInfoHelper.stateName);
-                GUI.Label(new Rect(0, 30, 200, 20), "Clip Length: " + stateInfoHelper.duration);
-            }
         }
         #endregion
 
@@ -148,14 +147,21 @@ namespace AllNetXR
 
         public void OnNextAction()
         {
-            int nextIndex = sequencer.GetNextIndex(GetCurrentIndex(), stateKeys.Length, 0);
+            if (stateKeys == null) return;
+
+            //int nextIndex = sequencer.GetNextIndex(GetCurrentIndex(), stateKeys.Length, 0);
+
+            int nextIndex = sequencer.GetNextIndex(GetCurrentIndex(), 0, sequenceableKeys.Count - 1);
             ChangeToAppState(stateKeys[nextIndex]);
         }
 
         public void OnPreviousAction()
         {
-            int previousIndex = sequencer.GetPreviousIndex(GetCurrentIndex(), stateKeys.Length, 0);
-            ChangeToAppState(stateKeys[previousIndex]);
+            if (stateKeys == null) return;
+
+            //int previousIndex = sequencer.GetPreviousIndex(GetCurrentIndex(), stateKeys.Length, 0);
+            int previousIndex = sequencer.GetPreviousIndex(GetCurrentIndex(), 0, sequenceableKeys.Count - 1);
+            ChangeToAppState(stateKeys[previousIndex], -1);
         }
 
         public void ChangeToAppState(string aRequestedState, int direction = 1)  // -1 for reverse
@@ -187,6 +193,16 @@ namespace AllNetXR
             if (previousStateName != requestedStateName)
             {
                 DoozyUI.UIManager.HideUiElement(previousStateName, Category);
+            }
+        }
+
+        void OnGUI()
+        {
+            //Output the current Animation name and length to the screen
+            if (stateInfoHelper != null)
+            {
+                GUI.Label(new Rect(0, 0, 200, 20), "Clip Name:" + stateInfoHelper.stateName);
+                GUI.Label(new Rect(0, 30, 200, 20), "Clip Length: " + stateInfoHelper.stateDuration);
             }
         }
 

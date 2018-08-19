@@ -6,17 +6,17 @@ using Talespin;
 
 namespace AllNetXR
 {
+
     public class LoopSequencer : MonoBehaviour  //, IUIAnimatableSingle
     {
-       // public static LoopSequencer Instance;
         public int numberOfRounds;
+        //public static LoopSequencer Instance;
         //private eAppState newStartState;
         //public eAppState loopStartState, loopEndState; // DH -
         //private AppMetadata appMetadata; // helper
 
-
         #region Next/Previous support
-        public int GetNextIndex( int currentIndex, int maxIndex, int startIndex )  // maxIndex s/b count if using enumerator
+        public int GetNextIndex(int currentIndex, int startIndex, int maxIndex = 0)  // maxIndex s/b count if using enumerator
         {
             //int newIdx = DetermineNextIndex(state);
             int newIdx = currentIndex + 1;
@@ -30,12 +30,25 @@ namespace AllNetXR
 
             return newIdx;
         }
+           
+        public int GetPreviousIndex(int currentIndex, int startIndex,  int maxIndex = 0)  // count
+        {
+            int newIdx = currentIndex - 1;   // vs idx++
+
+            if (newIdx < 0)
+            {
+                newIdx = maxIndex - 1;
+            }
+
+            return newIdx;
+        }
 
         /*
+        #region Next/Previous support
+        
         public int DetermineNextIndex(eAppState state)
         {
             int idx = (int)state;
-
             bool shouldLoop =
                 (state == loopEndState && appMetadata.currentRound < numberOfRounds);
 
@@ -44,23 +57,7 @@ namespace AllNetXR
 
             return newIdx;
         }
-        */
-
-        public int GetPreviousIndex (int currentIndex, int maxIndex, int startIndex)  // count
-        {
-            int newIdx = currentIndex - 1 ;   // vs idx++
-
-            if (newIdx < 0 )
-            {
-                newIdx = maxIndex - 1;
-            }
-
-            return newIdx;
-        }
-
-
-        /*
-        #region Next/Previous support
+    
         public eAppState GetNextStateFor(eAppState state, eAppState theStartState = (eAppState)0  )
         {            
             //int newIdx = DetermineNextIndex(state);
