@@ -34,12 +34,15 @@ MonoBehaviour:
     - categoryName: Example 3 - Buttons
       itemNames:
       - ~Element Name~
+      - EnterCredentials
+      - Register
       - State0
       - State1
       - State2
       - State3
       - State4
       - State5
+      - WelcomeBack
       isExpanded:
         m_Target: 1
         speed: 2

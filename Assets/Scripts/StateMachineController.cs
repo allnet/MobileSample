@@ -105,7 +105,7 @@ namespace AllNetXR
             stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo);
             if (!stateControllers.ContainsKey(key: stateInfoHelper.stateName))
             {
-                Debug.Log("< INVALID: State and GameObject name mismatch >");
+                Debug.Log("< INVALID: State and GameObject name mismatch > " + stateInfoHelper.stateName);
                 return false;
             }
 
