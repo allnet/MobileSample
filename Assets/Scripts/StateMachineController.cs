@@ -26,7 +26,7 @@ namespace AllNetXR
 
     public class StateMachineController : MonoBehaviour, IUINavigationHandler
     {
-        private static int AppStateHash = Animator.StringToHash("AppStateIndex");
+        private static int StateLevelHash = Animator.StringToHash("AppStateLevel");
         private static string cStateTriggerPrefix = "On";
 
         public static String Category = "Example 3 - Buttons";
@@ -108,23 +108,25 @@ namespace AllNetXR
 
          public void HandleStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
         {            
-            if (!TryToSetActiveController(animatorStateInfo)) return;
+            if (!TryToSetActiveController(animatorStateInfo, layerIndex)) return;
 
             Debug.Log("STATE ENTER  =" + stateInfoHelper.stateName);
+            animator.SetInteger("AppStateLevel", stateInfoHelper.layerIndex);
             activeController.Begin();
         }
 
         public void HandleStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
         {          
-            if (!TryToSetActiveController(animatorStateInfo)) return;
+            if (!TryToSetActiveController(animatorStateInfo, layerIndex)) return;
 
             Debug.Log("STATE EXIT =" + stateInfoHelper.stateName);
+            animator.SetInteger("AppStateLevel", stateInfoHelper.layerIndex);
             activeController.End();         
         }
 
-        private bool TryToSetActiveController(AnimatorStateInfo animatorStateInfo)
+        private bool TryToSetActiveController(AnimatorStateInfo animatorStateInfo, int layerIndex)
         {
-            stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo, stateKeys);
+            stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo, layerIndex, stateKeys);
             if (stateInfoHelper.stateName == null) return false;
 
             if (!stateControllers.ContainsKey(key: stateInfoHelper.stateName))
@@ -149,8 +151,6 @@ namespace AllNetXR
         {
             if (stateKeys == null) return;
 
-            //int nextIndex = sequencer.GetNextIndex(GetCurrentIndex(), stateKeys.Length, 0);
-
             int nextIndex = sequencer.GetNextIndex(GetCurrentIndex(), 0, sequenceableKeys.Count - 1);
             ChangeToAppState(stateKeys[nextIndex]);
         }
@@ -159,7 +159,6 @@ namespace AllNetXR
         {
             if (stateKeys == null) return;
 
-            //int previousIndex = sequencer.GetPreviousIndex(GetCurrentIndex(), stateKeys.Length, 0);
             int previousIndex = sequencer.GetPreviousIndex(GetCurrentIndex(), 0, sequenceableKeys.Count - 1);
             ChangeToAppState(stateKeys[previousIndex], -1);
         }
@@ -176,7 +175,7 @@ namespace AllNetXR
             if (animator != null && animator.isActiveAndEnabled)
             {
                 //animator.Play(stateName, 0, percentage);             
-                animator.SetTrigger(triggerName);
+                animator.SetTrigger(triggerName);             
             }
 
             previousStateName = activeStateName;
@@ -206,19 +205,5 @@ namespace AllNetXR
             }
         }
 
-        //void addOrUpdate(Dictionary<int, int> dic, int key, int newValue)
-        //{
-        //    int val;
-        //    if (dic.TryGetValue(key, out val))
-        //    {
-        //        // yay, value exists!
-        //        dic[key] = val + newValue;
-        //    }
-        //    else
-        //    {
-        //        // darn, lets add the value
-        //        dic.Add(key, newValue);
-        //    }
-        //}
     }
 }

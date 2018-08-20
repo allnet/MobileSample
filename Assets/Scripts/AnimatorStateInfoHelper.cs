@@ -10,12 +10,12 @@ namespace AllNetXR
         private static readonly string EnumEndString = "Count";
 
         public string stateName;
-        public int stateIndex;
         public float stateDuration;
-        public int stateLayer;
+        public int layerIndex;  // int for layer in FSM
 
-        public AnimatorStateInfoHelper(AnimatorStateInfo animatorStateInfo, string[] stateNames = null)  // constru
+        public AnimatorStateInfoHelper(AnimatorStateInfo animatorStateInfo, int layerIndex, string[] stateNames = null)  // constru
         {
+            this.layerIndex = layerIndex;  // only 1 at present
             ParseStateInfo(animatorStateInfo, stateNames);
         }
 
@@ -31,7 +31,6 @@ namespace AllNetXR
                 if (animatorStateInfo.IsName(val))  // only way att
                 {
                     this.stateName = val;
-                    this.stateIndex = i;
                     break;
                 }
             }
