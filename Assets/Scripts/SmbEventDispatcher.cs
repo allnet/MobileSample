@@ -16,6 +16,7 @@ namespace AllNetXR
         {
             base.OnStateEnter(animator, stateInfo, layerIndex);
 
+            //AnimatorStateInfo baseStateInfo = animator.GetCurrentAnimatorStateInfo(layerIndex);  //Might need to activate
             if (OnStateEntered != null)  //does not see listeners
             {
                 OnStateEntered(animator, stateInfo, layerIndex);

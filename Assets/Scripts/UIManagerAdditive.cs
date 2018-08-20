@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DoozyUI;
 
 namespace AllNetXR
 {
@@ -15,129 +16,123 @@ namespace AllNetXR
 
     public class UIManagerAdditive : MonoBehaviour
     {
-      /*
-       *public static UIManagerAdditive Instance;
-        public static string RequestParmSuffix;
-        public static string ActiveParmSuffix;
-        public bool DebugMode = true;
-        public List<UIViewControllerAdditive> UIAdditions;
-        public List<bool> IsAdditiveUIShowing;
+        public static string Category = "Example 4 - Simple UI";
+        public static UIManagerAdditive Instance;
+        public static bool DebugMode = true;
+        public Animator stateMachineController;
+        private AnimatorStateInfoHelper stateInfoHelper;            
+        public List<UIElement> uiElements;
+        public bool IsBusy; // something is showing that is not dismissable
 
-        private Animator UIStateMachine;
-        private eUIStateAdditive LatestAdditiveState;
-        private UIViewControllerAdditive LatestAdditiveVC;
-        private int LatestAdditiveVCIdx;
+        private Dictionary<string, bool> isShowingDict = new Dictionary<string, bool>();
 
         // Use this for initialization
         private void Awake()
         {
             Instance = this;
-            RequestParmSuffix = "Request";
-            ActiveParmSuffix = "Active";
         }
 
         public void Reset()
         {
-            IsAdditiveUIShowing = new List<bool>();
-            
-            foreach (UIViewControllerAdditive UIState in UIAdditions)
+            // IsAdditiveUIShowing = new List<bool>();
+            foreach (UIElement uiElement in uiElements)
             {
-                if (UIState == null) continue;
-                UIState.View.gameObject.SetActive(false);
-                UIState.gameObject.SetActive(false);
-                IsAdditiveUIShowing.Add(false);              
+                isShowingDict[uiElement.gameObject.name] = false;
+                uiElement.gameObject.SetActive(false);
             }
-            
         }
 
         public void Start()
         {
             Reset();
-            UIStateMachine = GameManager.Instance.UISystemManager.UIStateMachine;
-         }
+            //UIStateMachine = StateMachineController.Instance; 
+        }
 
-    #region mecanim interface requirements - IAnimatableUI
-
-    public bool ShowViewForState(eUIStateAdditive aState)
+        #region
+        void OnEnable()  // Same trigger principal - trigger names start with "On"
         {
-            if (aState == eUIStateAdditive.None)
+            SmbEventDispatcher.OnStateEntered += HandleStateEnter;
+            SmbEventDispatcher.OnStateExited += HandleStateExit;
+        }
+
+        private void OnDisable()
+        {
+            SmbEventDispatcher.OnStateEntered -= HandleStateEnter;
+            SmbEventDispatcher.OnStateExited -= HandleStateExit;
+        }
+
+        public void HandleStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
+        {
+            stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo, layerIndex);
+            if (stateInfoHelper.stateName == null) return;         
+
+            Debug.Log("STATE ENTER  =" + stateInfoHelper.stateName);
+            ShowViewFor(stateInfoHelper.stateName);
+        }
+
+        public void HandleStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
+        {
+            stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo, layerIndex);
+            if (stateInfoHelper.stateName == null) return;
+
+            Debug.Log("STATE EXIT =" + stateInfoHelper.stateName);
+            HideViewFor(stateInfoHelper.stateName);
+        }
+
+        public bool ShowViewFor(string stateName)  // returns error if invalid
+        {
+            if (stateName == "None")
             {
-                HandleNoneRequest();
+               Reset();  // clear everything
                 return false;
             }
 
-            if (IsAdditiveUIShowing[(int)aState])
+            if (isShowingDict[stateName] == false) // already on
             {
-                return false;
+                DoozyUI.UIManager.ShowUiElement(stateName, Category);
+
             }
 
-            UIViewControllerAdditive vc = (UIViewControllerAdditive)UIAdditions[(int)aState];
+            isShowingDict[stateName] = true;
 
-            if (!vc.ShouldShow())
-            {
-                return false;
-            }
+            return isShowingDict[stateName];
+        }
 
-            UIStateMachine.SetBool(aState.ToString() + "Request", true);
+        public bool HideViewFor(string stateName)
+        {
+            if (stateName == "None")
+                {
+                    Reset();
+                    return false;
+                }
 
-            LatestAdditiveVC = vc;
-            LatestAdditiveVC.gameObject.SetActive(true);
-            LatestAdditiveVC.View.gameObject.SetActive(true);
+            DoozyUI.UIManager.HideUiElement(stateName, Category);
 
-            IsAdditiveUIShowing[(int)aState] = true;
             return true;
         }
 
-        public bool HideViewForState(eUIStateAdditive aState)
-        {
-            if (aState == eUIStateAdditive.None)
-            {
-                return false;
-            }
-
-            LatestAdditiveVC = (UIViewControllerAdditive)UIAdditions[(int)aState];
-            if (LatestAdditiveVC.CanDismiss) // note: this can also be IsValid
-            {
-                UIStateMachine.SetBool(aState.ToString() + RequestParmSuffix, false);  // trigger close if 
-                return true;
-            }
-
-            return false;
-        }
-
-        public void OnClipOpenComplete(eUIStateAdditive aState)
-        {
-            UIStateMachine.SetBool(aState + ActiveParmSuffix, true);  // triggers wait state            
-        }
-
-        public void OnClipOpenStarted(eUIStateAdditive aState)
-        {
-
-        }
-
-        public void OnClipCloseComplete(eUIStateAdditive aState)  // not allowed to hide
-        {
-            LatestAdditiveVC = (UIViewControllerAdditive)UIAdditions[(int)aState];
-            LatestAdditiveVC.gameObject.SetActive(false);
-            LatestAdditiveVC.View.gameObject.SetActive(false);
-
-            IsAdditiveUIShowing[(int)aState] = false;
-
-            UIStateMachine.SetBool(aState.ToString() + ActiveParmSuffix, false);
-
-            return;
-        }
-        
-        private void HandleNoneRequest()
-        {
-            foreach (eUIStateAdditive aState in System.Enum.GetValues(typeof(eUIStateAdditive)))
-            {
-                if (DebugMode) Debug.Log(aState.ToString());
-                bool result = HideViewForState(aState);
-            }
-        }
-
         #endregion
-        */
+
+        //private void HandleNoneRequest()
+        //{
+        //    foreach (eUIStateAdditive aState in System.Enum.GetValues(typeof(eUIStateAdditive)))
+        //    {
+        //        if (DebugMode) Debug.Log(aState.ToString());
+        //        bool result = HideViewForState(aState);
+        //    }
+        //}
+
+
+
+        //public void PerformUIUpdates(string requestedStateName, int direction = 1) // -1 is reverse
+        //{
+        //    DoozyUI.UIManager.ShowUiElement(requestedStateName, Category);
+
+        //    if (previousStateName != requestedStateName)
+        //    {
+        //        DoozyUI.UIManager.HideUiElement(previousStateName, Category);
+        //    }
+        //}
+
     }
 }
