@@ -16,12 +16,12 @@ namespace AllNetXR
 
     public class UIManagerAdditive : MonoBehaviour
     {
-        public static string Category = "Example 4 - Simple UI";
+        public static string Category = "Additive";
         public static UIManagerAdditive Instance;
         public static bool DebugMode = true;
-        public Animator stateMachineController;
-        private AnimatorStateInfoHelper stateInfoHelper;            
-        public List<UIElement> uiElements;
+        //public Animator stateMachineController;
+        private AnimatorStateInfoHelper stateInfoHelper;
+        public List<UINotification> uiNotifications;
         public bool IsBusy; // something is showing that is not dismissable
 
         private Dictionary<string, bool> isShowingDict = new Dictionary<string, bool>();
@@ -34,18 +34,18 @@ namespace AllNetXR
 
         public void Reset()
         {
-            // IsAdditiveUIShowing = new List<bool>();
-            foreach (UIElement uiElement in uiElements)
+           
+            foreach (UINotification uiNotify in uiNotifications)
             {
-                isShowingDict[uiElement.gameObject.name] = false;
-                uiElement.gameObject.SetActive(false);
+                isShowingDict[uiNotify.gameObject.name] = false;
+                uiNotify.gameObject.SetActive(false);
             }
         }
 
         public void Start()
         {
             Reset();
-            //UIStateMachine = StateMachineController.Instance; 
+            //UIStateMachine = StateMachineController.Instance;          
         }
 
         #region
@@ -63,50 +63,56 @@ namespace AllNetXR
 
         public void HandleStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
         {
-            stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo, layerIndex);
-            if (stateInfoHelper.stateName == null) return;         
+            //stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo, layerIndex, AppStateController.Instance.stateKeys);
+            //if (stateInfoHelper.stateName == null) return;
 
-            Debug.Log("STATE ENTER  =" + stateInfoHelper.stateName);
-            ShowViewFor(stateInfoHelper.stateName);
+            // Debug.Log("STATE ENTER  =" + stateInfoHelper.stateName);
+            //ShowViewFor(stateInfoHelper.stateName);
+
+            //DoozyUI.UIManager.ShowUiElement("Alert2", Category);
+
+          //DoozyUI.UIManager.ShowNotification("Alert3", 1, false, "Darryl", "Darryl's message");
         }
 
         public void HandleStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
         {
-            stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo, layerIndex);
-            if (stateInfoHelper.stateName == null) return;
+            //stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo, layerIndex, AppStateController.Instance.stateKeys);
+            //if (stateInfoHelper.stateName == null) return;
 
-            Debug.Log("STATE EXIT =" + stateInfoHelper.stateName);
-            HideViewFor(stateInfoHelper.stateName);
+            //Debug.Log("STATE EXIT =" + stateInfoHelper.stateName);
+            //HideViewFor(stateInfoHelper.stateName);
+            //DoozyUI.UIManager.HideNotification("Alert3");
         }
 
         public bool ShowViewFor(string stateName)  // returns error if invalid
         {
             if (stateName == "None")
             {
-               Reset();  // clear everything
+                Reset();  // clear everything
                 return false;
             }
 
-            if (isShowingDict[stateName] == false) // already on
-            {
-                DoozyUI.UIManager.ShowUiElement(stateName, Category);
+            //if (isShowingDict[stateName] == false) // already on
+            //{
+            //    DoozyUI.UIManager.ShowUiElement(stateName, Category);
 
-            }
+            //}
 
-            isShowingDict[stateName] = true;
+            //isShowingDict[stateName] = true;
 
-            return isShowingDict[stateName];
+            //return isShowingDict[stateName];
+            return true;
         }
 
         public bool HideViewFor(string stateName)
         {
             if (stateName == "None")
-                {
-                    Reset();
-                    return false;
-                }
+            {
+                Reset();
+                return false;
+            }
 
-            DoozyUI.UIManager.HideUiElement(stateName, Category);
+           // DoozyUI.UIManager.HideUiElement(stateName, Category);
 
             return true;
         }
@@ -121,8 +127,6 @@ namespace AllNetXR
         //        bool result = HideViewForState(aState);
         //    }
         //}
-
-
 
         //public void PerformUIUpdates(string requestedStateName, int direction = 1) // -1 is reverse
         //{

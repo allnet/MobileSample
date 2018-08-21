@@ -13,6 +13,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DatabaseUIElements:
     categories:
+    - categoryName: Additive
+      itemNames:
+      - ~Element Name~
+      - Ad
+      - Alert1
+      - Alert2
+      - Alert3
+      - Info
+      - Offer
+      - Warning
+      isExpanded:
+        m_Target: 1
+        speed: 2
+        m_Value: 1
     - categoryName: Example 1 - SimpleScene
       itemNames:
       - MainMenu
@@ -20,17 +34,17 @@ MonoBehaviour:
       - Menu 2
       - Menu 3
       isExpanded:
-        m_Target: 1
+        m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
     - categoryName: Example 2 - OrientationManager
       itemNames:
       - MainMenu
       - SecondMenu
       isExpanded:
-        m_Target: 1
+        m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
     - categoryName: Example 3 - Buttons
       itemNames:
       - ~Element Name~
@@ -44,9 +58,9 @@ MonoBehaviour:
       - State5
       - WelcomeBack
       isExpanded:
-        m_Target: 1
+        m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
     - categoryName: Example 4 - Simple UI
       itemNames:
       - LeftMenu
@@ -62,12 +76,21 @@ MonoBehaviour:
     - categoryName: Uncategorized
       itemNames:
       - ~Element Name~
+      - Add1 (1) (-1757732)
+      - Add1 (-1690570)
+      - Add2 (-1757732)
+      - Add3 (18126)
+      - Alert1 (-1880438)
+      - Alert2 (-3430398)
+      - Alert2 (-829164)
+      - UIE - Notification Container (-391488)
       isExpanded:
         m_Target: 0
         speed: 2
         m_Value: 0
     categoryNames:
     - ~Custom Name~
+    - Additive
     - Example 1 - SimpleScene
     - Example 2 - OrientationManager
     - Example 3 - Buttons
@@ -95,6 +118,7 @@ MonoBehaviour:
         m_Value: 0
     - categoryName: Example 3 - Buttons
       itemNames:
+      - ~Button Name~
       - Next
       - Previous
       isExpanded:
@@ -113,6 +137,16 @@ MonoBehaviour:
         m_Target: 0
         speed: 2
         m_Value: 0
+    - categoryName: Notifications
+      itemNames:
+      - ~Button Name~
+      - Cancel
+      - OK
+      - Retry
+      isExpanded:
+        m_Target: 1
+        speed: 2
+        m_Value: 1
     - categoryName: Uncategorized
       itemNames:
       - ~Button Name~
@@ -126,8 +160,10 @@ MonoBehaviour:
     - Example 2 - OrientationManager
     - Example 3 - Buttons
     - Example 4 - Simple UI
+    - Notifications
     - Uncategorized
   DatabaseUICanvases:
+  - Additive
   - Canvas1
   - MasterCanvas
   DatabaseUISounds:
