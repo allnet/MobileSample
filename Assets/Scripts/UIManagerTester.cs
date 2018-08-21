@@ -107,20 +107,20 @@ namespace AllNetXR
             {
                 //state = (eUIStateAdditive)0;
                
-                DoozyUI.UIManager.ShowNotification("Alert1", 1, false, "Darryl", "Darryl's message");
+                DoozyUI.UIManager.ShowNotification("Alert1", -1, false, "Darryl", "Darryl's message");
 
             }
 
             if (Input.GetKeyDown(KeyCode.Keypad1))
             {
                 //state = (eUIStateAdditive)1;
-                DoozyUI.UIManager.ShowNotification("Alert2", 1, false, "Darryl", "Darryl's message");
+                DoozyUI.UIManager.ShowNotification("Alert2", -1, false, "Darryl", "Darryl's message");
             }
 
             if (Input.GetKeyDown(KeyCode.Keypad2))
             {
                 //state = (eUIStateAdditive)2;
-                DoozyUI.UIManager.ShowNotification("Alert3", 1, false, "Darryl", "Darryl's message");
+                DoozyUI.UIManager.ShowNotification("Alert3", -1, false, "Darryl", "Darryl's message");
             }
 
             //ToggleViewVisibility(state);
