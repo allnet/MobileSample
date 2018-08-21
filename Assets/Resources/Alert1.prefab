@@ -199,7 +199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1662080375126044
 GameObject:
   m_ObjectHideFlags: 1
@@ -268,7 +268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &114028156087826374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -281,10 +281,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementCategory: Uncategorized
-  elementName: Alert1 (-3528878)
+  elementName: Alert1 (-92250776)
   LANDSCAPE: 1
   PORTRAIT: 1
-  startHidden: 0
+  startHidden: 1
   animateAtStart: 0
   disableWhenHidden: 0
   dontDisableCanvasWhenHidden: 0
@@ -3054,7 +3054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementCategory: Uncategorized
-  elementName: Alert1 (-3430242)
+  elementName: ~Element Name~
   LANDSCAPE: 1
   PORTRAIT: 1
   startHidden: 1
@@ -3071,8 +3071,8 @@ MonoBehaviour:
   deselectAnySelectedButtonOnHide: 0
   enableAutoSelectButtonAfterShow: 1
   selectedButton: {fileID: 0}
-  linkedToNotification: 1
-  autoRegister: 0
+  linkedToNotification: 0
+  autoRegister: 1
   isVisible: 1
   inAnimations:
     animationType: 0
@@ -3447,7 +3447,8 @@ MonoBehaviour:
   title: {fileID: 1285856062421240}
   message: {fileID: 1504905712168726}
   icon: {fileID: 0}
-  buttons: []
+  buttons:
+  - {fileID: 0}
   closeButton: {fileID: 114491637794900554}
   specialElements: []
   effects: []
@@ -3729,8 +3730,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 197.20001, y: -197.20001}
-  m_SizeDelta: {x: -553.6, y: -433.6}
+  m_AnchoredPosition: {x: 226.6, y: -256}
+  m_SizeDelta: {x: -453.2, y: -573}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224143366795172184
 RectTransform:

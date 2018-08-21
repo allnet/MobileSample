@@ -16,39 +16,53 @@ namespace AllNetXR
 
     public class UIManagerAdditive : MonoBehaviour
     {
-        public static string Category = "Additive";
         public static UIManagerAdditive Instance;
+        public static string Category = "Additive";
         public static bool DebugMode = true;
-        //public Animator stateMachineController;
+
         private AnimatorStateInfoHelper stateInfoHelper;
-        public List<UINotification> uiNotifications;
         public bool IsBusy; // something is showing that is not dismissable
 
-        private Dictionary<string, bool> isShowingDict = new Dictionary<string, bool>();
+        // BINDINGS LOGIC
+        [System.Serializable]
+        public struct NotificationBinding
+        {
+            public GameObject notification; // uses name to invoke so they must match 
+            [HideInInspector] public string title;  //  [HideInInspector]
+            public bool isDismissable;
+            public bool isShowing;
+
+            public NotificationBinding(GameObject notification, bool isDismissable = false, bool isShowing = false)
+            {
+                this.notification = notification;
+                this.title = notification.name;
+                this.isDismissable = isDismissable;
+                this.isShowing = isShowing;
+            }
+        }
+        [Header("Notification Bindings")]
+        public NotificationBinding[] notificationBindings;
+        private List<string> notificationTitles = new List<string>();
+
 
         // Use this for initialization
-        private void Awake()
+        void Awake()
         {
             Instance = this;
+
+            Initialize();
         }
 
-        public void Reset()
+        void Initialize()
         {
-           
-            foreach (UINotification uiNotify in uiNotifications)
+            foreach (NotificationBinding nb in notificationBindings)
             {
-                isShowingDict[uiNotify.gameObject.name] = false;
-                uiNotify.gameObject.SetActive(false);
+                nb.notification.SetActive(false);
+                notificationTitles.Add(nb.title);
             }
         }
 
-        public void Start()
-        {
-            Reset();
-            //UIStateMachine = StateMachineController.Instance;          
-        }
-
-        #region
+        #region  StateMachineApproach
         void OnEnable()  // Same trigger principal - trigger names start with "On"
         {
             SmbEventDispatcher.OnStateEntered += HandleStateEnter;
@@ -63,59 +77,37 @@ namespace AllNetXR
 
         public void HandleStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
         {
-            //stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo, layerIndex, AppStateController.Instance.stateKeys);
-            //if (stateInfoHelper.stateName == null) return;
+            stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo, layerIndex, notificationTitles.ToArray());
+            if (stateInfoHelper.stateName == null) return;
 
-            // Debug.Log("STATE ENTER  =" + stateInfoHelper.stateName);
-            //ShowViewFor(stateInfoHelper.stateName);
-
+           Debug.Log("STATE ENTER  =" + stateInfoHelper.stateName);             
             //DoozyUI.UIManager.ShowUiElement("Alert2", Category);
-
-          //DoozyUI.UIManager.ShowNotification("Alert3", 1, false, "Darryl", "Darryl's message");
+            DoozyUI.UIManager.ShowNotification(stateInfoHelper.stateName, 1, false, "Darryl", "Darryl's message");
         }
 
         public void HandleStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
         {
-            //stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo, layerIndex, AppStateController.Instance.stateKeys);
-            //if (stateInfoHelper.stateName == null) return;
+            stateInfoHelper = new AnimatorStateInfoHelper(animatorStateInfo, layerIndex, notificationTitles.ToArray());
+            if (stateInfoHelper.stateName == null) return;
 
-            //Debug.Log("STATE EXIT =" + stateInfoHelper.stateName);
+            Debug. Log("STATE EXIT =" + stateInfoHelper.stateName);
             //HideViewFor(stateInfoHelper.stateName);
             //DoozyUI.UIManager.HideNotification("Alert3");
+           // DoozyUI.UIManager.HideNotification(stateInfoHelper.stateName, 1, false, "Darryl", "Darryl's message");
         }
 
-        public bool ShowViewFor(string stateName)  // returns error if invalid
-        {
-            if (stateName == "None")
-            {
-                Reset();  // clear everything
-                return false;
-            }
 
-            //if (isShowingDict[stateName] == false) // already on
-            //{
-            //    DoozyUI.UIManager.ShowUiElement(stateName, Category);
+        //public bool HideViewFor(string stateName)
+        //{
+        //    if (stateName == "None")
+        //    {
+        //        Reset();
+        //        return false;
+        //    }
 
-            //}
-
-            //isShowingDict[stateName] = true;
-
-            //return isShowingDict[stateName];
-            return true;
-        }
-
-        public bool HideViewFor(string stateName)
-        {
-            if (stateName == "None")
-            {
-                Reset();
-                return false;
-            }
-
-           // DoozyUI.UIManager.HideUiElement(stateName, Category);
-
-            return true;
-        }
+        //    // DoozyUI.UIManager.HideUiElement(stateName, Category);
+        //    return true;
+        //}
 
         #endregion
 

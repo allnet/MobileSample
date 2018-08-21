@@ -37,22 +37,5 @@ namespace AllNetXR
             this.stateDuration = animatorStateInfo.length;
         }
 
-        //public void ParseStateInfo(AnimatorStateInfo animatorStateInfo)  // enum based
-        //{
-        //    duration = animatorStateInfo.length;
-
-        //    foreach (eAppState enumVal in Enum.GetValues(typeof(eAppState)))
-        //    {
-        //        stateName = (enumVal.ToString() == EnumEndString) ? "< State Mismatch >" : enumVal.ToString();
-
-        //        //Debug.Log("search val = " + searchVal);
-        //        if (animatorStateInfo.IsName(stateName))  // only way att
-        //        {
-        //            stateIndex = (int)enumVal;
-        //            break;
-        //        }
-        //    }
-        //}
-
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using DoozyUI;
 using System.Linq;
+//using Extensions;
 
 // next activates the state controller
 namespace AllNetXR
@@ -47,27 +48,28 @@ namespace AllNetXR
         public Dictionary<string, Transform> stateControllers = new Dictionary<string, Transform>();
 
         // Static - DH - extension possibly        
-        private Transform[] GetTopLevelChildren(Transform Parent)
-        {
-            Transform[] Children = new Transform[Parent.childCount];
-            for (int ID = 0; ID < Parent.childCount; ID++)
-            {
-                Children[ID] = Parent.GetChild(ID);
-            }
-            return Children;
-        }
 
         private void InitializeControllersToChildren(Transform parent) //DH
         {
-            sequenceableKeys = new List<string>();
             Transform[] transforms = GetTopLevelChildren(parent);
 
             CollectSequenceable(transforms);
             SetStateControllerSpecifics();
         }
 
+        public Transform[] GetTopLevelChildren(Transform parent)
+        {
+            Transform[] children = new Transform[parent.childCount];
+            for (int ID = 0; ID < parent.childCount; ID++)
+            {
+                children[ID] = parent.GetChild(ID);
+            }
+            return children;
+        }
+
         private void CollectSequenceable(Transform[] transforms)
         {
+            sequenceableKeys = new List<string>();
             foreach (Transform t in transforms)
             {
                 stateControllers[t.gameObject.name] = t;
@@ -112,8 +114,8 @@ namespace AllNetXR
             SmbEventDispatcher.OnStateExited -= HandleStateExit;
         }
 
-         public void HandleStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
-        {            
+        public void HandleStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
+        {
             if (!TryToSetActiveController(animatorStateInfo, layerIndex)) return;
 
             Debug.Log("STATE ENTER  =" + stateInfoHelper.stateName);
@@ -122,12 +124,12 @@ namespace AllNetXR
         }
 
         public void HandleStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
-        {          
+        {
             if (!TryToSetActiveController(animatorStateInfo, layerIndex)) return;
 
             Debug.Log("STATE EXIT =" + stateInfoHelper.stateName);
             animator.SetInteger("AppStateLevel", stateInfoHelper.layerIndex);
-            activeController.End();         
+            activeController.End();
         }
 
         private bool TryToSetActiveController(AnimatorStateInfo animatorStateInfo, int layerIndex)
@@ -181,7 +183,7 @@ namespace AllNetXR
             if (animator != null && animator.isActiveAndEnabled)
             {
                 //animator.Play(stateName, 0, percentage);             
-                animator.SetTrigger(triggerName);             
+                animator.SetTrigger(triggerName);
             }
 
             previousStateName = activeStateName;
