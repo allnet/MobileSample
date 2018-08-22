@@ -106,19 +106,25 @@ namespace AllNetXR
             if (Input.GetKeyDown(KeyCode.Keypad0))
             {
                 //state = (eUIStateAdditive)0;               
-                DoozyUI.UIManager.ShowNotification("TestAlert", -1, false, "Darryl", "Darryl's message");
+                DoozyUI.UIManager.ShowNotification("Busy", -1, false, "Busy", "A test message with informative info");
             }
 
             if (Input.GetKeyDown(KeyCode.Keypad1))
             {
                 //state = (eUIStateAdditive)1;
-                DoozyUI.UIManager.ShowNotification("TestAlert1", -1, false, "Darryl", "Darryl's message");
+                DoozyUI.UIManager.ShowNotification("Info", -1, false, "Info", "A test message with informative info.");
             }
 
             if (Input.GetKeyDown(KeyCode.Keypad2))
             {
                 //state = (eUIStateAdditive)2;
-                DoozyUI.UIManager.ShowNotification("TestAlert2", -1, false, "Darryl", "Darryl's message");
+                DoozyUI.UIManager.ShowNotification("Choice2Way", -1, false, "Choice 2-way", "A test message with informative info.");
+            }
+
+            if (Input.GetKeyDown(KeyCode.Keypad3))
+            {
+                //state = (eUIStateAdditive)2;
+                DoozyUI.UIManager.ShowNotification("Choice3Way", -1, false, "Choice 3-way", "A test message with informative info.");
             }
 
             //ToggleViewVisibility(state);
