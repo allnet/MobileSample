@@ -102,6 +102,7 @@ namespace AllNetXR
         }
 
         #region Callback Handling
+
         void OnEnable()
         {
             SmbEventDispatcher.OnStateEntered += HandleStateEnter;

@@ -17,12 +17,12 @@ namespace AllNetXR
 
     public interface IUIAnimatableMulti  // multi-state
     {
-        bool HideViewForState(eUIStateAdditive aState);  // returns success = true, fail = false
-        bool ShowViewForState(eUIStateAdditive aState);  //  returns success = true, fail = false
+        bool HideViewForState(eNotificationType aState);  // returns success = true, fail = false
+        bool ShowViewForState(eNotificationType aState);  //  returns success = true, fail = false
 
-        void OnClipOpenStarted(eUIStateAdditive aState);   // open clip/frame 1 - animation event
-        void OnClipOpenComplete(eUIStateAdditive aState);  // end of open clip - UI ready
-        void OnClipCloseComplete(eUIStateAdditive aState); // after close request this is fired >> UIManagerAdditive.Instance.ShowView(eUIStaeAdditive)
+        void OnClipOpenStarted(eNotificationType aState);   // open clip/frame 1 - animation event
+        void OnClipOpenComplete(eNotificationType aState);  // end of open clip - UI ready
+        void OnClipCloseComplete(eNotificationType aState); // after close request this is fired >> UIManagerAdditive.Instance.ShowView(eUIStaeAdditive)
     }
 }
 

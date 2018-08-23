@@ -9,68 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1256165033314788}
+  m_RootGameObject: {fileID: 1275654626484196}
   m_IsPrefabAsset: 1
---- !u!1 &1007825506935584
+--- !u!1 &1050577183111914
 GameObject:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 224203187881421956}
-  - component: {fileID: 222342137072367554}
-  - component: {fileID: 114812869725140934}
-  m_Layer: 5
-  m_Name: Notification Title
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1256165033314788
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 224817880962751710}
-  - component: {fileID: 114252815907487044}
-  m_Layer: 5
-  m_Name: Choice3Way
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1287904976219938
-GameObject:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 224074033467185440}
-  - component: {fileID: 222532603944187440}
-  - component: {fileID: 114850365826947086}
-  m_Layer: 5
-  m_Name: Label
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1305187180919952
-GameObject:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 224928531925855562}
-  - component: {fileID: 222885722713711118}
-  - component: {fileID: 114544899688818670}
+  - component: {fileID: 224673227845801074}
+  - component: {fileID: 222191043392958270}
+  - component: {fileID: 114179689153420332}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -78,157 +28,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1355047130842136
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 224617727764337122}
-  - component: {fileID: 223916011733431702}
-  - component: {fileID: 225206799416106816}
-  - component: {fileID: 114665966180690016}
-  - component: {fileID: 114626480607649416}
-  m_Layer: 5
-  m_Name: UIE - Background Overlay
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1467690041060082
+--- !u!1 &1083442456076290
 GameObject:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 224464600091256164}
-  - component: {fileID: 222261352599136226}
-  - component: {fileID: 114606121305842334}
-  m_Layer: 5
-  m_Name: Label
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1494220872770686
-GameObject:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 224413297064685636}
-  - component: {fileID: 222970981942710258}
-  - component: {fileID: 114711914969621778}
-  m_Layer: 5
-  m_Name: Background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1614065264422284
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 224659102806366490}
-  - component: {fileID: 223824572392313194}
-  - component: {fileID: 225473684547428136}
-  - component: {fileID: 114781710122585920}
-  - component: {fileID: 114323955347981744}
-  - component: {fileID: 114178312710253146}
-  m_Layer: 5
-  m_Name: UIE - Notification Container
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1646310038179430
-GameObject:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 224493522443064270}
-  - component: {fileID: 114797969210386716}
-  - component: {fileID: 114248932155752098}
-  m_Layer: 5
-  m_Name: UIB - Retry
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1653364759269774
-GameObject:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 224793120508450934}
-  - component: {fileID: 222502592781951842}
-  - component: {fileID: 114392131459296566}
-  m_Layer: 5
-  m_Name: Background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1736718511238702
-GameObject:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 224401471765971248}
-  - component: {fileID: 222722154369017322}
-  - component: {fileID: 114286756127607552}
-  m_Layer: 5
-  m_Name: Notification Title Container
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1760406273051842
-GameObject:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 224147902406001140}
-  - component: {fileID: 114677966436156850}
-  - component: {fileID: 114029348677739252}
-  m_Layer: 5
-  m_Name: UIB - OK
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1770795720285166
-GameObject:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 224400841824983674}
-  - component: {fileID: 222670852304911882}
-  - component: {fileID: 114237163941542512}
+  - component: {fileID: 224002948028281256}
+  - component: {fileID: 222392803638863066}
+  - component: {fileID: 114969525189190264}
   m_Layer: 5
   m_Name: Notification Message
   m_TagString: Untagged
@@ -236,16 +45,66 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1799563258924808
+--- !u!1 &1121318850052162
 GameObject:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 224267993349172622}
-  - component: {fileID: 222525291621293306}
-  - component: {fileID: 114844427277888240}
+  - component: {fileID: 224480168024073104}
+  - component: {fileID: 222561458272563238}
+  - component: {fileID: 114693263808577432}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1151636039428526
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224187441630381854}
+  - component: {fileID: 114216539714876028}
+  - component: {fileID: 114869531974185948}
+  m_Layer: 5
+  m_Name: Notification Button 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1275654626484196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224889185501317082}
+  - component: {fileID: 114007498631673704}
+  m_Layer: 5
+  m_Name: Choice3Way
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1292927935743438
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224294621327806992}
+  - component: {fileID: 222588301251456540}
+  - component: {fileID: 114093171587767402}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -253,16 +112,86 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1915751714628208
+--- !u!1 &1314494887374840
 GameObject:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 224831123069690938}
-  - component: {fileID: 222321352897093194}
-  - component: {fileID: 114650368200742810}
+  - component: {fileID: 224770846749769244}
+  - component: {fileID: 222116353198438952}
+  - component: {fileID: 114619238182375528}
+  m_Layer: 5
+  m_Name: Notification Title Container
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1324771013541964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224658428758320768}
+  - component: {fileID: 223457112154283202}
+  - component: {fileID: 225658906646056794}
+  - component: {fileID: 114014811705781902}
+  - component: {fileID: 114119553840500904}
+  m_Layer: 5
+  m_Name: UIE - Background Overlay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1326274399386604
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224890511111650504}
+  - component: {fileID: 222869169076242862}
+  - component: {fileID: 114711659053706254}
+  m_Layer: 5
+  m_Name: Label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1470948724606778
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224127253848646652}
+  - component: {fileID: 114793119582545906}
+  - component: {fileID: 114156969467162556}
+  m_Layer: 5
+  m_Name: Notification Button 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1614285367081608
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224948007689448508}
+  - component: {fileID: 222388701298171522}
+  - component: {fileID: 114404774859193262}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -270,49 +199,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1924230385765720
+--- !u!1 &1674061116364782
 GameObject:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 224753963172188256}
-  - component: {fileID: 222495227850426756}
-  - component: {fileID: 114420172550513796}
+  - component: {fileID: 224307746390937644}
+  - component: {fileID: 223618513296966326}
+  - component: {fileID: 225484294584209078}
+  - component: {fileID: 114015756508512600}
+  - component: {fileID: 114698562006172488}
+  - component: {fileID: 114532109932269938}
   m_Layer: 5
-  m_Name: Background
+  m_Name: UIE - Notification Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1936850870000198
+--- !u!1 &1773140886706922
 GameObject:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 224181529840993874}
-  - component: {fileID: 114677164283079446}
-  - component: {fileID: 114736769423917706}
-  m_Layer: 5
-  m_Name: UIB - Cancel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1944221796872880
-GameObject:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 224182626412135832}
-  - component: {fileID: 114075573701015944}
+  - component: {fileID: 224688140130948664}
+  - component: {fileID: 114097522485111848}
   m_Layer: 5
   m_Name: ButtonsHorizontal
   m_TagString: Untagged
@@ -320,2341 +235,115 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114029348677739252
+--- !u!1 &1831357569940768
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224808346572377906}
+  - component: {fileID: 222706373244068388}
+  - component: {fileID: 114493210287617714}
+  m_Layer: 5
+  m_Name: Notification Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1879823804503512
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224667501601823470}
+  - component: {fileID: 222361400107946014}
+  - component: {fileID: 114241654391024256}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1923583282521672
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224261584690184286}
+  - component: {fileID: 222025001592206798}
+  - component: {fileID: 114526010780878626}
+  m_Layer: 5
+  m_Name: Label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1957596876069070
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224967951489289376}
+  - component: {fileID: 222023935669650372}
+  - component: {fileID: 114954751801796836}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1983877763456864
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224785989904633436}
+  - component: {fileID: 114820453709736780}
+  - component: {fileID: 114645367227689022}
+  m_Layer: 5
+  m_Name: Notification Button 0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &114007498631673704
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1760406273051842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 682849f091f20484485c3a8e6c1e0b1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debug: 0
-  buttonCategory: Notifications
-  buttonName: OK
-  allowMultipleClicks: 1
-  deselectButtonOnClick: 1
-  disableButtonInterval: 0.4
-  useOnPointerEnter: 0
-  onPointerEnterDisableInterval: 0.4
-  onPointerEnterSound: ~No Sound~
-  customOnPointerEnterSound: 0
-  OnPointerEnter:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onPointerEnterAnimationType: 0
-  onPointerEnterPunchPresetCategory: Uncategorized
-  onPointerEnterPunchPresetName: DefaultPreset
-  loadOnPointerEnterPunchPresetAtRuntime: 0
-  onPointerEnterPunch:
-    move:
-      enabled: 0
-      punch: {x: 0, y: 20, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    rotate:
-      enabled: 0
-      punch: {x: 0, y: 0, z: 30}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    scale:
-      enabled: 0
-      punch: {x: 0.2, y: 0.2, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onPointerEnterStatePresetCategory: Uncategorized
-  onPointerEnterStatePresetName: DefaultPreset
-  loadOnPointerEnterStatePresetAtRuntime: 0
-  onPointerEnterState:
-    animationType: 2
-    move:
-      enabled: 0
-      animationType: 2
-      moveDirection: 0
-      customPosition: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      animationType: 2
-      rotation: {x: 0, y: 0, z: 0}
-      rotateMode: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      animationType: 2
-      scale: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      animationType: 2
-      alpha: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onPointerEnterGameEvents: []
-  onPointerEnterNavigation:
-    addToNavigationHistory: 0
-    show: []
-    hide: []
-  useOnPointerExit: 0
-  onPointerExitDisableInterval: 0.4
-  onPointerExitSound: ~No Sound~
-  customOnPointerExitSound: 0
-  OnPointerExit:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onPointerExitAnimationType: 0
-  onPointerExitPunchPresetCategory: Uncategorized
-  onPointerExitPunchPresetName: DefaultPreset
-  loadOnPointerExitPunchPresetAtRuntime: 0
-  onPointerExitPunch:
-    move:
-      enabled: 0
-      punch: {x: 0, y: 20, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    rotate:
-      enabled: 0
-      punch: {x: 0, y: 0, z: 30}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    scale:
-      enabled: 0
-      punch: {x: 0.2, y: 0.2, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onPointerExitStatePresetCategory: Uncategorized
-  onPointerExitStatePresetName: DefaultPreset
-  loadOnPointerExitStatePresetAtRuntime: 0
-  onPointerExitState:
-    animationType: 2
-    move:
-      enabled: 0
-      animationType: 2
-      moveDirection: 0
-      customPosition: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      animationType: 2
-      rotation: {x: 0, y: 0, z: 0}
-      rotateMode: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      animationType: 2
-      scale: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      animationType: 2
-      alpha: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onPointerExitGameEvents: []
-  onPointerExitNavigation:
-    addToNavigationHistory: 0
-    show: []
-    hide: []
-  useOnPointerDown: 0
-  onPointerDownSound: ~No Sound~
-  customOnPointerDownSound: 0
-  OnPointerDown:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onPointerDownAnimationType: 0
-  onPointerDownPunchPresetCategory: Uncategorized
-  onPointerDownPunchPresetName: DefaultPreset
-  loadOnPointerDownPunchPresetAtRuntime: 0
-  onPointerDownPunch:
-    move:
-      enabled: 0
-      punch: {x: 0, y: 20, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    rotate:
-      enabled: 0
-      punch: {x: 0, y: 0, z: 30}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    scale:
-      enabled: 0
-      punch: {x: 0.2, y: 0.2, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onPointerDownStatePresetCategory: Uncategorized
-  onPointerDownStatePresetName: DefaultPreset
-  loadOnPointerDownStatePresetAtRuntime: 0
-  onPointerDownState:
-    animationType: 2
-    move:
-      enabled: 0
-      animationType: 2
-      moveDirection: 0
-      customPosition: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      animationType: 2
-      rotation: {x: 0, y: 0, z: 0}
-      rotateMode: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      animationType: 2
-      scale: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      animationType: 2
-      alpha: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onPointerDownGameEvents: []
-  onPointerDownNavigation:
-    addToNavigationHistory: 0
-    show: []
-    hide: []
-  useOnPointerUp: 0
-  onPointerUpSound: ~No Sound~
-  customOnPointerUpSound: 0
-  OnPointerUp:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onPointerUpAnimationType: 0
-  onPointerUpPunchPresetCategory: Uncategorized
-  onPointerUpPunchPresetName: DefaultPreset
-  loadOnPointerUpPunchPresetAtRuntime: 0
-  onPointerUpPunch:
-    move:
-      enabled: 0
-      punch: {x: 0, y: 20, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    rotate:
-      enabled: 0
-      punch: {x: 0, y: 0, z: 30}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    scale:
-      enabled: 0
-      punch: {x: 0.2, y: 0.2, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onPointerUpStatePresetCategory: Uncategorized
-  onPointerUpStatePresetName: DefaultPreset
-  loadOnPointerUpStatePresetAtRuntime: 0
-  onPointerUpState:
-    animationType: 2
-    move:
-      enabled: 0
-      animationType: 2
-      moveDirection: 0
-      customPosition: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      animationType: 2
-      rotation: {x: 0, y: 0, z: 0}
-      rotateMode: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      animationType: 2
-      scale: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      animationType: 2
-      alpha: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onPointerUpGameEvents: []
-  onPointerUpNavigation:
-    addToNavigationHistory: 0
-    show: []
-    hide: []
-  useOnClickAnimations: 1
-  waitForOnClickAnimation: 1
-  singleClickMode: 0
-  onClickSound: ~No Sound~
-  customOnClickSound: 0
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onClickAnimationType: 0
-  onClickPunchPresetCategory: Uncategorized
-  onClickPunchPresetName: DefaultPreset
-  loadOnClickPunchPresetAtRuntime: 0
-  onClickPunch:
-    move:
-      enabled: 0
-      punch: {x: 0, y: 20, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    rotate:
-      enabled: 0
-      punch: {x: 0, y: 0, z: 30}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    scale:
-      enabled: 0
-      punch: {x: 0.2, y: 0.2, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onClickStatePresetCategory: Uncategorized
-  onClickStatePresetName: DefaultPreset
-  loadOnClickStatePresetAtRuntime: 0
-  onClickState:
-    animationType: 2
-    move:
-      enabled: 0
-      animationType: 2
-      moveDirection: 0
-      customPosition: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      animationType: 2
-      rotation: {x: 0, y: 0, z: 0}
-      rotateMode: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      animationType: 2
-      scale: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      animationType: 2
-      alpha: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onClickGameEvents: []
-  onClickNavigation:
-    addToNavigationHistory: 0
-    show: []
-    hide: []
-  useOnDoubleClick: 0
-  waitForOnDoubleClickAnimation: 1
-  doubleClickRegisterInterval: 0.2
-  onDoubleClickSound: ~No Sound~
-  customOnDoubleClickSound: 0
-  OnDoubleClick:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onDoubleClickAnimationType: 0
-  onDoubleClickPunchPresetCategory: Uncategorized
-  onDoubleClickPunchPresetName: DefaultPreset
-  loadOnDoubleClickPunchPresetAtRuntime: 0
-  onDoubleClickPunch:
-    move:
-      enabled: 0
-      punch: {x: 0, y: 20, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    rotate:
-      enabled: 0
-      punch: {x: 0, y: 0, z: 30}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    scale:
-      enabled: 0
-      punch: {x: 0.2, y: 0.2, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onDoubleClickStatePresetCategory: Uncategorized
-  onDoubleClickStatePresetName: DefaultPreset
-  loadOnDoubleClickStatePresetAtRuntime: 0
-  onDoubleClickState:
-    animationType: 2
-    move:
-      enabled: 0
-      animationType: 2
-      moveDirection: 0
-      customPosition: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      animationType: 2
-      rotation: {x: 0, y: 0, z: 0}
-      rotateMode: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      animationType: 2
-      scale: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      animationType: 2
-      alpha: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onDoubleClickGameEvents: []
-  onDoubleClickNavigation:
-    addToNavigationHistory: 0
-    show: []
-    hide: []
-  useOnLongClick: 0
-  waitForOnLongClickAnimation: 1
-  longClickRegisterInterval: 0.5
-  onLongClickSound: ~No Sound~
-  customOnLongClickSound: 0
-  OnLongClick:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onLongClickAnimationType: 0
-  onLongClickPunchPresetCategory: Uncategorized
-  onLongClickPunchPresetName: DefaultPreset
-  loadOnLongClickPunchPresetAtRuntime: 0
-  onLongClickPunch:
-    move:
-      enabled: 0
-      punch: {x: 0, y: 20, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    rotate:
-      enabled: 0
-      punch: {x: 0, y: 0, z: 30}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    scale:
-      enabled: 0
-      punch: {x: 0.2, y: 0.2, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onLongClickStatePresetCategory: Uncategorized
-  onLongClickStatePresetName: DefaultPreset
-  loadOnLongClickStatePresetAtRuntime: 0
-  onLongClickState:
-    animationType: 2
-    move:
-      enabled: 0
-      animationType: 2
-      moveDirection: 0
-      customPosition: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      animationType: 2
-      rotation: {x: 0, y: 0, z: 0}
-      rotateMode: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      animationType: 2
-      scale: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      animationType: 2
-      alpha: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onLongClickGameEvents: []
-  onLongClickNavigation:
-    addToNavigationHistory: 0
-    show: []
-    hide: []
-  normalLoopPresetCategory: Uncategorized
-  normalLoopPresetName: DefaultPreset
-  loadNormalLoopPresetAtRuntime: 0
-  normalLoop:
-    autoStart: 0
-    move:
-      enabled: 0
-      movement: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      rotation: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      rotateMode: 0
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      min: {x: 1, y: 1, z: 1}
-      max: {x: 1.05, y: 1.05, z: 1.05}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      min: 0
-      max: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  selectedLoopPresetCategory: Uncategorized
-  selectedLoopPresetName: DefaultPreset
-  loadSelectedLoopPresetAtRuntime: 0
-  selectedLoop:
-    autoStart: 0
-    move:
-      enabled: 0
-      movement: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      rotation: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      rotateMode: 0
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      min: {x: 1, y: 1, z: 1}
-      max: {x: 1.05, y: 1.05, z: 1.05}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      min: 0
-      max: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  controllerInputMode: 2
-  enableAlternateInputs: 1
-  onClickKeyCode: 13
-  onClickKeyCodeAlt: 32
-  onClickVirtualButtonName: Submit
-  onClickVirtualButtonNameAlt: Jump
---- !u!114 &114075573701015944
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1944221796872880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -405508275, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 7
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 1
-  m_ChildControlHeight: 1
---- !u!114 &114178312710253146
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1614065264422284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &114237163941542512
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1770795720285166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9639974, g: 0.9716981, b: 0.43543077, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 2
-    m_BestFit: 1
-    m_MinSize: 12
-    m_MaxSize: 18
-    m_Alignment: 4
-    m_AlignByGeometry: 1
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: notification message example
---- !u!114 &114248932155752098
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1646310038179430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 682849f091f20484485c3a8e6c1e0b1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debug: 0
-  buttonCategory: Notifications
-  buttonName: OK
-  allowMultipleClicks: 1
-  deselectButtonOnClick: 1
-  disableButtonInterval: 0.4
-  useOnPointerEnter: 0
-  onPointerEnterDisableInterval: 0.4
-  onPointerEnterSound: ~No Sound~
-  customOnPointerEnterSound: 0
-  OnPointerEnter:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onPointerEnterAnimationType: 0
-  onPointerEnterPunchPresetCategory: Uncategorized
-  onPointerEnterPunchPresetName: DefaultPreset
-  loadOnPointerEnterPunchPresetAtRuntime: 0
-  onPointerEnterPunch:
-    move:
-      enabled: 0
-      punch: {x: 0, y: 20, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    rotate:
-      enabled: 0
-      punch: {x: 0, y: 0, z: 30}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    scale:
-      enabled: 0
-      punch: {x: 0.2, y: 0.2, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onPointerEnterStatePresetCategory: Uncategorized
-  onPointerEnterStatePresetName: DefaultPreset
-  loadOnPointerEnterStatePresetAtRuntime: 0
-  onPointerEnterState:
-    animationType: 2
-    move:
-      enabled: 0
-      animationType: 2
-      moveDirection: 0
-      customPosition: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      animationType: 2
-      rotation: {x: 0, y: 0, z: 0}
-      rotateMode: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      animationType: 2
-      scale: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      animationType: 2
-      alpha: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onPointerEnterGameEvents: []
-  onPointerEnterNavigation:
-    addToNavigationHistory: 0
-    show: []
-    hide: []
-  useOnPointerExit: 0
-  onPointerExitDisableInterval: 0.4
-  onPointerExitSound: ~No Sound~
-  customOnPointerExitSound: 0
-  OnPointerExit:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onPointerExitAnimationType: 0
-  onPointerExitPunchPresetCategory: Uncategorized
-  onPointerExitPunchPresetName: DefaultPreset
-  loadOnPointerExitPunchPresetAtRuntime: 0
-  onPointerExitPunch:
-    move:
-      enabled: 0
-      punch: {x: 0, y: 20, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    rotate:
-      enabled: 0
-      punch: {x: 0, y: 0, z: 30}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    scale:
-      enabled: 0
-      punch: {x: 0.2, y: 0.2, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onPointerExitStatePresetCategory: Uncategorized
-  onPointerExitStatePresetName: DefaultPreset
-  loadOnPointerExitStatePresetAtRuntime: 0
-  onPointerExitState:
-    animationType: 2
-    move:
-      enabled: 0
-      animationType: 2
-      moveDirection: 0
-      customPosition: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      animationType: 2
-      rotation: {x: 0, y: 0, z: 0}
-      rotateMode: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      animationType: 2
-      scale: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      animationType: 2
-      alpha: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onPointerExitGameEvents: []
-  onPointerExitNavigation:
-    addToNavigationHistory: 0
-    show: []
-    hide: []
-  useOnPointerDown: 0
-  onPointerDownSound: ~No Sound~
-  customOnPointerDownSound: 0
-  OnPointerDown:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onPointerDownAnimationType: 0
-  onPointerDownPunchPresetCategory: Uncategorized
-  onPointerDownPunchPresetName: DefaultPreset
-  loadOnPointerDownPunchPresetAtRuntime: 0
-  onPointerDownPunch:
-    move:
-      enabled: 0
-      punch: {x: 0, y: 20, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    rotate:
-      enabled: 0
-      punch: {x: 0, y: 0, z: 30}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    scale:
-      enabled: 0
-      punch: {x: 0.2, y: 0.2, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onPointerDownStatePresetCategory: Uncategorized
-  onPointerDownStatePresetName: DefaultPreset
-  loadOnPointerDownStatePresetAtRuntime: 0
-  onPointerDownState:
-    animationType: 2
-    move:
-      enabled: 0
-      animationType: 2
-      moveDirection: 0
-      customPosition: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      animationType: 2
-      rotation: {x: 0, y: 0, z: 0}
-      rotateMode: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      animationType: 2
-      scale: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      animationType: 2
-      alpha: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onPointerDownGameEvents: []
-  onPointerDownNavigation:
-    addToNavigationHistory: 0
-    show: []
-    hide: []
-  useOnPointerUp: 0
-  onPointerUpSound: ~No Sound~
-  customOnPointerUpSound: 0
-  OnPointerUp:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onPointerUpAnimationType: 0
-  onPointerUpPunchPresetCategory: Uncategorized
-  onPointerUpPunchPresetName: DefaultPreset
-  loadOnPointerUpPunchPresetAtRuntime: 0
-  onPointerUpPunch:
-    move:
-      enabled: 0
-      punch: {x: 0, y: 20, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    rotate:
-      enabled: 0
-      punch: {x: 0, y: 0, z: 30}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    scale:
-      enabled: 0
-      punch: {x: 0.2, y: 0.2, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onPointerUpStatePresetCategory: Uncategorized
-  onPointerUpStatePresetName: DefaultPreset
-  loadOnPointerUpStatePresetAtRuntime: 0
-  onPointerUpState:
-    animationType: 2
-    move:
-      enabled: 0
-      animationType: 2
-      moveDirection: 0
-      customPosition: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      animationType: 2
-      rotation: {x: 0, y: 0, z: 0}
-      rotateMode: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      animationType: 2
-      scale: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      animationType: 2
-      alpha: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onPointerUpGameEvents: []
-  onPointerUpNavigation:
-    addToNavigationHistory: 0
-    show: []
-    hide: []
-  useOnClickAnimations: 1
-  waitForOnClickAnimation: 1
-  singleClickMode: 0
-  onClickSound: ~No Sound~
-  customOnClickSound: 0
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onClickAnimationType: 0
-  onClickPunchPresetCategory: Uncategorized
-  onClickPunchPresetName: DefaultPreset
-  loadOnClickPunchPresetAtRuntime: 0
-  onClickPunch:
-    move:
-      enabled: 0
-      punch: {x: 0, y: 20, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    rotate:
-      enabled: 0
-      punch: {x: 0, y: 0, z: 30}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    scale:
-      enabled: 0
-      punch: {x: 0.2, y: 0.2, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onClickStatePresetCategory: Uncategorized
-  onClickStatePresetName: DefaultPreset
-  loadOnClickStatePresetAtRuntime: 0
-  onClickState:
-    animationType: 2
-    move:
-      enabled: 0
-      animationType: 2
-      moveDirection: 0
-      customPosition: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      animationType: 2
-      rotation: {x: 0, y: 0, z: 0}
-      rotateMode: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      animationType: 2
-      scale: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      animationType: 2
-      alpha: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onClickGameEvents: []
-  onClickNavigation:
-    addToNavigationHistory: 0
-    show: []
-    hide: []
-  useOnDoubleClick: 0
-  waitForOnDoubleClickAnimation: 1
-  doubleClickRegisterInterval: 0.2
-  onDoubleClickSound: ~No Sound~
-  customOnDoubleClickSound: 0
-  OnDoubleClick:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onDoubleClickAnimationType: 0
-  onDoubleClickPunchPresetCategory: Uncategorized
-  onDoubleClickPunchPresetName: DefaultPreset
-  loadOnDoubleClickPunchPresetAtRuntime: 0
-  onDoubleClickPunch:
-    move:
-      enabled: 0
-      punch: {x: 0, y: 20, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    rotate:
-      enabled: 0
-      punch: {x: 0, y: 0, z: 30}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    scale:
-      enabled: 0
-      punch: {x: 0.2, y: 0.2, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onDoubleClickStatePresetCategory: Uncategorized
-  onDoubleClickStatePresetName: DefaultPreset
-  loadOnDoubleClickStatePresetAtRuntime: 0
-  onDoubleClickState:
-    animationType: 2
-    move:
-      enabled: 0
-      animationType: 2
-      moveDirection: 0
-      customPosition: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      animationType: 2
-      rotation: {x: 0, y: 0, z: 0}
-      rotateMode: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      animationType: 2
-      scale: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      animationType: 2
-      alpha: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onDoubleClickGameEvents: []
-  onDoubleClickNavigation:
-    addToNavigationHistory: 0
-    show: []
-    hide: []
-  useOnLongClick: 0
-  waitForOnLongClickAnimation: 1
-  longClickRegisterInterval: 0.5
-  onLongClickSound: ~No Sound~
-  customOnLongClickSound: 0
-  OnLongClick:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  onLongClickAnimationType: 0
-  onLongClickPunchPresetCategory: Uncategorized
-  onLongClickPunchPresetName: DefaultPreset
-  loadOnLongClickPunchPresetAtRuntime: 0
-  onLongClickPunch:
-    move:
-      enabled: 0
-      punch: {x: 0, y: 20, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    rotate:
-      enabled: 0
-      punch: {x: 0, y: 0, z: 30}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    scale:
-      enabled: 0
-      punch: {x: 0.2, y: 0.2, z: 0}
-      startDelay: 0
-      duration: 0.3
-      vibrato: 4
-      elasticity: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onLongClickStatePresetCategory: Uncategorized
-  onLongClickStatePresetName: DefaultPreset
-  loadOnLongClickStatePresetAtRuntime: 0
-  onLongClickState:
-    animationType: 2
-    move:
-      enabled: 0
-      animationType: 2
-      moveDirection: 0
-      customPosition: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      animationType: 2
-      rotation: {x: 0, y: 0, z: 0}
-      rotateMode: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      animationType: 2
-      scale: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      animationType: 2
-      alpha: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  onLongClickGameEvents: []
-  onLongClickNavigation:
-    addToNavigationHistory: 0
-    show: []
-    hide: []
-  normalLoopPresetCategory: Uncategorized
-  normalLoopPresetName: DefaultPreset
-  loadNormalLoopPresetAtRuntime: 0
-  normalLoop:
-    autoStart: 0
-    move:
-      enabled: 0
-      movement: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      rotation: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      rotateMode: 0
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      min: {x: 1, y: 1, z: 1}
-      max: {x: 1.05, y: 1.05, z: 1.05}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      min: 0
-      max: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  selectedLoopPresetCategory: Uncategorized
-  selectedLoopPresetName: DefaultPreset
-  loadSelectedLoopPresetAtRuntime: 0
-  selectedLoop:
-    autoStart: 0
-    move:
-      enabled: 0
-      movement: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      rotation: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      rotateMode: 0
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      min: {x: 1, y: 1, z: 1}
-      max: {x: 1.05, y: 1.05, z: 1.05}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      min: 0
-      max: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  controllerInputMode: 2
-  enableAlternateInputs: 1
-  onClickKeyCode: 13
-  onClickKeyCodeAlt: 32
-  onClickVirtualButtonName: Submit
-  onClickVirtualButtonNameAlt: Jump
---- !u!114 &114252815907487044
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1256165033314788}
+  m_GameObject: {fileID: 1275654626484196}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5fda386369912b408e9466993be739d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listenForBackButton: 1
+  listenForBackButton: 0
   targetCanvasName: Additive
   customTargetCanvasName: 0
-  notificationContainer: {fileID: 114323955347981744}
+  notificationContainer: {fileID: 114698562006172488}
   overlay: {fileID: 0}
-  title: {fileID: 1007825506935584}
-  message: {fileID: 1770795720285166}
+  title: {fileID: 1831357569940768}
+  message: {fileID: 1083442456076290}
   icon: {fileID: 0}
-  buttons: []
-  closeButton: {fileID: 114677966436156850}
+  buttons:
+  - {fileID: 114645367227689022}
+  - {fileID: 114156969467162556}
+  - {fileID: 114869531974185948}
+  closeButton: {fileID: 0}
   specialElements: []
   effects: []
   data:
@@ -2668,422 +357,44 @@ MonoBehaviour:
     icon: {fileID: 0}
     buttonNames: []
     buttonTexts: []
---- !u!114 &114286756127607552
+--- !u!114 &114014811705781902
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1736718511238702}
+  m_GameObject: {fileID: 1324771013541964}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.12156863, g: 0.53333336, b: 0.7882353, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!114 &114323955347981744
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &114015756508512600
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1614065264422284}
+  m_GameObject: {fileID: 1674061116364782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abb5c4702c7d6e344b9832a97ae1264d, type: 3}
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elementCategory: Uncategorized
-  elementName: Choice3Way (145578)
-  LANDSCAPE: 1
-  PORTRAIT: 1
-  startHidden: 1
-  animateAtStart: 0
-  disableWhenHidden: 0
-  dontDisableCanvasWhenHidden: 0
-  disableGraphicRaycaster: 0
-  autoHide: 0
-  autoHideDelay: 3
-  useCustomStartAnchoredPosition: 0
-  customStartAnchoredPosition: {x: 0, y: 0, z: 0}
-  executeLayoutFix: 0
-  deselectAnySelectedButtonOnShow: 0
-  deselectAnySelectedButtonOnHide: 0
-  enableAutoSelectButtonAfterShow: 1
-  selectedButton: {fileID: 0}
-  linkedToNotification: 1
-  autoRegister: 0
-  isVisible: 1
-  inAnimations:
-    animationType: 0
-    move:
-      enabled: 0
-      animationType: 0
-      moveDirection: 0
-      customPosition: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      animationType: 0
-      rotation: {x: 0, y: 0, z: 0}
-      rotateMode: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      animationType: 0
-      scale: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      animationType: 0
-      alpha: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  OnInAnimationsStart:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnInAnimationsFinish:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  inAnimationsPresetCategoryName: Basic
-  inAnimationsPresetName: Punch
-  loadInAnimationsPresetAtRuntime: 1
-  inAnimationsSoundAtStart: ~No Sound~
-  customInAnimationsSoundAtStart: 0
-  inAnimationsSoundAtFinish: ~No Sound~
-  customInAnimationsSoundAtFinish: 0
-  outAnimations:
-    animationType: 1
-    move:
-      enabled: 0
-      animationType: 1
-      moveDirection: 0
-      customPosition: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      animationType: 1
-      rotation: {x: 0, y: 0, z: 0}
-      rotateMode: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      animationType: 1
-      scale: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      animationType: 1
-      alpha: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  OnOutAnimationsStart:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnOutAnimationsFinish:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  outAnimationsPresetCategoryName: Basic
-  outAnimationsPresetName: Punch
-  loadOutAnimationsPresetAtRuntime: 1
-  outAnimationsSoundAtStart: ~No Sound~
-  customOutAnimationsSoundAtStart: 0
-  outAnimationsSoundAtFinish: ~No Sound~
-  customOutAnimationsSoundAtFinish: 0
-  loopAnimations:
-    autoStart: 0
-    move:
-      enabled: 0
-      movement: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      startDelay: 0
-      duration: 0.5
-    rotate:
-      enabled: 0
-      rotation: {x: 0, y: 0, z: 0}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      rotateMode: 0
-      startDelay: 0
-      duration: 0.5
-    scale:
-      enabled: 0
-      min: {x: 1, y: 1, z: 1}
-      max: {x: 1.05, y: 1.05, z: 1.05}
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      startDelay: 0
-      duration: 0.5
-    fade:
-      enabled: 0
-      min: 0
-      max: 1
-      easeType: 0
-      ease: 1
-      animationCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      loops: -1
-      loopType: 1
-      startDelay: 0
-      duration: 0.5
-    moveIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    rotateIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    scaleIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    fadeIsExpanded:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-  loopAnimationsPresetCategoryName: Uncategorized
-  loopAnimationsPresetName: DefaultPreset
-  loadLoopAnimationsPresetAtRuntime: 0
---- !u!114 &114392131459296566
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &114093171587767402
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1653364759269774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.12156863, g: 0.53333336, b: 0.7882353, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!114 &114420172550513796
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1924230385765720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.508989, g: 0.7633964, b: 0.8113208, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!114 &114544899688818670
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1305187180919952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.043137256, g: 0.19607843, b: 0.2901961, a: 0.78431374}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!114 &114606121305842334
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1467690041060082}
+  m_GameObject: {fileID: 1292927935743438}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -3110,13 +421,37 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Retry
---- !u!114 &114626480607649416
+  m_Text: 'Button2
+
+'
+--- !u!114 &114097522485111848
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1355047130842136}
+  m_GameObject: {fileID: 1773140886706922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -405508275, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 7
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+--- !u!114 &114119553840500904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1324771013541964}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abb5c4702c7d6e344b9832a97ae1264d, type: 3}
@@ -3413,26 +748,1135 @@ MonoBehaviour:
   loopAnimationsPresetCategoryName: Uncategorized
   loopAnimationsPresetName: DefaultPreset
   loadLoopAnimationsPresetAtRuntime: 0
---- !u!114 &114650368200742810
+--- !u!114 &114156969467162556
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1915751714628208}
+  m_GameObject: {fileID: 1470948724606778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 682849f091f20484485c3a8e6c1e0b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  buttonCategory: Notifications
+  buttonName: OK
+  allowMultipleClicks: 1
+  deselectButtonOnClick: 1
+  disableButtonInterval: 0.4
+  useOnPointerEnter: 0
+  onPointerEnterDisableInterval: 0.4
+  onPointerEnterSound: ~No Sound~
+  customOnPointerEnterSound: 0
+  OnPointerEnter:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onPointerEnterAnimationType: 0
+  onPointerEnterPunchPresetCategory: Uncategorized
+  onPointerEnterPunchPresetName: DefaultPreset
+  loadOnPointerEnterPunchPresetAtRuntime: 0
+  onPointerEnterPunch:
+    move:
+      enabled: 0
+      punch: {x: 0, y: 20, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    rotate:
+      enabled: 0
+      punch: {x: 0, y: 0, z: 30}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    scale:
+      enabled: 0
+      punch: {x: 0.2, y: 0.2, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onPointerEnterStatePresetCategory: Uncategorized
+  onPointerEnterStatePresetName: DefaultPreset
+  loadOnPointerEnterStatePresetAtRuntime: 0
+  onPointerEnterState:
+    animationType: 2
+    move:
+      enabled: 0
+      animationType: 2
+      moveDirection: 0
+      customPosition: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      animationType: 2
+      rotation: {x: 0, y: 0, z: 0}
+      rotateMode: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      animationType: 2
+      scale: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      animationType: 2
+      alpha: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onPointerEnterGameEvents: []
+  onPointerEnterNavigation:
+    addToNavigationHistory: 0
+    show: []
+    hide: []
+  useOnPointerExit: 0
+  onPointerExitDisableInterval: 0.4
+  onPointerExitSound: ~No Sound~
+  customOnPointerExitSound: 0
+  OnPointerExit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onPointerExitAnimationType: 0
+  onPointerExitPunchPresetCategory: Uncategorized
+  onPointerExitPunchPresetName: DefaultPreset
+  loadOnPointerExitPunchPresetAtRuntime: 0
+  onPointerExitPunch:
+    move:
+      enabled: 0
+      punch: {x: 0, y: 20, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    rotate:
+      enabled: 0
+      punch: {x: 0, y: 0, z: 30}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    scale:
+      enabled: 0
+      punch: {x: 0.2, y: 0.2, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onPointerExitStatePresetCategory: Uncategorized
+  onPointerExitStatePresetName: DefaultPreset
+  loadOnPointerExitStatePresetAtRuntime: 0
+  onPointerExitState:
+    animationType: 2
+    move:
+      enabled: 0
+      animationType: 2
+      moveDirection: 0
+      customPosition: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      animationType: 2
+      rotation: {x: 0, y: 0, z: 0}
+      rotateMode: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      animationType: 2
+      scale: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      animationType: 2
+      alpha: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onPointerExitGameEvents: []
+  onPointerExitNavigation:
+    addToNavigationHistory: 0
+    show: []
+    hide: []
+  useOnPointerDown: 0
+  onPointerDownSound: ~No Sound~
+  customOnPointerDownSound: 0
+  OnPointerDown:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onPointerDownAnimationType: 0
+  onPointerDownPunchPresetCategory: Uncategorized
+  onPointerDownPunchPresetName: DefaultPreset
+  loadOnPointerDownPunchPresetAtRuntime: 0
+  onPointerDownPunch:
+    move:
+      enabled: 0
+      punch: {x: 0, y: 20, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    rotate:
+      enabled: 0
+      punch: {x: 0, y: 0, z: 30}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    scale:
+      enabled: 0
+      punch: {x: 0.2, y: 0.2, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onPointerDownStatePresetCategory: Uncategorized
+  onPointerDownStatePresetName: DefaultPreset
+  loadOnPointerDownStatePresetAtRuntime: 0
+  onPointerDownState:
+    animationType: 2
+    move:
+      enabled: 0
+      animationType: 2
+      moveDirection: 0
+      customPosition: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      animationType: 2
+      rotation: {x: 0, y: 0, z: 0}
+      rotateMode: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      animationType: 2
+      scale: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      animationType: 2
+      alpha: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onPointerDownGameEvents: []
+  onPointerDownNavigation:
+    addToNavigationHistory: 0
+    show: []
+    hide: []
+  useOnPointerUp: 0
+  onPointerUpSound: ~No Sound~
+  customOnPointerUpSound: 0
+  OnPointerUp:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onPointerUpAnimationType: 0
+  onPointerUpPunchPresetCategory: Uncategorized
+  onPointerUpPunchPresetName: DefaultPreset
+  loadOnPointerUpPunchPresetAtRuntime: 0
+  onPointerUpPunch:
+    move:
+      enabled: 0
+      punch: {x: 0, y: 20, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    rotate:
+      enabled: 0
+      punch: {x: 0, y: 0, z: 30}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    scale:
+      enabled: 0
+      punch: {x: 0.2, y: 0.2, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onPointerUpStatePresetCategory: Uncategorized
+  onPointerUpStatePresetName: DefaultPreset
+  loadOnPointerUpStatePresetAtRuntime: 0
+  onPointerUpState:
+    animationType: 2
+    move:
+      enabled: 0
+      animationType: 2
+      moveDirection: 0
+      customPosition: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      animationType: 2
+      rotation: {x: 0, y: 0, z: 0}
+      rotateMode: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      animationType: 2
+      scale: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      animationType: 2
+      alpha: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onPointerUpGameEvents: []
+  onPointerUpNavigation:
+    addToNavigationHistory: 0
+    show: []
+    hide: []
+  useOnClickAnimations: 1
+  waitForOnClickAnimation: 1
+  singleClickMode: 0
+  onClickSound: ~No Sound~
+  customOnClickSound: 0
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onClickAnimationType: 0
+  onClickPunchPresetCategory: Uncategorized
+  onClickPunchPresetName: DefaultPreset
+  loadOnClickPunchPresetAtRuntime: 0
+  onClickPunch:
+    move:
+      enabled: 0
+      punch: {x: 0, y: 20, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    rotate:
+      enabled: 0
+      punch: {x: 0, y: 0, z: 30}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    scale:
+      enabled: 0
+      punch: {x: 0.2, y: 0.2, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onClickStatePresetCategory: Uncategorized
+  onClickStatePresetName: DefaultPreset
+  loadOnClickStatePresetAtRuntime: 0
+  onClickState:
+    animationType: 2
+    move:
+      enabled: 0
+      animationType: 2
+      moveDirection: 0
+      customPosition: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      animationType: 2
+      rotation: {x: 0, y: 0, z: 0}
+      rotateMode: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      animationType: 2
+      scale: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      animationType: 2
+      alpha: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onClickGameEvents: []
+  onClickNavigation:
+    addToNavigationHistory: 0
+    show: []
+    hide: []
+  useOnDoubleClick: 0
+  waitForOnDoubleClickAnimation: 1
+  doubleClickRegisterInterval: 0.2
+  onDoubleClickSound: ~No Sound~
+  customOnDoubleClickSound: 0
+  OnDoubleClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onDoubleClickAnimationType: 0
+  onDoubleClickPunchPresetCategory: Uncategorized
+  onDoubleClickPunchPresetName: DefaultPreset
+  loadOnDoubleClickPunchPresetAtRuntime: 0
+  onDoubleClickPunch:
+    move:
+      enabled: 0
+      punch: {x: 0, y: 20, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    rotate:
+      enabled: 0
+      punch: {x: 0, y: 0, z: 30}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    scale:
+      enabled: 0
+      punch: {x: 0.2, y: 0.2, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onDoubleClickStatePresetCategory: Uncategorized
+  onDoubleClickStatePresetName: DefaultPreset
+  loadOnDoubleClickStatePresetAtRuntime: 0
+  onDoubleClickState:
+    animationType: 2
+    move:
+      enabled: 0
+      animationType: 2
+      moveDirection: 0
+      customPosition: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      animationType: 2
+      rotation: {x: 0, y: 0, z: 0}
+      rotateMode: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      animationType: 2
+      scale: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      animationType: 2
+      alpha: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onDoubleClickGameEvents: []
+  onDoubleClickNavigation:
+    addToNavigationHistory: 0
+    show: []
+    hide: []
+  useOnLongClick: 0
+  waitForOnLongClickAnimation: 1
+  longClickRegisterInterval: 0.5
+  onLongClickSound: ~No Sound~
+  customOnLongClickSound: 0
+  OnLongClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onLongClickAnimationType: 0
+  onLongClickPunchPresetCategory: Uncategorized
+  onLongClickPunchPresetName: DefaultPreset
+  loadOnLongClickPunchPresetAtRuntime: 0
+  onLongClickPunch:
+    move:
+      enabled: 0
+      punch: {x: 0, y: 20, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    rotate:
+      enabled: 0
+      punch: {x: 0, y: 0, z: 30}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    scale:
+      enabled: 0
+      punch: {x: 0.2, y: 0.2, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onLongClickStatePresetCategory: Uncategorized
+  onLongClickStatePresetName: DefaultPreset
+  loadOnLongClickStatePresetAtRuntime: 0
+  onLongClickState:
+    animationType: 2
+    move:
+      enabled: 0
+      animationType: 2
+      moveDirection: 0
+      customPosition: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      animationType: 2
+      rotation: {x: 0, y: 0, z: 0}
+      rotateMode: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      animationType: 2
+      scale: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      animationType: 2
+      alpha: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onLongClickGameEvents: []
+  onLongClickNavigation:
+    addToNavigationHistory: 0
+    show: []
+    hide: []
+  normalLoopPresetCategory: Uncategorized
+  normalLoopPresetName: DefaultPreset
+  loadNormalLoopPresetAtRuntime: 0
+  normalLoop:
+    autoStart: 0
+    move:
+      enabled: 0
+      movement: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      rotation: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      rotateMode: 0
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      min: {x: 1, y: 1, z: 1}
+      max: {x: 1.05, y: 1.05, z: 1.05}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      min: 0
+      max: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  selectedLoopPresetCategory: Uncategorized
+  selectedLoopPresetName: DefaultPreset
+  loadSelectedLoopPresetAtRuntime: 0
+  selectedLoop:
+    autoStart: 0
+    move:
+      enabled: 0
+      movement: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      rotation: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      rotateMode: 0
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      min: {x: 1, y: 1, z: 1}
+      max: {x: 1.05, y: 1.05, z: 1.05}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      min: 0
+      max: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  controllerInputMode: 2
+  enableAlternateInputs: 1
+  onClickKeyCode: 13
+  onClickKeyCodeAlt: 32
+  onClickVirtualButtonName: Submit
+  onClickVirtualButtonNameAlt: Jump
+--- !u!114 &114179689153420332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1050577183111914}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.12156863, g: 0.53333336, b: 0.7882353, a: 1}
+  m_Color: {r: 0.508989, g: 0.7633964, b: 0.8113208, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3440,28 +1884,12 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114665966180690016
+--- !u!114 &114216539714876028
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1355047130842136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &114677164283079446
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1936850870000198}
+  m_GameObject: {fileID: 1151636039428526}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -3491,59 +1919,45 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 114650368200742810}
+  m_TargetGraphic: {fileID: 114693263808577432}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114677966436156850
+--- !u!114 &114241654391024256
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1760406273051842}
+  m_GameObject: {fileID: 1879823804503512}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 114392131459296566}
-  m_OnClick:
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.043137256, g: 0.19607843, b: 0.2901961, a: 0.78431374}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &114711914969621778
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!114 &114404774859193262
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1494220872770686}
+  m_GameObject: {fileID: 1614285367081608}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -3565,12 +1979,149 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114736769423917706
+--- !u!114 &114493210287617714
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1936850870000198}
+  m_GameObject: {fileID: 1831357569940768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9639974, g: 0.9716981, b: 0.43543077, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 14
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: UPDATE
+--- !u!114 &114526010780878626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1923583282521672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 0.85882354}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 12
+    m_MaxSize: 20
+    m_Alignment: 4
+    m_AlignByGeometry: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Button1
+
+
+'
+--- !u!114 &114532109932269938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1674061116364782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114619238182375528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1314494887374840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.12156863, g: 0.53333336, b: 0.7882353, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!114 &114645367227689022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1983877763456864}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 682849f091f20484485c3a8e6c1e0b1f, type: 3}
@@ -4674,28 +3225,374 @@ MonoBehaviour:
   onClickKeyCodeAlt: 32
   onClickVirtualButtonName: Submit
   onClickVirtualButtonNameAlt: Jump
---- !u!114 &114781710122585920
+--- !u!114 &114693263808577432
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1614065264422284}
+  m_GameObject: {fileID: 1121318850052162}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &114797969210386716
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.12156863, g: 0.53333336, b: 0.7882353, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!114 &114698562006172488
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1646310038179430}
+  m_GameObject: {fileID: 1674061116364782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb5c4702c7d6e344b9832a97ae1264d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementCategory: Uncategorized
+  elementName: Choice3Way (-7702520)
+  LANDSCAPE: 1
+  PORTRAIT: 1
+  startHidden: 1
+  animateAtStart: 0
+  disableWhenHidden: 0
+  dontDisableCanvasWhenHidden: 0
+  disableGraphicRaycaster: 0
+  autoHide: 0
+  autoHideDelay: 3
+  useCustomStartAnchoredPosition: 0
+  customStartAnchoredPosition: {x: 0, y: 0, z: 0}
+  executeLayoutFix: 0
+  deselectAnySelectedButtonOnShow: 0
+  deselectAnySelectedButtonOnHide: 0
+  enableAutoSelectButtonAfterShow: 1
+  selectedButton: {fileID: 0}
+  linkedToNotification: 1
+  autoRegister: 0
+  isVisible: 1
+  inAnimations:
+    animationType: 0
+    move:
+      enabled: 0
+      animationType: 0
+      moveDirection: 0
+      customPosition: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      animationType: 0
+      rotation: {x: 0, y: 0, z: 0}
+      rotateMode: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      animationType: 0
+      scale: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      animationType: 0
+      alpha: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  OnInAnimationsStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnInAnimationsFinish:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  inAnimationsPresetCategoryName: Basic
+  inAnimationsPresetName: Punch
+  loadInAnimationsPresetAtRuntime: 1
+  inAnimationsSoundAtStart: ~No Sound~
+  customInAnimationsSoundAtStart: 0
+  inAnimationsSoundAtFinish: ~No Sound~
+  customInAnimationsSoundAtFinish: 0
+  outAnimations:
+    animationType: 1
+    move:
+      enabled: 0
+      animationType: 1
+      moveDirection: 0
+      customPosition: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      animationType: 1
+      rotation: {x: 0, y: 0, z: 0}
+      rotateMode: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      animationType: 1
+      scale: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      animationType: 1
+      alpha: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  OnOutAnimationsStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnOutAnimationsFinish:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  outAnimationsPresetCategoryName: Basic
+  outAnimationsPresetName: Punch
+  loadOutAnimationsPresetAtRuntime: 1
+  outAnimationsSoundAtStart: ~No Sound~
+  customOutAnimationsSoundAtStart: 0
+  outAnimationsSoundAtFinish: ~No Sound~
+  customOutAnimationsSoundAtFinish: 0
+  loopAnimations:
+    autoStart: 0
+    move:
+      enabled: 0
+      movement: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      rotation: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      rotateMode: 0
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      min: {x: 1, y: 1, z: 1}
+      max: {x: 1.05, y: 1.05, z: 1.05}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      min: 0
+      max: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  loopAnimationsPresetCategoryName: Uncategorized
+  loopAnimationsPresetName: DefaultPreset
+  loadLoopAnimationsPresetAtRuntime: 0
+--- !u!114 &114711659053706254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1326274399386604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 0.85882354}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 12
+    m_MaxSize: 20
+    m_Alignment: 4
+    m_AlignByGeometry: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Button3
+--- !u!114 &114793119582545906
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1470948724606778}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -4725,18 +3622,1195 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 114711914969621778}
+  m_TargetGraphic: {fileID: 114954751801796836}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114812869725140934
+--- !u!114 &114820453709736780
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1007825506935584}
+  m_GameObject: {fileID: 1983877763456864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 114404774859193262}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114869531974185948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1151636039428526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 682849f091f20484485c3a8e6c1e0b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  buttonCategory: Notifications
+  buttonName: OK
+  allowMultipleClicks: 1
+  deselectButtonOnClick: 1
+  disableButtonInterval: 0.4
+  useOnPointerEnter: 0
+  onPointerEnterDisableInterval: 0.4
+  onPointerEnterSound: ~No Sound~
+  customOnPointerEnterSound: 0
+  OnPointerEnter:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onPointerEnterAnimationType: 0
+  onPointerEnterPunchPresetCategory: Uncategorized
+  onPointerEnterPunchPresetName: DefaultPreset
+  loadOnPointerEnterPunchPresetAtRuntime: 0
+  onPointerEnterPunch:
+    move:
+      enabled: 0
+      punch: {x: 0, y: 20, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    rotate:
+      enabled: 0
+      punch: {x: 0, y: 0, z: 30}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    scale:
+      enabled: 0
+      punch: {x: 0.2, y: 0.2, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onPointerEnterStatePresetCategory: Uncategorized
+  onPointerEnterStatePresetName: DefaultPreset
+  loadOnPointerEnterStatePresetAtRuntime: 0
+  onPointerEnterState:
+    animationType: 2
+    move:
+      enabled: 0
+      animationType: 2
+      moveDirection: 0
+      customPosition: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      animationType: 2
+      rotation: {x: 0, y: 0, z: 0}
+      rotateMode: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      animationType: 2
+      scale: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      animationType: 2
+      alpha: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onPointerEnterGameEvents: []
+  onPointerEnterNavigation:
+    addToNavigationHistory: 0
+    show: []
+    hide: []
+  useOnPointerExit: 0
+  onPointerExitDisableInterval: 0.4
+  onPointerExitSound: ~No Sound~
+  customOnPointerExitSound: 0
+  OnPointerExit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onPointerExitAnimationType: 0
+  onPointerExitPunchPresetCategory: Uncategorized
+  onPointerExitPunchPresetName: DefaultPreset
+  loadOnPointerExitPunchPresetAtRuntime: 0
+  onPointerExitPunch:
+    move:
+      enabled: 0
+      punch: {x: 0, y: 20, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    rotate:
+      enabled: 0
+      punch: {x: 0, y: 0, z: 30}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    scale:
+      enabled: 0
+      punch: {x: 0.2, y: 0.2, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onPointerExitStatePresetCategory: Uncategorized
+  onPointerExitStatePresetName: DefaultPreset
+  loadOnPointerExitStatePresetAtRuntime: 0
+  onPointerExitState:
+    animationType: 2
+    move:
+      enabled: 0
+      animationType: 2
+      moveDirection: 0
+      customPosition: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      animationType: 2
+      rotation: {x: 0, y: 0, z: 0}
+      rotateMode: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      animationType: 2
+      scale: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      animationType: 2
+      alpha: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onPointerExitGameEvents: []
+  onPointerExitNavigation:
+    addToNavigationHistory: 0
+    show: []
+    hide: []
+  useOnPointerDown: 0
+  onPointerDownSound: ~No Sound~
+  customOnPointerDownSound: 0
+  OnPointerDown:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onPointerDownAnimationType: 0
+  onPointerDownPunchPresetCategory: Uncategorized
+  onPointerDownPunchPresetName: DefaultPreset
+  loadOnPointerDownPunchPresetAtRuntime: 0
+  onPointerDownPunch:
+    move:
+      enabled: 0
+      punch: {x: 0, y: 20, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    rotate:
+      enabled: 0
+      punch: {x: 0, y: 0, z: 30}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    scale:
+      enabled: 0
+      punch: {x: 0.2, y: 0.2, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onPointerDownStatePresetCategory: Uncategorized
+  onPointerDownStatePresetName: DefaultPreset
+  loadOnPointerDownStatePresetAtRuntime: 0
+  onPointerDownState:
+    animationType: 2
+    move:
+      enabled: 0
+      animationType: 2
+      moveDirection: 0
+      customPosition: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      animationType: 2
+      rotation: {x: 0, y: 0, z: 0}
+      rotateMode: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      animationType: 2
+      scale: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      animationType: 2
+      alpha: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onPointerDownGameEvents: []
+  onPointerDownNavigation:
+    addToNavigationHistory: 0
+    show: []
+    hide: []
+  useOnPointerUp: 0
+  onPointerUpSound: ~No Sound~
+  customOnPointerUpSound: 0
+  OnPointerUp:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onPointerUpAnimationType: 0
+  onPointerUpPunchPresetCategory: Uncategorized
+  onPointerUpPunchPresetName: DefaultPreset
+  loadOnPointerUpPunchPresetAtRuntime: 0
+  onPointerUpPunch:
+    move:
+      enabled: 0
+      punch: {x: 0, y: 20, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    rotate:
+      enabled: 0
+      punch: {x: 0, y: 0, z: 30}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    scale:
+      enabled: 0
+      punch: {x: 0.2, y: 0.2, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onPointerUpStatePresetCategory: Uncategorized
+  onPointerUpStatePresetName: DefaultPreset
+  loadOnPointerUpStatePresetAtRuntime: 0
+  onPointerUpState:
+    animationType: 2
+    move:
+      enabled: 0
+      animationType: 2
+      moveDirection: 0
+      customPosition: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      animationType: 2
+      rotation: {x: 0, y: 0, z: 0}
+      rotateMode: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      animationType: 2
+      scale: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      animationType: 2
+      alpha: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onPointerUpGameEvents: []
+  onPointerUpNavigation:
+    addToNavigationHistory: 0
+    show: []
+    hide: []
+  useOnClickAnimations: 1
+  waitForOnClickAnimation: 1
+  singleClickMode: 0
+  onClickSound: ~No Sound~
+  customOnClickSound: 0
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onClickAnimationType: 0
+  onClickPunchPresetCategory: Uncategorized
+  onClickPunchPresetName: DefaultPreset
+  loadOnClickPunchPresetAtRuntime: 0
+  onClickPunch:
+    move:
+      enabled: 0
+      punch: {x: 0, y: 20, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    rotate:
+      enabled: 0
+      punch: {x: 0, y: 0, z: 30}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    scale:
+      enabled: 0
+      punch: {x: 0.2, y: 0.2, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onClickStatePresetCategory: Uncategorized
+  onClickStatePresetName: DefaultPreset
+  loadOnClickStatePresetAtRuntime: 0
+  onClickState:
+    animationType: 2
+    move:
+      enabled: 0
+      animationType: 2
+      moveDirection: 0
+      customPosition: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      animationType: 2
+      rotation: {x: 0, y: 0, z: 0}
+      rotateMode: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      animationType: 2
+      scale: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      animationType: 2
+      alpha: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onClickGameEvents: []
+  onClickNavigation:
+    addToNavigationHistory: 0
+    show: []
+    hide: []
+  useOnDoubleClick: 0
+  waitForOnDoubleClickAnimation: 1
+  doubleClickRegisterInterval: 0.2
+  onDoubleClickSound: ~No Sound~
+  customOnDoubleClickSound: 0
+  OnDoubleClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onDoubleClickAnimationType: 0
+  onDoubleClickPunchPresetCategory: Uncategorized
+  onDoubleClickPunchPresetName: DefaultPreset
+  loadOnDoubleClickPunchPresetAtRuntime: 0
+  onDoubleClickPunch:
+    move:
+      enabled: 0
+      punch: {x: 0, y: 20, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    rotate:
+      enabled: 0
+      punch: {x: 0, y: 0, z: 30}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    scale:
+      enabled: 0
+      punch: {x: 0.2, y: 0.2, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onDoubleClickStatePresetCategory: Uncategorized
+  onDoubleClickStatePresetName: DefaultPreset
+  loadOnDoubleClickStatePresetAtRuntime: 0
+  onDoubleClickState:
+    animationType: 2
+    move:
+      enabled: 0
+      animationType: 2
+      moveDirection: 0
+      customPosition: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      animationType: 2
+      rotation: {x: 0, y: 0, z: 0}
+      rotateMode: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      animationType: 2
+      scale: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      animationType: 2
+      alpha: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onDoubleClickGameEvents: []
+  onDoubleClickNavigation:
+    addToNavigationHistory: 0
+    show: []
+    hide: []
+  useOnLongClick: 0
+  waitForOnLongClickAnimation: 1
+  longClickRegisterInterval: 0.5
+  onLongClickSound: ~No Sound~
+  customOnLongClickSound: 0
+  OnLongClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onLongClickAnimationType: 0
+  onLongClickPunchPresetCategory: Uncategorized
+  onLongClickPunchPresetName: DefaultPreset
+  loadOnLongClickPunchPresetAtRuntime: 0
+  onLongClickPunch:
+    move:
+      enabled: 0
+      punch: {x: 0, y: 20, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    rotate:
+      enabled: 0
+      punch: {x: 0, y: 0, z: 30}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    scale:
+      enabled: 0
+      punch: {x: 0.2, y: 0.2, z: 0}
+      startDelay: 0
+      duration: 0.3
+      vibrato: 4
+      elasticity: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onLongClickStatePresetCategory: Uncategorized
+  onLongClickStatePresetName: DefaultPreset
+  loadOnLongClickStatePresetAtRuntime: 0
+  onLongClickState:
+    animationType: 2
+    move:
+      enabled: 0
+      animationType: 2
+      moveDirection: 0
+      customPosition: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      animationType: 2
+      rotation: {x: 0, y: 0, z: 0}
+      rotateMode: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      animationType: 2
+      scale: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      animationType: 2
+      alpha: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  onLongClickGameEvents: []
+  onLongClickNavigation:
+    addToNavigationHistory: 0
+    show: []
+    hide: []
+  normalLoopPresetCategory: Uncategorized
+  normalLoopPresetName: DefaultPreset
+  loadNormalLoopPresetAtRuntime: 0
+  normalLoop:
+    autoStart: 0
+    move:
+      enabled: 0
+      movement: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      rotation: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      rotateMode: 0
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      min: {x: 1, y: 1, z: 1}
+      max: {x: 1.05, y: 1.05, z: 1.05}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      min: 0
+      max: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  selectedLoopPresetCategory: Uncategorized
+  selectedLoopPresetName: DefaultPreset
+  loadSelectedLoopPresetAtRuntime: 0
+  selectedLoop:
+    autoStart: 0
+    move:
+      enabled: 0
+      movement: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      startDelay: 0
+      duration: 0.5
+    rotate:
+      enabled: 0
+      rotation: {x: 0, y: 0, z: 0}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      rotateMode: 0
+      startDelay: 0
+      duration: 0.5
+    scale:
+      enabled: 0
+      min: {x: 1, y: 1, z: 1}
+      max: {x: 1.05, y: 1.05, z: 1.05}
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      startDelay: 0
+      duration: 0.5
+    fade:
+      enabled: 0
+      min: 0
+      max: 1
+      easeType: 0
+      ease: 1
+      animationCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      loops: -1
+      loopType: 1
+      startDelay: 0
+      duration: 0.5
+    moveIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    rotateIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    scaleIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    fadeIsExpanded:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  controllerInputMode: 2
+  enableAlternateInputs: 1
+  onClickKeyCode: 13
+  onClickKeyCodeAlt: 32
+  onClickVirtualButtonName: Submit
+  onClickVirtualButtonNameAlt: Jump
+--- !u!114 &114954751801796836
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1957596876069070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.12156863, g: 0.53333336, b: 0.7882353, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!114 &114969525189190264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1083442456076290}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -4753,188 +4827,100 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 2
     m_BestFit: 1
-    m_MinSize: 14
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 1
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: UPDATE
---- !u!114 &114844427277888240
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1799563258924808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 0.85882354}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
     m_MinSize: 12
-    m_MaxSize: 20
+    m_MaxSize: 18
     m_Alignment: 4
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Cancel
-
-'
---- !u!114 &114850365826947086
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1287904976219938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 0.85882354}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 12
-    m_MaxSize: 20
-    m_Alignment: 4
-    m_AlignByGeometry: 1
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: OK
---- !u!222 &222261352599136226
+  m_Text: notification message example
+--- !u!222 &222023935669650372
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1467690041060082}
+  m_GameObject: {fileID: 1957596876069070}
   m_CullTransparentMesh: 0
---- !u!222 &222321352897093194
+--- !u!222 &222025001592206798
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1915751714628208}
+  m_GameObject: {fileID: 1923583282521672}
   m_CullTransparentMesh: 0
---- !u!222 &222342137072367554
+--- !u!222 &222116353198438952
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1007825506935584}
+  m_GameObject: {fileID: 1314494887374840}
   m_CullTransparentMesh: 0
---- !u!222 &222495227850426756
+--- !u!222 &222191043392958270
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1924230385765720}
+  m_GameObject: {fileID: 1050577183111914}
   m_CullTransparentMesh: 0
---- !u!222 &222502592781951842
+--- !u!222 &222361400107946014
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1653364759269774}
+  m_GameObject: {fileID: 1879823804503512}
   m_CullTransparentMesh: 0
---- !u!222 &222525291621293306
+--- !u!222 &222388701298171522
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1799563258924808}
+  m_GameObject: {fileID: 1614285367081608}
   m_CullTransparentMesh: 0
---- !u!222 &222532603944187440
+--- !u!222 &222392803638863066
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1287904976219938}
+  m_GameObject: {fileID: 1083442456076290}
   m_CullTransparentMesh: 0
---- !u!222 &222670852304911882
+--- !u!222 &222561458272563238
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1770795720285166}
+  m_GameObject: {fileID: 1121318850052162}
   m_CullTransparentMesh: 0
---- !u!222 &222722154369017322
+--- !u!222 &222588301251456540
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1736718511238702}
+  m_GameObject: {fileID: 1292927935743438}
   m_CullTransparentMesh: 0
---- !u!222 &222885722713711118
+--- !u!222 &222706373244068388
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1305187180919952}
+  m_GameObject: {fileID: 1831357569940768}
   m_CullTransparentMesh: 0
---- !u!222 &222970981942710258
+--- !u!222 &222869169076242862
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1494220872770686}
+  m_GameObject: {fileID: 1326274399386604}
   m_CullTransparentMesh: 0
---- !u!223 &223824572392313194
+--- !u!223 &223457112154283202
 Canvas:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1614065264422284}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 1
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 1
-  m_TargetDisplay: 0
---- !u!223 &223916011733431702
-Canvas:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1355047130842136}
+  m_GameObject: {fileID: 1324771013541964}
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
@@ -4949,132 +4935,37 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!224 &224074033467185440
+--- !u!223 &223618513296966326
+Canvas:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1674061116364782}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
+--- !u!224 &224002948028281256
 RectTransform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1287904976219938}
+  m_GameObject: {fileID: 1083442456076290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 224147902406001140}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224147902406001140
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1760406273051842}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.9283291}
-  m_LocalScale: {x: 0.85925925, y: 0.85925925, z: 0.85925925}
-  m_Children:
-  - {fileID: 224793120508450934}
-  - {fileID: 224074033467185440}
-  m_Father: {fileID: 224182626412135832}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 128.89, y: -13.88}
-  m_SizeDelta: {x: 85.92667, y: 27.76}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224181529840993874
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1936850870000198}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.9283291}
-  m_LocalScale: {x: 0.85925996, y: 0.85925996, z: 0.85925996}
-  m_Children:
-  - {fileID: 224831123069690938}
-  - {fileID: 224267993349172622}
-  m_Father: {fileID: 224182626412135832}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 42.963333, y: -13.88}
-  m_SizeDelta: {x: 85.92667, y: 27.76}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224182626412135832
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1944221796872880}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 224181529840993874}
-  - {fileID: 224147902406001140}
-  - {fileID: 224493522443064270}
-  m_Father: {fileID: 224659102806366490}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.89, y: -78}
-  m_SizeDelta: {x: 257.78, y: 27.76}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224203187881421956
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1007825506935584}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224401471765971248}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -32, y: -4}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224267993349172622
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1799563258924808}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224181529840993874}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224400841824983674
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1770795720285166}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224659102806366490}
+  m_Father: {fileID: 224307746390937644}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5082,74 +4973,39 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -24}
   m_SizeDelta: {x: -48, y: -80}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224401471765971248
+--- !u!224 &224127253848646652
 RectTransform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1736718511238702}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 1470948724606778}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1.9283291}
+  m_LocalScale: {x: 0.85925925, y: 0.85925925, z: 0.85925925}
   m_Children:
-  - {fileID: 224203187881421956}
-  m_Father: {fileID: 224659102806366490}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -16}
-  m_SizeDelta: {x: 16, y: 32}
-  m_Pivot: {x: 0.5, y: 1}
---- !u!224 &224413297064685636
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1494220872770686}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224493522443064270}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224464600091256164
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1467690041060082}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224493522443064270}
+  - {fileID: 224967951489289376}
+  - {fileID: 224294621327806992}
+  m_Father: {fileID: 224688140130948664}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 128.89, y: -13.88}
+  m_SizeDelta: {x: 85.92667, y: 27.76}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224493522443064270
+--- !u!224 &224187441630381854
 RectTransform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1646310038179430}
+  m_GameObject: {fileID: 1151636039428526}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1.9283291}
   m_LocalScale: {x: 0.85925996, y: 0.85925996, z: 0.85925996}
   m_Children:
-  - {fileID: 224413297064685636}
-  - {fileID: 224464600091256164}
-  m_Father: {fileID: 224182626412135832}
+  - {fileID: 224480168024073104}
+  - {fileID: 224890511111650504}
+  m_Father: {fileID: 224688140130948664}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -5157,40 +5013,57 @@ RectTransform:
   m_AnchoredPosition: {x: 214.81667, y: -13.880005}
   m_SizeDelta: {x: 85.92667, y: 27.76}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224617727764337122
+--- !u!224 &224261584690184286
 RectTransform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1355047130842136}
+  m_GameObject: {fileID: 1923583282521672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 224928531925855562}
-  m_Father: {fileID: 224817880962751710}
-  m_RootOrder: 0
+  m_Children: []
+  m_Father: {fileID: 224785989904633436}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224659102806366490
+--- !u!224 &224294621327806992
 RectTransform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1614065264422284}
+  m_GameObject: {fileID: 1292927935743438}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224127253848646652}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224307746390937644
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1674061116364782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 224753963172188256}
-  - {fileID: 224400841824983674}
-  - {fileID: 224401471765971248}
-  - {fileID: 224182626412135832}
-  m_Father: {fileID: 224817880962751710}
+  - {fileID: 224673227845801074}
+  - {fileID: 224002948028281256}
+  - {fileID: 224770846749769244}
+  - {fileID: 224688140130948664}
+  m_Father: {fileID: 224889185501317082}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -5198,17 +5071,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224753963172188256
+--- !u!224 &224480168024073104
 RectTransform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1924230385765720}
+  m_GameObject: {fileID: 1121318850052162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 224659102806366490}
+  m_Father: {fileID: 224187441630381854}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5216,17 +5089,36 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224793120508450934
+--- !u!224 &224658428758320768
 RectTransform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1653364759269774}
+  m_GameObject: {fileID: 1324771013541964}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 224667501601823470}
+  m_Father: {fileID: 224889185501317082}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224667501601823470
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1879823804503512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 224147902406001140}
+  m_Father: {fileID: 224658428758320768}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5234,18 +5126,114 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224817880962751710
+--- !u!224 &224673227845801074
 RectTransform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1256165033314788}
+  m_GameObject: {fileID: 1050577183111914}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224307746390937644}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224688140130948664
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1773140886706922}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 224617727764337122}
-  - {fileID: 224659102806366490}
+  - {fileID: 224785989904633436}
+  - {fileID: 224127253848646652}
+  - {fileID: 224187441630381854}
+  m_Father: {fileID: 224307746390937644}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 2.89, y: 13.880005}
+  m_SizeDelta: {x: 257.78, y: 27.760002}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224770846749769244
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1314494887374840}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 224808346572377906}
+  m_Father: {fileID: 224307746390937644}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -16}
+  m_SizeDelta: {x: 16, y: 32}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!224 &224785989904633436
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1983877763456864}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1.9283291}
+  m_LocalScale: {x: 0.85925996, y: 0.85925996, z: 0.85925996}
+  m_Children:
+  - {fileID: 224948007689448508}
+  - {fileID: 224261584690184286}
+  m_Father: {fileID: 224688140130948664}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 42.963333, y: -13.88}
+  m_SizeDelta: {x: 85.92667, y: 27.76}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224808346572377906
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1831357569940768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224770846749769244}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -32, y: -4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224889185501317082
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1275654626484196}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 224658428758320768}
+  - {fileID: 224307746390937644}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5254,17 +5242,35 @@ RectTransform:
   m_AnchoredPosition: {x: 273, y: -228}
   m_SizeDelta: {x: -651.4, y: -664.1}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224831123069690938
+--- !u!224 &224890511111650504
 RectTransform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1915751714628208}
+  m_GameObject: {fileID: 1326274399386604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 224181529840993874}
+  m_Father: {fileID: 224187441630381854}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224948007689448508
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1614285367081608}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224785989904633436}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5272,17 +5278,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224928531925855562
+--- !u!224 &224967951489289376
 RectTransform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1305187180919952}
+  m_GameObject: {fileID: 1957596876069070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 224617727764337122}
+  m_Father: {fileID: 224127253848646652}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5290,23 +5296,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!225 &225206799416106816
+--- !u!225 &225484294584209078
 CanvasGroup:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1355047130842136}
+  m_GameObject: {fileID: 1674061116364782}
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!225 &225473684547428136
+--- !u!225 &225658906646056794
 CanvasGroup:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1614065264422284}
+  m_GameObject: {fileID: 1324771013541964}
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
