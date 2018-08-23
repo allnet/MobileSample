@@ -91,9 +91,8 @@ namespace AllNetXR
 
 
             if (Input.GetKeyDown(KeyCode.Keypad2))
-            {             
-              
-                UnityAction[] callbacks = { uim.NotificationCallbackOk, uim.NotificationCallbackCancel };
+            {            
+                              UnityAction[] callbacks = { uim.NotificationCallbackOk, uim.NotificationCallbackCancel };
                 DoozyUI.UIManager.ShowNotification("Choice2Way", -1, false,
                     "Choice 2-Way(bi)",
                     "A test message with informative info",
