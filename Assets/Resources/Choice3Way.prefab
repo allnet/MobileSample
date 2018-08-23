@@ -335,7 +335,7 @@ MonoBehaviour:
   targetCanvasName: Additive
   customTargetCanvasName: 0
   notificationContainer: {fileID: 114698562006172488}
-  overlay: {fileID: 0}
+  overlay: {fileID: 114119553840500904}
   title: {fileID: 1831357569940768}
   message: {fileID: 1083442456076290}
   icon: {fileID: 0}
@@ -475,8 +475,8 @@ MonoBehaviour:
   deselectAnySelectedButtonOnHide: 0
   enableAutoSelectButtonAfterShow: 1
   selectedButton: {fileID: 0}
-  linkedToNotification: 0
-  autoRegister: 1
+  linkedToNotification: 1
+  autoRegister: 0
   isVisible: 1
   inAnimations:
     animationType: 0
@@ -1937,7 +1937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.043137256, g: 0.19607843, b: 0.2901961, a: 0.78431374}
+  m_Color: {r: 0.88309896, g: 0.9496262, b: 0.990566, a: 0.3137255}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3264,7 +3264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementCategory: Uncategorized
-  elementName: Choice3Way (-1184)
+  elementName: Choice3Way (-1314)
   LANDSCAPE: 1
   PORTRAIT: 1
   startHidden: 1
@@ -5105,8 +5105,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.5, y: 3}
-  m_SizeDelta: {x: 328.7, y: 219.9}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 431, y: 766}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224667501601823470
 RectTransform:
@@ -5182,7 +5182,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -16}
-  m_SizeDelta: {x: 16, y: 32}
+  m_SizeDelta: {x: 12.14, y: 30.34}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!224 &224785989904633436
 RectTransform:
@@ -5239,8 +5239,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 328.8, y: -312.3}
-  m_SizeDelta: {x: -539.7, y: -495.6}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224890511111650504
 RectTransform:

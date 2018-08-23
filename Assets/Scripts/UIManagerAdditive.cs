@@ -43,8 +43,19 @@ namespace AllNetXR
             Instance = this;
 
             responseHandler += DefaultResponseHandler;
+            DeactivateUINotifications(this.transform);  // notifications
         }
- 
+
+        public Transform[] DeactivateUINotifications(Transform parent)  // all top level
+        {
+            Transform[] children = new Transform[parent.childCount];
+            for (int ID = 0; ID < parent.childCount; ID++)
+            {
+                children[ID] = parent.GetChild(ID);
+                children[ID].gameObject.SetActive(false);
+            }
+            return children;
+        }
 
         public void DefaultResponseHandler(eNotificationType type, eResponseType responseType,  string input)
         {
