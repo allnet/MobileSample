@@ -54,7 +54,8 @@ namespace AllNetXR
 
 
         private void ProcessAdditiveUIStateRequests()
-        {
+        {       
+         
             UIManagerAdditive uim = UIManagerAdditive.Instance;
 
             if (Input.GetKeyDown(KeyCode.Keypad0))  //BUSy  needs rotating sprite
@@ -66,36 +67,52 @@ namespace AllNetXR
                 //UIManagerAdditive.Instance.ShowNotification(eNotificationType.Busy, eNotificationType.Busy.ToString(), "A busy test message");  // needs a callback for each button
 
                 //DoozyUI.UIManager.ShowNotification("Busy", -1, false, "Busy", "A test message with informative info");  // works simple
-                DoozyUI.UIManager.ShowNotification("Busy", -1, false, "Busy", "A test message with busy info", UIManagerAdditive.Instance.NotificationCallbackCancel);  //simple cancel callback
+                DoozyUI.UIManager.ShowNotification("Busy", -1, false, "Busy", "Click inside Inspector to EXIT ", uim.NotificationCallbackCancel);  //simple cancel callback
             }
 
-            if (Input.GetKeyDown(KeyCode.Keypad0))  //Info
-            {
-                DoozyUI.UIManager.ShowNotification("Info", -1, false, "Info", "A test message with informative info.", UIManagerAdditive.Instance.NotificationCallbackCancel);
-            }
-
-
+         
             if (Input.GetKeyDown(KeyCode.Keypad1))  // single button - info
-            {
-
-                string[] buttonNames = { "OK" };
-                UnityAction[] callbacks = { UIManagerAdditive.Instance.NotificationCallbackOk };//
-                DoozyUI.UIManager.ShowNotification("SingleButton", -1, false, "Single Button Info", "A test message with informative info", null, buttonNames, callbacks);
-
+            {             
+                DoozyUI.UIManager.ShowNotification("SingleButton", -1, false, "Single Button Info", "A test message with informative info", 
+                    null,
+                    new string[] { "OKHit" },
+                    new string[] { "OK" },
+                   new UnityAction[] { uim.NotificationCallbackOk } );
             }
+
+            //if (Input.GetKeyDown(KeyCode.Keypad4))  // single button - info  // not escaping but think I can do it with a big button or pursue further
+            //{
+            //    DoozyUI.UIManager.ShowNotification("SingleButtonEsc", -1, false, "Single Button ESCAPABLE Info", "A test message with informative info",
+            //        null,
+            //        new string[] { "OKHit" },
+            //        new string[] { "OK" },
+            //        new UnityAction[] { uim.NotificationCallbackOk });  //   new UnityAction[] { uim.NotificationCallbackOk }
+            //}
+
 
             if (Input.GetKeyDown(KeyCode.Keypad2))
-            {
-                DoozyUI.UIManager.ShowNotification("Choice2Way", -1, false, "Choice 2-way", "A test message with 2-way info.", UIManagerAdditive.Instance.NotificationCallbackCancel);
+            {             
+              
+                UnityAction[] callbacks = { uim.NotificationCallbackOk, uim.NotificationCallbackCancel };
+                DoozyUI.UIManager.ShowNotification("Choice2Way", -1, false,
+                    "Choice 2-Way(bi)",
+                    "A test message with informative info",
+                    notificationSprite,
+                    new string[] { "OKHit", "CancelHit" },  // broadcast game event name
+                    new string[] { "OK", "Cancel" },  // titles that appear
+                    callbacks);
             }
 
             if (Input.GetKeyDown(KeyCode.Keypad3))
-            {
-                //DoozyUI.UIManager.ShowNotification("Choice3Way", -1, false, "Choice 3-way", "A test message with 3-way info.", UIManagerAdditive.Instance.NotificationCallbackCancel);
-
-                string[] buttonNames = { "OK", "Cancel", "Retry" };  // but 1, 2, 3 respectively
+            {            
                 UnityAction[] callbacks = { uim.NotificationCallbackOk, uim.NotificationCallbackCancel, uim.NotificationCallbackRetry };
-                DoozyUI.UIManager.ShowNotification("Choice3Way", -1, false, "Choice 3-Way", "A test message with informative info", notificationSprite, buttonNames, buttonNames, callbacks);
+                DoozyUI.UIManager.ShowNotification("Choice3Way", -1, false,
+                    "Choice 3-Way", 
+                    "A test message with informative info", 
+                    notificationSprite,
+                    new string[] { "OKHit", "CancelHit", "RetryHit" },  // is associated with broadcast game event that gets published
+                    new string[] { "OK", "Cancel", "Retry" }, // title
+                    callbacks);
             }
 
             //ToggleViewVisibility(state);

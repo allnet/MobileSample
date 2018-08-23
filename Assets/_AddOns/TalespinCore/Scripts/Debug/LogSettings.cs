@@ -11,12 +11,12 @@ namespace Talespin.Debugging
     {
         public static Color HexToRgbColor(String hexValue)
         {
-            //string htmlValue = “#FF0000”;
+            //string htmlValue = "#FF0000";
             Color newCol;
-            //if (ColorUtility.TryParseHtmlString(hexValue, out newCol))  //DH
-            //{
-            //    return newCol;
-            //}
+            if (ColorUtility.TryParseHtmlString(hexValue, out newCol))  //DH
+            {
+                return newCol;
+            }
 
             return new Color();
         }

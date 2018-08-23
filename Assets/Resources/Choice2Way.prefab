@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 114768667911359596}
   - component: {fileID: 114281778577469742}
   m_Layer: 5
-  m_Name: UIB - Cancel
+  m_Name: Notification Button 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 114886224856388370}
   - component: {fileID: 114445672595566878}
   m_Layer: 5
-  m_Name: UIB - OK
+  m_Name: Notification Button 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5fda386369912b408e9466993be739d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listenForBackButton: 1
+  listenForBackButton: 0
   targetCanvasName: Additive
   customTargetCanvasName: 0
   notificationContainer: {fileID: 114664982789831962}
@@ -394,8 +394,9 @@ MonoBehaviour:
   message: {fileID: 1106286157232008}
   icon: {fileID: 0}
   buttons:
-  - {fileID: 0}
-  closeButton: {fileID: 114886224856388370}
+  - {fileID: 114281778577469742}
+  - {fileID: 114445672595566878}
+  closeButton: {fileID: 0}
   specialElements: []
   effects: []
   data:
@@ -3059,7 +3060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementCategory: Uncategorized
-  elementName: Choice2Way (49428)
+  elementName: Choice2Way (-1432)
   LANDSCAPE: 1
   PORTRAIT: 1
   startHidden: 1
