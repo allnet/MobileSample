@@ -25,6 +25,7 @@ namespace AllNetXR
 
     public class UIManagerAdditive : MonoBehaviour
     {
+
         public static UIManagerAdditive Instance;
         public static string Category = "Additive";
         public static bool DebugMode = true;
@@ -34,7 +35,7 @@ namespace AllNetXR
 
         private AnimatorStateInfoHelper stateInfoHelper;
         public bool IsBusy; // something is showing that is not dismissable
-        
+        public Sprite notificationSprite;
 
         // Use this for initialization
         void Awake()

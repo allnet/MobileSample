@@ -9,9 +9,6 @@ namespace AllNetXR
 {
     public class UIManagerTester : MonoBehaviour
     {
-
-        public Sprite notificationSprite;
-
         private bool IsShowing;
 
         //private void OnEnable()
@@ -96,7 +93,7 @@ namespace AllNetXR
                 DoozyUI.UIManager.ShowNotification("Choice2Way", -1, false,
                     "Choice 2-Way(bi)",
                     "A test message with informative info",
-                    notificationSprite,
+                    uim.notificationSprite,
                     new string[] { "OKHit", "CancelHit" },  // broadcast game event name
                     new string[] { "OK", "Cancel" },  // titles that appear
                     callbacks);
@@ -108,7 +105,7 @@ namespace AllNetXR
                 DoozyUI.UIManager.ShowNotification("Choice3Way", -1, false,
                     "Choice 3-Way", 
                     "A test message with informative info", 
-                    notificationSprite,
+                    uim.notificationSprite,
                     new string[] { "OKHit", "CancelHit", "RetryHit" },  // is associated with broadcast game event that gets published
                     new string[] { "OK", "Cancel", "Retry" }, // title
                     callbacks);
