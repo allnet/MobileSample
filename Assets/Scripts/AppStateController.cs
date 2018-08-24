@@ -17,6 +17,9 @@ namespace AllNetXR
         State2,
         State3,
         State4,
+        Register,
+        EnterCredentials,
+        WelcomeBack,
         Count
     }
 

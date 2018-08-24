@@ -22,11 +22,11 @@ GameObject:
   - component: {fileID: 114206920360605862}
   m_Layer: 0
   m_Name: State1
-  m_TagString: Untagged
+  m_TagString: Sequenceable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1401395441494006
 GameObject:
   m_ObjectHideFlags: 0
@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 114939444507241514}
   m_Layer: 0
   m_Name: EnterCredentials
-  m_TagString: Untagged
+  m_TagString: Sequenceable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 114335674589062528}
   m_Layer: 0
   m_Name: State5
-  m_TagString: Untagged
+  m_TagString: Sequenceable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 114933925145715350}
   m_Layer: 0
   m_Name: State4
-  m_TagString: Untagged
+  m_TagString: Sequenceable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,11 +102,11 @@ GameObject:
   - component: {fileID: 114764437106714532}
   m_Layer: 0
   m_Name: State2
-  m_TagString: Untagged
+  m_TagString: Sequenceable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1748730826544978
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 114621691361074380}
   m_Layer: 0
   m_Name: State0
-  m_TagString: Untagged
+  m_TagString: Sequenceable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 114187327926323114}
   m_Layer: 0
   m_Name: Register
-  m_TagString: Untagged
+  m_TagString: Sequenceable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,8 +167,8 @@ GameObject:
   - component: {fileID: 4272514914988186}
   - component: {fileID: 114041930097348194}
   m_Layer: 0
-  m_Name: Welcomeback
-  m_TagString: Untagged
+  m_Name: WelcomeBack
+  m_TagString: Sequenceable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -412,10 +412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 95545861119394290}
   sequencer: {fileID: 114086216241723636}
-  activeStateName: 
-  previousStateName: 
-  startState: 
-  activeController: {fileID: 0}
+  stateKeys: []
 --- !u!114 &114621691361074380
 MonoBehaviour:
   m_ObjectHideFlags: 1
