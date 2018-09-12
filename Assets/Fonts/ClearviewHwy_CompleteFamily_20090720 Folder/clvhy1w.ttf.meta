@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 31e0108d8356a4641aaf643a239cbe49
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: ClearviewHwy
+  fontNames:
+  - ClearviewHwy
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 05a55541f33634e4e9927ee5dfe11409, type: 3}
+  - {fileID: 12800000, guid: 0dcffc64eb81744bc96cba35028c6ae1, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
