@@ -1,89 +1,38 @@
-﻿using System;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
-namespace AllNetXR
+public static class TransformExtensions
 {
     /// <summary>
-    /// Extension methods for UnityEngine.Transform.
+    /// Find all children of the Transform by tag (includes self)
     /// </summary>
-    public static class TransformExtensions
+    /// <param name="transform"></param>
+    /// <param name="tags"></param>
+    /// <returns></returns>
+    public static List<Transform> FindChildrenByTag(this Transform transform, params string[] tags)
     {
-        /// <summary>
-        /// Makes the given game objects children of the transform.
-        /// </summary>
- 
-        /// <param name=“children”> Top Level Game object children.</param>
-        public static Transform[] GetTopLevelChildren(this Transform parent)
-        {
-            Transform[] children = new Transform[parent.childCount];
-            for (int ID = 0; ID < parent.childCount; ID++)
-            {
-                children[ID] = parent.GetChild(ID);
-            }
-            return children;
-        }
-        
-        /// <summary>
-        /// Makes the given game objects children of the transform.
-        /// </summary>
-        /// <param name=“transform”>Parent transform.</param>
-        /// <param name=“children”>Game objects to make children.</param>
-        public static void AddChildren(this Transform transform, GameObject[] children)
-        {
-            Array.ForEach(children, child => child.transform.parent = transform);
-        }
+        List<Transform> list = new List<Transform>();
+        foreach (var tran in transform.Cast<Transform>().ToList())
+            list.AddRange(tran.FindChildrenByTag(tags)); // recursively check children
+        if (tags.Any(tag => tag == transform.tag))
+            list.Add(transform); // we matched, add this transform
+        return list;
+    }
 
-        /// <summary>
-        /// Makes the game objects of given components children of the transform.
-        /// </summary>
-        /// <param name=“transform”>Parent transform.</param>
-        /// <param name=“children”>Components of game objects to make children.</param>
-        public static void AddChildren(this Transform transform, Component[] children)
-        {
-            Array.ForEach(children, child => child.transform.parent = transform);
-        }
-
-        /// <summary>
-        /// Sets the position of a transform’s children to zero.
-        /// </summary>
-        /// <param name=“transform”>Parent transform.</param>
-        /// <param name=“recursive”>Also reset ancestor positions?</param>
-        public static void ResetChildPositions(this Transform transform, bool recursive = false)
-        {
-            foreach (Transform child in transform)
-            {
-                child.position = Vector3.zero;
-
-                if (recursive)
-                {
-                    child.ResetChildPositions(recursive);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Sets the layer of the transform’s children.
-        /// </summary>
-        /// <param name=“transform”>Parent transform.</param>
-        /// <param name=“layerName”>Name of layer.</param>
-        /// <param name=“recursive”>Also set ancestor layers?</param>
-        public static void SetChildLayers(this Transform transform, string layerName, bool recursive = false)
-        {
-            var layer = LayerMask.NameToLayer(layerName);
-            SetChildLayersHelper(transform, layer, recursive);
-        }
-
-        static void SetChildLayersHelper(Transform transform, int layer, bool recursive)
-        {
-            foreach (Transform child in transform)
-            {
-                child.gameObject.layer = layer;
-
-                if (recursive)
-                {
-                    SetChildLayersHelper(child, layer, recursive);
-                }
-            }
-        }
+    /// <summary>
+    /// Find all children of the GameObject by tag (includes self)
+    /// </summary>
+    /// <param name="gameObject"></param>
+    /// <param name="tags"></param>
+    /// <returns></returns>
+    public static List<GameObject> FindChildrenByTag(this GameObject gameObject, params string[] tags)
+    {
+        return FindChildrenByTag(gameObject.transform, tags)
+            //.Cast<GameObject>() // Can't use Cast here :(
+            .Select(tran => tran.gameObject)
+            .Where(gameOb => gameOb != null)
+            .ToList();
     }
 }
