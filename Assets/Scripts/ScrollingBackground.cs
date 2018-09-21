@@ -36,6 +36,7 @@ public class ScrollingBackground : MonoBehaviour
     {
         foreach (var item in sprites)
         {
+            item.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;  // set this at run time for convenience
             MoveToPosition(item);
 
             TranslateSpritePosition(item);
@@ -62,7 +63,6 @@ public class ScrollingBackground : MonoBehaviour
                 break;
         }
     }
-
 
 
     private void MoveToPosition(SpriteRenderer item)

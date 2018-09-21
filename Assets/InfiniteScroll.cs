@@ -22,7 +22,7 @@ public class InfiniteScroll : MonoBehaviour {
 
         var spriteRenderer = GetComponent<SpriteRenderer>();
         rightEdge = transform.position.x + spriteRenderer.bounds.extents.x / multiplier;
-        leftEdge = transform.position.y - spriteRenderer.bounds.extents.x / multiplier;
+        leftEdge = transform.position.x - spriteRenderer.bounds.extents.x / multiplier;
     }
 
 
@@ -44,8 +44,7 @@ public class InfiniteScroll : MonoBehaviour {
 
     bool hasPassedEdge() {
 
-        return scrollSpeed > 0 && transform.position.x > rightEdge ||
-                                           scrollSpeed < 0 && transform.position.x < leftEdge;
+        return (scrollSpeed > 0 && transform.position.x > rightEdge || scrollSpeed < 0 && transform.position.x < leftEdge);
 
     }
 
