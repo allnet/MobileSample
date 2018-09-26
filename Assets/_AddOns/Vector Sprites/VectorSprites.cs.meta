@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 72b9414762a5e3842bddc94d92c6297e
+timeCreated: 1461617602
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - shapeMaterial: {fileID: 2100000, guid: 4fd33a704ff223b4bb753dfbb281be3e, type: 2}
+  - pillowAndGlowMeshMaterial: {fileID: 2100000, guid: 48ba127231db2f14186e3db6c5a16c8e,
+      type: 2}
+  - pillowAndGlowRenderTextureMaterial: {fileID: 2100000, guid: 42dd5c076956caf47bd070a7e7a5b7d7,
+      type: 2}
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: 6767159ec7239d342beac0835c23d033, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
