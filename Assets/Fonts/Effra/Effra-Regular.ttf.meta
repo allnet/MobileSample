@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 683e6e094d31c4684830001559daf95b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Effra
+  fontNames:
+  - Effra
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 03e2bdfa7fcbb415997ed43d23e8b940, type: 3}
+  - {fileID: 12800000, guid: 41a748fda09bc4c2884620823663fae4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
