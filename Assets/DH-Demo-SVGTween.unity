@@ -1223,7 +1223,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 102
+  m_SortingOrder: 5673
 --- !u!33 &80672029
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1250,7 +1250,7 @@ MonoBehaviour:
   _transparentMaterial: {fileID: 0}
   _sortingLayerID: 0
   _sortingLayerName: 
-  _sortingOrder: 102
+  _sortingOrder: 5673
   _overrideSorter: 0
   _overrideSorterChildren: 0
 --- !u!1 &81297017
@@ -8001,7 +8001,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4533933710739378, guid: 7c464401c072942c9ad8e7d4dd6258e2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.5119998
+      value: 4.1
       objectReference: {fileID: 0}
     - target: {fileID: 4533933710739378, guid: 7c464401c072942c9ad8e7d4dd6258e2, type: 2}
       propertyPath: m_LocalPosition.y
@@ -9221,7 +9221,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 464017485}
-  m_Mesh: {fileID: 4300000, guid: 24a07343589bf47eeb0f0bd93feff979, type: 2}
+  m_Mesh: {fileID: 0}
 --- !u!114 &464017489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11763,7 +11763,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 103
+  m_SortingOrder: 5674
 --- !u!33 &773460850
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11790,7 +11790,7 @@ MonoBehaviour:
   _transparentMaterial: {fileID: 0}
   _sortingLayerID: 0
   _sortingLayerName: 
-  _sortingOrder: 103
+  _sortingOrder: 5674
   _overrideSorter: 0
   _overrideSorterChildren: 0
 --- !u!1 &777517246
@@ -13119,7 +13119,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 104
+  m_SortingOrder: 5675
 --- !u!33 &957045613
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13146,7 +13146,7 @@ MonoBehaviour:
   _transparentMaterial: {fileID: 0}
   _sortingLayerID: 0
   _sortingLayerName: 
-  _sortingOrder: 104
+  _sortingOrder: 5675
   _overrideSorter: 0
   _overrideSorterChildren: 0
 --- !u!1 &972563791
@@ -14159,7 +14159,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1079582041}
-  m_Mesh: {fileID: 4388998, guid: 13d49b48d28084a428eacfca0e37e75c, type: 2}
+  m_Mesh: {fileID: 0}
 --- !u!114 &1079582045
 MonoBehaviour:
   m_ObjectHideFlags: 0
