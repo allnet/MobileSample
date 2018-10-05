@@ -2,7 +2,7 @@
 <root>
 <SettingsList FormatVersion = "1" ProductVersion = "3.0.4">
 <Entries>
-<e IsBuiltin = "true" Id = "0" Title = "Error" IsEnabled = "true" IsCustomIcon = "false" IsConsumeEnabled = "true" IsSharing = "false" SharingMode = "ToolbarAndRowIcon" IdSharing = "0" IsHideIfEmpty = "false" HasNavButton = "true" OpenWith = "\0" Theme = "Unity" SizeAdjust = "0" ColorizeRowFor = "Disabled" BgFlashFor = "AllLogsInTab" BgFlashDuration = "OneSecond">
+<e IsBuiltin = "true" Id = "0" Title = "Error" IsEnabled = "true" IsCustomIcon = "true" IsConsumeEnabled = "true" IsSharing = "false" SharingMode = "ToolbarAndRowIcon" IdSharing = "0" IsHideIfEmpty = "false" HasNavButton = "true" OpenWith = "\0" Theme = "SubtleSmall" SizeAdjust = "0" ColorizeRowFor = "Disabled" BgFlashFor = "AllLogsInTab" BgFlashDuration = "OneSecond">
 <BgColorFlash ProSkin = "FF1400A0" FreeSkin = "FF1400AF" />
 <TextColor ProSkin = "B4B4B4FF" FreeSkin = "000000FF" />
 <BgColorEven ProSkin = "FF14002A" FreeSkin = "FF1E0041" />
@@ -92,7 +92,7 @@
 <s v = "Shader error in" />
 </Keywords>
 </e>
-<e IsBuiltin = "true" Id = "1" Title = "Warning" IsEnabled = "true" IsCustomIcon = "false" IsConsumeEnabled = "true" IsSharing = "false" SharingMode = "ToolbarAndRowIcon" IdSharing = "0" IsHideIfEmpty = "false" HasNavButton = "false" OpenWith = "\0" Theme = "Unity" SizeAdjust = "0" ColorizeRowFor = "Disabled" BgFlashFor = "AllLogsInTab" BgFlashDuration = "OneSecond">
+<e IsBuiltin = "true" Id = "1" Title = "Warning" IsEnabled = "true" IsCustomIcon = "true" IsConsumeEnabled = "true" IsSharing = "false" SharingMode = "ToolbarAndRowIcon" IdSharing = "0" IsHideIfEmpty = "false" HasNavButton = "false" OpenWith = "\0" Theme = "SubtleSmall" SizeAdjust = "0" ColorizeRowFor = "Disabled" BgFlashFor = "AllLogsInTab" BgFlashDuration = "OneSecond">
 <BgColorFlash ProSkin = "C9B90064" FreeSkin = "C9B900AF" />
 <TextColor ProSkin = "B4B4B4FF" FreeSkin = "000000FF" />
 <BgColorEven ProSkin = "C9B9001C" FreeSkin = "C9B90037" />
@@ -181,7 +181,7 @@
 <s v = "): BCW" />
 </Keywords>
 </e>
-<e IsBuiltin = "true" Id = "2" Title = "Info" IsEnabled = "true" IsCustomIcon = "false" IsConsumeEnabled = "true" IsSharing = "false" SharingMode = "ToolbarAndRowIcon" IdSharing = "0" IsHideIfEmpty = "false" HasNavButton = "false" OpenWith = "\0" Theme = "Unity" SizeAdjust = "0" ColorizeRowFor = "Disabled" BgFlashFor = "Disabled" BgFlashDuration = "OneSecond">
+<e IsBuiltin = "true" Id = "2" Title = "Info" IsEnabled = "true" IsCustomIcon = "true" IsConsumeEnabled = "true" IsSharing = "false" SharingMode = "ToolbarAndRowIcon" IdSharing = "0" IsHideIfEmpty = "false" HasNavButton = "false" OpenWith = "\0" Theme = "SubtleSmall" SizeAdjust = "0" ColorizeRowFor = "Disabled" BgFlashFor = "Disabled" BgFlashDuration = "OneSecond">
 <BgColorFlash ProSkin = "7F00007F" FreeSkin = "FF000080" />
 <TextColor ProSkin = "B4B4B4FF" FreeSkin = "000000FF" />
 <BgColorEven ProSkin = "373737FF" FreeSkin = "DEDEDEFF" />
