@@ -1,9 +1,38 @@
 EnhancedScroller
 http://u3d.as/fXk
 
+Version 2.18.1
+26 September 2018
+Requires Unity 2017.4.8f1+
+
+    Fixed remote resources demo to work on WebGL
+
+
+Version 2.18.0
+Requires Unity 2017.4.8f1+
+
+    Changed remote resources demo to pull in a list of urls from a remote text file instead of reading from a hard-coded list
+
+
+Version 2.17.0
+Requires Unity 2017.4.8f1+
+
+    Added method GetCellViewAtDataIndex to retrieve a cell view at a particular data index. If no cell view is visible with this index, then null is returned.
+    Created CellViewInstantiated delegate that is fired when a cell view is created from scratch (not reused)
+    Created CellViewReused delegate that is fired when a cell view is reused from the recycled list
+
+
+Version 2.16.0
+September 10, 2018
+Requires Unity 2017.4.8f1+
+
+	Fixed snapping when at the start or end of the scroller
+	Added ability to change spacing at runtime and see the results immediately
+
+
 Version 2.15.6
 April 11, 2018
-Requires Unity 2017.3.0f3
+Requires Unity 2017.3.0f3+
 
     Fixed boundary conditions on ScrollSize so that they are not negative
     Fixed boundary conditions on NormalizedScrollPosition so that it is not negative

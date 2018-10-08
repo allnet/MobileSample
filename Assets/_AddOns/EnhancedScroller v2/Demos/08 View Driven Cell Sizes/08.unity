@@ -1327,12 +1327,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollDirection: 0
-  spacing: 50
+  spacing: 10
   padding:
     m_Left: 10
     m_Right: 10
     m_Top: 10
-    m_Bottom: 30
+    m_Bottom: 10
   loop: 0
   scrollbarVisibility: 0
   snapping: 0

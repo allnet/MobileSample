@@ -19,10 +19,10 @@ namespace EVgo
         private const string accept = "application/json";
         private const string appToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkMTZlODlmMy1mNGU5LTQ2NTMtYmMzNy1jYzI1NjY2NjUzMGIiLCJ1c2VyUm9sZSI6IkFETUlOIn0.OKsshezl_EkmsWrsdni5sK0GCKyuP2vCKlQWK5aBnZ9AKATHXo7NVJLLjSjEP1fV4L4W9-pnUrpJwGaZCLTknw";
 
-        public string section = "locations/";
+        public string section = "locations/";      
+        public string specifics = "mapping?latitude=33.923&longitude=-118.388&distance=10&metric=MILES";
         public Text responseText;
         public InputField responseOutput;
-        public string specifics = "mapping?latitude=33.923&longitude=-118.388&distance=10&metric=MILES";
 
 
         public void Request()
@@ -39,12 +39,11 @@ namespace EVgo
         private IEnumerator OnResponse(WWW wwwResponse)
         {
             yield return wwwResponse;
-
-            responseText.text = wwwResponse.text;
-            responseOutput.text = wwwResponse.text;
-
+            
             if (OnLocationDataLoad != null) OnLocationDataLoad(wwwResponse.text);
-            // OnResponseChanged();  
+
+            //responseText.text = wwwResponse.text;
+           // responseOutput.text = wwwResponse.text;
         }
 
 

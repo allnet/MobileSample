@@ -48,6 +48,20 @@ namespace EnhancedUI.EnhancedScroller
     public delegate void ScrollerTweeningChangedDelegate(EnhancedScroller scroller, bool tweening);
 
     /// <summary>
+    /// This delegate is called when a cell view is created for the first time (not reused)
+    /// </summary>
+    /// <param name="scroller">The scroller that created the cell view</param>
+    /// <param name="cellView">The cell view that was created</param>
+    public delegate void CellViewInstantiated(EnhancedScroller scroller, EnhancedScrollerCellView cellView);
+
+    /// <summary>
+    /// This delegate is called when a cell view is reused from the recycled cell view list
+    /// </summary>
+    /// <param name="scroller">The scroller that reused the cell view</param>
+    /// <param name="cellView">The cell view that was resused</param>
+    public delegate void CellViewReused(EnhancedScroller scroller, EnhancedScrollerCellView cellView);
+
+    /// <summary>
     /// The EnhancedScroller allows you to easily set up a dynamic scroller that will recycle views for you. This means
     /// that using only a handful of views, you can display thousands of rows. This will save memory and processing
     /// power in your application.
@@ -212,6 +226,16 @@ namespace EnhancedUI.EnhancedScroller
         /// This delegate is called when the scroller has started or stopped tweening
         /// </summary>
         public ScrollerTweeningChangedDelegate scrollerTweeningChanged;
+
+        /// <summary>
+        /// This delegate is called when the scroller creates a new cell view from scratch
+        /// </summary>
+        public CellViewInstantiated cellViewInstantiated;
+
+        /// <summary>
+        /// This delegate is called when the scroller reuses a recycled cell view
+        /// </summary>
+        public CellViewReused cellViewReused;
 
         /// <summary>
         /// The Delegate is what the scroller will call when it needs to know information about
@@ -518,6 +542,20 @@ namespace EnhancedUI.EnhancedScroller
                 cellView.transform.SetParent(_container);
                 cellView.transform.localPosition = Vector3.zero;
                 cellView.transform.localRotation = Quaternion.identity;
+
+                // call the instantiated callback
+                if (cellViewInstantiated != null)
+                {
+                    cellViewInstantiated(this, cellView);
+                }
+            }
+            else
+            {
+                // call the reused callback
+                if (cellViewReused != null)
+                {
+                    cellViewReused(this, cellView);
+                }
             }
 
             return cellView;
@@ -861,9 +899,45 @@ namespace EnhancedUI.EnhancedScroller
             return _GetCellIndexAtPosition(position, 0, _cellViewOffsetArray.Count - 1);
         }
 
+        /// <summary>
+        /// Get a cell view for a particular data index. If the cell view is not currently
+        /// in the visible range, then this method will return null.
+        /// Note: this is against MVC principles and will couple your controller to the view
+        /// more than this paradigm would suggest. Generally speaking, the view can have knowledge
+        /// about the controller, but the controller should not know anything about the view.
+        /// Use this method sparingly if you are trying to adhere to strict MVC design.
+        /// </summary>
+        /// <param name="dataIndex">The data index of the cell view to return</param>
+        /// <returns></returns>
+        public EnhancedScrollerCellView GetCellViewAtDataIndex(int dataIndex)
+        {
+            for (var i = 0; i < _activeCellViews.Count; i++)
+            {
+                if (_activeCellViews[i].dataIndex == dataIndex)
+                {
+                    return _activeCellViews[i];
+                }
+            }
+
+            return null;
+        }
+
         #endregion
 
         #region Private
+
+        /// <summary>
+        /// Set after the scroller is first created. This allwos
+        /// us to ignore OnValidate changes at the start
+        /// </summary>
+        private bool _initialized = false;
+
+        /// <summary>
+        /// Set when the spacing is changed in the inspector. Since we cannot
+        /// make changes during the OnValidate, we have to use this flag to
+        /// later call the _UpdateSpacing method from Update()
+        /// </summary>
+        private bool _updateSpacing = false;
 
         /// <summary>
         /// Cached reference to the scrollRect
@@ -1118,6 +1192,17 @@ namespace EnhancedUI.EnhancedScroller
 
             // set up the visibility of the scrollbar
             ScrollbarVisibility = scrollbarVisibility;
+        }
+
+        /// <summary>
+        /// Updates the spacing on the scroller
+        /// </summary>
+        /// <param name="spacing">new spacing value</param>
+        private void _UpdateSpacing(float spacing)
+        {
+            _updateSpacing = false;
+            _layoutGroup.spacing = spacing;
+            ReloadData(NormalizedScrollPosition);
         }
 
         /// <summary>
@@ -1555,10 +1640,18 @@ namespace EnhancedUI.EnhancedScroller
             _lastScrollRectSize = ScrollRectSize;
             _lastLoop = loop;
             _lastScrollbarVisibility = scrollbarVisibility;
+
+            _initialized = true;
         }
 
         void Update()
         {
+            if (_updateSpacing)
+            {
+                _UpdateSpacing(spacing);
+                _reloadData = false;
+            }
+
             if (_reloadData)
             {
                 // if the reload flag is true, then reload the data
@@ -1597,6 +1690,18 @@ namespace EnhancedUI.EnhancedScroller
             {
                 IsScrolling = false;
                 if (scrollerScrollingChanged != null) scrollerScrollingChanged(this, false);
+            }
+        }
+
+        /// <summary>
+        /// Reacts to changes in the inspector
+        /// </summary>
+        void OnValidate()
+        {
+            // if spacing changed, update it
+            if (_initialized && spacing != _layoutGroup.spacing)
+            {
+                _updateSpacing = true;
             }
         }
 
@@ -1649,8 +1754,13 @@ namespace EnhancedUI.EnhancedScroller
                 // if the speed has dropped below the threshhold velocity
                 if (Mathf.Abs(LinearVelocity) <= snapVelocityThreshold && LinearVelocity != 0)
                 {
-                    // Call the snap function
-                    Snap();
+                    // Make sure the scroller is not on the boundary if not looping
+                    var normalized = NormalizedScrollPosition;
+                    if (loop || (!loop && normalized > 0 && normalized < 1.0f))
+                    {
+                        // Call the snap function
+                        Snap();
+                    }
                 }
             }
 
